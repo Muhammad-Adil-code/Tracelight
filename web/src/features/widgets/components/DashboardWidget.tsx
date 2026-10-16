@@ -101,7 +101,7 @@ export function DashboardWidget({
   dashboardOwner: "LANGFUSE" | "PROJECT";
   schedulerId?: string;
   /**
-   * Present on Langfuse-managed (read-only) dashboards: edit affordances stay
+   * Present on Tracelight-managed (read-only) dashboards: edit affordances stay
    * visible and any edit attempt routes here (clone-first flow) instead of
    * mutating.
    */
@@ -147,7 +147,7 @@ export function DashboardWidget({
     scope: "dashboards:CUD",
   });
   const hasCUDAccess = hasRbacCUDAccess && dashboardOwner !== "LANGFUSE";
-  // Langfuse-managed dashboard, but the user could edit a clone: show the
+  // Tracelight-managed dashboard, but the user could edit a clone: show the
   // same edit affordances and route attempts through the clone-first flow.
   const isLockedEditable =
     hasRbacCUDAccess &&
@@ -641,9 +641,9 @@ export function DashboardWidget({
             <Badge
               variant="secondary"
               className="shrink-0"
-              title="Maintained by Langfuse — editing creates your own copy"
+              title="Maintained by Tracelight — editing creates your own copy"
             >
-              Langfuse
+              Tracelight
             </Badge>
           )}
         </span>

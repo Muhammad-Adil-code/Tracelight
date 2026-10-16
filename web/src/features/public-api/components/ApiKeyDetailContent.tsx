@@ -63,7 +63,7 @@ export function ApiKeyDetailContent(props: ApiKeyDetailContentProps) {
             <SubHeader title="Using with MCP" />
             <p className="text-muted-foreground text-sm">
               For a detailed guide on how to use this API key to connect to the
-              Langfuse MCP server, see the{" "}
+              Tracelight MCP server, see the{" "}
               <a
                 href="https://langfuse.com/docs/api-and-data-platform/features/mcp-server"
                 target="_blank"

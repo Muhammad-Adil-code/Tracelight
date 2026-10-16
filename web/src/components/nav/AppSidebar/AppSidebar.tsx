@@ -554,10 +554,10 @@ const DemoBadge = () => {
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild tooltip="Your Langfuse Organizations">
+            <SidebarMenuButton asChild tooltip="Your Tracelight Organizations">
               <Link href="/">
                 <Grid2X2 className="icon-base" />
-                <span>Your Langfuse Orgs</span>
+                <span>Your Tracelight Orgs</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

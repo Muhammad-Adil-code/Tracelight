@@ -67,7 +67,7 @@ export function PresetDashboardWidget({
   dashboardOwner: "LANGFUSE" | "PROJECT";
   schedulerId?: string;
   /**
-   * Present on Langfuse-managed (read-only) dashboards: edit affordances stay
+   * Present on Tracelight-managed (read-only) dashboards: edit affordances stay
    * visible and any edit attempt routes here (clone-first flow) instead of
    * mutating.
    */
@@ -90,7 +90,7 @@ export function PresetDashboardWidget({
 
   // Presets on project-owned dashboards (e.g. a clone of the curated Home)
   // can be moved/removed, but their content stays fixed until extended into a
-  // configurable widget. On Langfuse-owned dashboards the same affordances
+  // configurable widget. On Tracelight-owned dashboards the same affordances
   // show, routing through the clone-first flow.
   const hasRbacCUDAccess = useHasProjectAccess({
     projectId,

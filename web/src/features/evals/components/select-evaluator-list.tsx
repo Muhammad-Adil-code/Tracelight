@@ -135,7 +135,7 @@ export function SelectEvaluatorList({ projectId }: SelectEvaluatorListProps) {
                 <span className="flex flex-col gap-1">
                   <span className="font-bold">Code evaluator</span>
                   <span className="text-muted-foreground text-sm font-normal">
-                    Use code to create Langfuse scores.
+                    Use code to create Tracelight scores.
                   </span>
                 </span>
               </Button>

@@ -16,7 +16,7 @@ import type { DashboardPlacement } from "@/src/features/widgets";
 import { classifyTrpcToastError } from "@/src/utils/trpcErrorClassification";
 
 /**
- * Clone-first flow for Langfuse-managed (read-only) dashboards: any edit
+ * Clone-first flow for Tracelight-managed (read-only) dashboards: any edit
  * attempt routes here instead of being blocked. Confirming clones the
  * dashboard into the project (optionally carrying the attempted change via
  * `pendingDefinition` and setting the clone as the project's Home) and
@@ -129,7 +129,7 @@ function CloneFirstDialogContent({
         set_as_home: setAsHome,
         had_pending_change: Boolean(pendingDefinition),
         dashboardId,
-        // The clone-first flow only exists for locked Langfuse-owned dashboards.
+        // The clone-first flow only exists for locked Tracelight-owned dashboards.
         owner: "LANGFUSE",
       });
       showSuccessToast({
@@ -182,13 +182,13 @@ function CloneFirstDialogContent({
             <span className="text-foreground font-bold">
               &ldquo;{dashboardName}&rdquo;
             </span>{" "}
-            is maintained by Langfuse and can&rsquo;t be edited directly.
+            is maintained by Tracelight and can&rsquo;t be edited directly.
             We&rsquo;ll create your own editable copy in this project
             {pendingDefinition ? " with your change applied" : ""}
             {setAsHome ? " and show it on your Home page from now on" : ""}.
           </p>
           <p>
-            Langfuse-maintained tiles on the copy can be rearranged or removed;
+            Tracelight-maintained tiles on the copy can be rearranged or removed;
             editing their content will become available in a future release.
           </p>
           {existingClone && (

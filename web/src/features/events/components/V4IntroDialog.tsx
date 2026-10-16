@@ -23,19 +23,19 @@ export function V4IntroDialog({
           below is an h2, so it is not caught by that selector. */}
       <DialogContent className="[&>div:last-child]:hidden">
         <DialogTitle className="sr-only">
-          Welcome to a faster Langfuse
+          Welcome to a faster Tracelight
         </DialogTitle>
         <DialogBody>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/assets/v4-beta-intro.jpg"
-            alt="Langfuse gets Faster — performance comparison showing 5x to 165x speedups"
+            alt="Tracelight gets Faster — performance comparison showing 5x to 165x speedups"
             className="w-full rounded-md"
           />
           <ul className="flex flex-col gap-3">
             <li className="text-muted-foreground text-sm">
               <span className="text-foreground block font-bold">
-                Welcome to a faster Langfuse
+                Welcome to a faster Tracelight
               </span>{" "}
               We&apos;ve rebuilt the data model around observations rather than
               traces, which means charts, filters, and APIs are dramatically

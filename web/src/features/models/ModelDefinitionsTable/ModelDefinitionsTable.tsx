@@ -24,7 +24,7 @@ import { PriceBreakdownTooltip } from "@/src/features/models/components/PriceBre
 
 export type ModelTableRow = {
   modelId: string;
-  maintainer: "User" | "Langfuse";
+  maintainer: "User" | "Tracelight";
   modelName: string;
   matchPattern: string;
   prices?: Record<string, number>;
@@ -46,7 +46,7 @@ const modelConfigDescriptions = {
   config:
     "Some tokenizers require additional configuration (e.g. openai tiktoken). See docs for details.",
   maintainer:
-    "Maintainer of the model. Langfuse managed models can be cloned, user managed models can be edited and deleted. To supersede a Langfuse managed model, set the custom model name to the Langfuse model name.",
+    "Maintainer of the model. Tracelight managed models can be cloned, user managed models can be edited and deleted. To supersede a Tracelight managed model, set the custom model name to the Tracelight model name.",
   lastUsed: "Start time of the latest generation using this model",
 } as const;
 
@@ -101,7 +101,7 @@ export function ModelDefinitionsTable({
       range: "decorative",
       getBadge: (maintainer) => ({
         value: maintainer,
-        variant: maintainer === "Langfuse" ? "teal" : "blue",
+        variant: maintainer === "Tracelight" ? "teal" : "blue",
       }),
     }),
     createTextTableColumn<ModelTableRow>({
@@ -184,7 +184,7 @@ export function ModelDefinitionsTable({
       tableName="models"
       columns={columns}
       actions={(model) =>
-        model.maintainer === "Langfuse"
+        model.maintainer === "Tracelight"
           ? [
               {
                 id: "clone",

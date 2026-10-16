@@ -105,7 +105,7 @@ export function GatewayConfigurationView({
         <Header title="AI Gateway configuration" />
         <p className="text-muted-foreground text-sm">
           Configure how requests routed through the organization gateway are
-          ingested into Langfuse.
+          ingested into Tracelight.
         </p>
       </div>
 

@@ -16,7 +16,7 @@ import { showToast } from "@/src/features/notifications";
 import { classifyTrpcToastError } from "@/src/utils/trpcErrorClassification";
 
 const SKILLS_INSTALL_COMMAND =
-  "Install the Langfuse AI skill from github.com/langfuse/skills and use it to add tracing to this application with Langfuse following best practices.";
+  "Install the Tracelight AI skill from github.com/langfuse/skills and use it to add tracing to this application with Tracelight following best practices.";
 const MANUAL_TRACING_DOCS_URL =
   "https://langfuse.com/docs/observability/get-started";
 
@@ -111,14 +111,14 @@ export function TracesSetupOnboardingCard({
     <SplashScreen
       waitingFor="Waiting for first trace"
       title="Time to log your first trace, it only takes a minute"
-      description="Get your API keys first, then ask your coding agent to add observability with Langfuse to your application."
+      description="Get your API keys first, then ask your coding agent to add observability with Tracelight to your application."
       videoSrc="https://static.langfuse.com/prod-assets/onboarding/traces-overview-v1.mp4"
       videoPosition="bottom"
       steps={[
         {
           title: "Create API keys",
           description:
-            "Your application needs API keys to send traces to Langfuse.",
+            "Your application needs API keys to send traces to Tracelight.",
           content: apiKeys ? (
             <ApiKeyDetailContent
               scope="project"

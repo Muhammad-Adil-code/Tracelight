@@ -13,8 +13,8 @@ export function CliSkillImportInstructions({
   return (
     <div className="flex flex-col gap-4">
       <p>
-        Push skills from your local project to Langfuse. Requires Node.js 20 or
-        later. The Langfuse CLI is in beta.
+        Push skills from your local project to Tracelight. Requires Node.js 20 or
+        later. The Tracelight CLI is in beta.
       </p>
       <div className="flex flex-col gap-2">
         <h3 className="font-bold">1. Install or update the CLI</h3>
@@ -45,7 +45,7 @@ export function CliSkillImportInstructions({
         <p className="text-muted-foreground">
           Run from your local project directory. Replace the example path with a
           skill folder containing SKILL.md, or push all skills under a
-          directory. The name in SKILL.md identifies the skill in Langfuse.
+          directory. The name in SKILL.md identifies the skill in Tracelight.
         </p>
         <Codeblock
           language="bash"

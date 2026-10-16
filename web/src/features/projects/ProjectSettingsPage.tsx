@@ -466,7 +466,7 @@ const Integrations = (props: { projectId: string }) => {
           </IntegrationCardHeader>
           <p className="text-primary mb-4 text-sm">
             We have teamed up with PostHog (OSS product analytics) to make
-            Langfuse Events/Metrics available in your Posthog Dashboards.
+            Tracelight Events/Metrics available in your Posthog Dashboards.
           </p>
           <div className="flex items-center gap-2">
             <ActionButton
@@ -496,7 +496,7 @@ const Integrations = (props: { projectId: string }) => {
             <MixpanelLogo className="text-foreground w-20" />
           </IntegrationCardHeader>
           <p className="text-primary mb-4 text-sm">
-            Integrate with Mixpanel to sync your Langfuse traces, generations,
+            Integrate with Mixpanel to sync your Tracelight traces, generations,
             and scores for advanced product analytics and insights.
           </p>
           <div className="flex items-center gap-2">
@@ -596,7 +596,7 @@ const Integrations = (props: { projectId: string }) => {
           </IntegrationCardHeader>
           <p className="text-primary mb-4 text-sm">
             Connect a Slack workspace and create channel automations to receive
-            Langfuse alerts natively in Slack.
+            Tracelight alerts natively in Slack.
           </p>
           <div className="flex items-center gap-2">
             <ActionButton

@@ -71,12 +71,12 @@ export function DashboardTable({
         range: "decorative",
         id: "ownerTag",
         accessorFn: (row) =>
-          row.owner === "LANGFUSE" ? "Langfuse" : "Project",
+          row.owner === "LANGFUSE" ? "Tracelight" : "Project",
         header: "Owner",
         size: 80,
         getBadge: (owner) => ({
           value: owner,
-          variant: owner === "Langfuse" ? "teal" : "blue",
+          variant: owner === "Tracelight" ? "teal" : "blue",
         }),
       }),
       createDateTableColumn<DashboardTableRow>({

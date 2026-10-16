@@ -184,7 +184,7 @@ export const RemoteExperimentUpsertForm = ({
       if (!name) continue;
       if (WebhookProtectedHeaders.includes(name.toLowerCase())) {
         form.setError(`headers.${index}.name`, {
-          message: `"${name}" is set by Langfuse and cannot be overridden`,
+          message: `"${name}" is set by Tracelight and cannot be overridden`,
         });
         return;
       }
@@ -232,9 +232,9 @@ export const RemoteExperimentUpsertForm = ({
         <DialogHeader>
           <DialogTitle>Save your signing secret</DialogTitle>
           <DialogDescription>
-            Langfuse signs every remote experiment request with this secret via
+            Tracelight signs every remote experiment request with this secret via
             the <code>x-langfuse-signature</code> header. Store it in your
-            service to verify that requests come from Langfuse. It can only be
+            service to verify that requests come from Tracelight. It can only be
             viewed once.
           </DialogDescription>
         </DialogHeader>
@@ -285,7 +285,7 @@ export const RemoteExperimentUpsertForm = ({
           </strong>
           . Configure a webhook URL to trigger remote custom experiments from
           UI. We will send dataset info (name, id) and config to your service,
-          which can run against the dataset and post results to Langfuse.
+          which can run against the dataset and post results to Tracelight.
         </DialogDescription>
       </DialogHeader>
 
@@ -354,7 +354,7 @@ export const RemoteExperimentUpsertForm = ({
                     <FormDescription>
                       {field.value
                         ? existingRemoteExperiment?.displaySecretKey
-                          ? "Requests include an x-langfuse-signature header so your service can verify they come from Langfuse."
+                          ? "Requests include an x-langfuse-signature header so your service can verify they come from Tracelight."
                           : "A signing secret will be generated when you save and shown once."
                         : "Requests will be sent without an x-langfuse-signature header."}
                     </FormDescription>

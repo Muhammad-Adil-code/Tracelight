@@ -624,7 +624,7 @@ function TableViewPresetsDrawerContentBody({
             <CommandList className="max-h-[calc(100vh-150px)]">
               <CommandEmpty>No views found</CommandEmpty>
               <CommandGroup className="pb-0">
-                {/* System Preset: Langfuse Default - hidden when page-specific presets exist */}
+                {/* System Preset: Tracelight Default - hidden when page-specific presets exist */}
                 {!systemFilterPresets?.length && (
                   <CommandItem
                     key={SYSTEM_PRESETS.DEFAULT.id}

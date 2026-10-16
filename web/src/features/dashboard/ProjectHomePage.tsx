@@ -179,7 +179,7 @@ function HomeDashboard({ readPath }: { readPath: ResolvedReadPath }) {
   const isDashboardDataReady = environmentOptionsState.isReady;
 
   // Home renders the project's selected dashboard (Project.homeDashboardId);
-  // unset/missing pointers resolve server-side to the Langfuse-curated
+  // unset/missing pointers resolve server-side to the Tracelight-curated
   // default. Fall back to the shared constant so Home still renders when the
   // curated row does not exist yet (e.g. worker has not run against this DB).
   const homeDashboard = api.dashboard.getHomeDashboard.useQuery(
@@ -211,7 +211,7 @@ function HomeDashboard({ readPath }: { readPath: ResolvedReadPath }) {
     : (homeDashboard.data?.dashboard ?? null);
   const dashboardId =
     displayedDashboard?.id ?? peekId ?? LANGFUSE_HOME_DASHBOARD_ID;
-  const dashboardName = displayedDashboard?.name ?? "Langfuse Home";
+  const dashboardName = displayedDashboard?.name ?? "Tracelight Home";
   const dashboardOwner = displayedDashboard?.owner ?? "LANGFUSE";
   // Show a loading state until the home resolution (or peek fetch) settles —
   // rendering the curated fallback early would flash the wrong layout and

@@ -71,7 +71,7 @@ export function InAppAgentWidgetComposer({
     >
       <div className="flex items-center gap-2 font-bold">
         <Sparkles className="icon-base" />
-        Add with Langfuse Halo
+        Add with Tracelight Halo
       </div>
       <p className="text-muted-foreground text-xs">
         Describe the chart you need. Halo will create it as a widget and add it
@@ -97,7 +97,7 @@ export function InAppAgentWidgetComposer({
           size="icon"
           className="h-8 w-8 shrink-0 rounded-md border"
           variant="outline"
-          aria-label="Add with Langfuse Halo"
+          aria-label="Add with Tracelight Halo"
           disabled={!request.trim()}
         >
           <SendHorizontal className="icon-base text-icon-foreground" />

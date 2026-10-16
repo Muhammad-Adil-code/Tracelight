@@ -14,7 +14,7 @@ import {
 
 /**
  * Dashboard JSON file-format version. `$langfuseDashboard: true` marks a JSON
- * payload as a Langfuse dashboard export; `version` is the version of that
+ * payload as a Tracelight dashboard export; `version` is the version of that
  * envelope. A dashboard file inlines each referenced widget's portable
  * configuration (widgets are recreated on import — DB widget ids do not
  * travel across projects/instances).
@@ -73,7 +73,7 @@ export function parsePastedPreset(text: string): PastedPresetParseResult {
   ) {
     return {
       status: "invalid",
-      reason: `This card uses format version ${payload.version}; this Langfuse version supports up to ${PRESET_FILE_FORMAT_VERSION}.`,
+      reason: `This card uses format version ${payload.version}; this Tracelight version supports up to ${PRESET_FILE_FORMAT_VERSION}.`,
     };
   }
 
@@ -83,7 +83,7 @@ export function parsePastedPreset(text: string): PastedPresetParseResult {
   ) {
     return {
       status: "invalid",
-      reason: "This preset card is not available in this Langfuse version.",
+      reason: "This preset card is not available in this Tracelight version.",
     };
   }
 
@@ -218,7 +218,7 @@ type ParsedDashboardImportPlacement =
 export type ParsedDashboardImport = {
   name: string;
   placements: ParsedDashboardImportPlacement[];
-  /** Presets in the file this Langfuse version does not know — dropped. */
+  /** Presets in the file this Tracelight version does not know — dropped. */
   skippedPresetCount: number;
   /** True when any widget lost filters during column normalization. */
   removedFilters: boolean;
@@ -230,7 +230,7 @@ export type DashboardImportParseResult =
   | { status: "dashboard"; dashboard: ParsedDashboardImport };
 
 /**
- * Parses dropped text into a dashboard import. Payloads without the Langfuse
+ * Parses dropped text into a dashboard import. Payloads without the Tracelight
  * dashboard envelope are "not-dashboard" (callers may fall back to the widget
  * parser); enveloped payloads that fail validation are "invalid" with a
  * user-facing reason.
@@ -257,7 +257,7 @@ export function parseDashboardImport(
   ) {
     return {
       status: "invalid",
-      reason: `This dashboard uses format version ${declaredVersion}; this Langfuse version supports up to ${DASHBOARD_FILE_FORMAT_VERSION}.`,
+      reason: `This dashboard uses format version ${declaredVersion}; this Tracelight version supports up to ${DASHBOARD_FILE_FORMAT_VERSION}.`,
     };
   }
 
@@ -325,7 +325,7 @@ export function parseDashboardImport(
       status: "invalid",
       reason:
         skippedPresetCount > 0
-          ? "The dashboard file only contains preset cards that are not available in this Langfuse version."
+          ? "The dashboard file only contains preset cards that are not available in this Tracelight version."
           : "The dashboard file contains no importable widgets.",
     };
   }

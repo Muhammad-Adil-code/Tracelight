@@ -137,7 +137,7 @@ export class WebhookActionHandler implements BaseActionHandler<WebhookActionForm
             WebhookProtectedHeaders.includes(header.name.trim().toLowerCase())
           ) {
             errors.push(
-              `Header ${index + 1}: "${header.name}" is automatically added by Langfuse and cannot be customized`,
+              `Header ${index + 1}: "${header.name}" is automatically added by Tracelight and cannot be customized`,
             );
           }
         }

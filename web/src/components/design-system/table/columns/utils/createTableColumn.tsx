@@ -51,7 +51,7 @@ export function createTableColumn<TData extends RowData, TValue>({
 }): LangfuseColumnDef<TData> {
   const accessor = accessorFn
     ? {
-        // Langfuse column visibility still indexes every column by accessorKey.
+        // Tracelight column visibility still indexes every column by accessorKey.
         accessorKey: explicitId,
         accessorFn,
         id: explicitId,

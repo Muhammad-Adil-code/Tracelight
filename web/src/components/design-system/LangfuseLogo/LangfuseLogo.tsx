@@ -17,7 +17,7 @@ export const LangfuseLogo = ({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={logoLightModeHref}
-          alt="Langfuse Logo"
+          alt="Tracelight Logo"
           className={cn(
             "group-data-[collapsible=icon]:hidden dark:hidden",
             "max-h-4 max-w-14",
@@ -26,7 +26,7 @@ export const LangfuseLogo = ({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={logoDarkModeHref}
-          alt="Langfuse Logo"
+          alt="Tracelight Logo"
           className={cn(
             "hidden group-data-[collapsible=icon]:hidden dark:block",
             "max-h-4 max-w-14",
@@ -44,13 +44,13 @@ export const LangfuseLogo = ({
       <img
         className="-ml-1 h-5 max-w-22 translate-y-px group-data-[collapsible=icon]:hidden dark:hidden"
         src={`${env.NEXT_PUBLIC_BASE_PATH ?? ""}/wordart-black.svg`}
-        alt="Langfuse Logo"
+        alt="Tracelight Logo"
       />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         className="-ml-1 hidden h-5 max-w-22 translate-y-px group-data-[collapsible=icon]:hidden dark:block"
         src={`${env.NEXT_PUBLIC_BASE_PATH ?? ""}/wordart-white.svg`}
-        alt="Langfuse Logo"
+        alt="Tracelight Logo"
       />
       <div className="hidden scale-120 group-data-[collapsible=icon]:block">
         <LangfuseIcon size={28} />

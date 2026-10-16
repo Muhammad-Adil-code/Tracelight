@@ -96,7 +96,7 @@ const DEPRECATED_INTEGRATION_MIGRATION_URLS: Record<string, string> = {
 const EXPERIMENT_OTEL_INGESTION_URL =
   "https://langfuse.com/integrations/native/opentelemetry/experiments";
 // The docs ship one combined SDK page, which is also the right target for
-// language-agnostic guidance: the upgrade applies to every Langfuse SDK, not
+// language-agnostic guidance: the upgrade applies to every Tracelight SDK, not
 // just the two most common ones.
 const SDK_OVERVIEW_URL = "https://langfuse.com/docs/observability/sdk/overview";
 const OTEL_INTEGRATION_URL =
@@ -113,7 +113,7 @@ const LANGFUSE_ASSISTANT_URL = "https://langfuse.com/docs/langfuse-assistant";
 // Hassieb's 2 minute walkthrough of the upgrade steps. Linked (not embedded)
 // from the Need help footer, so the panel stays free of YouTube player
 // chrome and the CSP frame-src stays untouched. Cloud only: the video covers
-// the steps as they apply to Langfuse Cloud projects.
+// the steps as they apply to Tracelight Cloud projects.
 const WALKTHROUGH_VIDEO_URL = "https://www.youtube.com/watch?v=g3YbbqVGt4g";
 
 // Copies the agent migration prompt to the clipboard with toast + analytics;
@@ -591,7 +591,7 @@ export function V4MigrationOtelSection({
   );
 }
 
-// Renders only while ingestion-API traffic without a Langfuse SDK header is
+// Renders only while ingestion-API traffic without a Tracelight SDK header is
 // detected: custom instrumentation against POST /api/public/ingestion, or an
 // SDK too old to send attribution headers. Exported for the gallery story.
 export function V4MigrationCustomInstrumentationSection({
@@ -619,7 +619,7 @@ export function V4MigrationCustomInstrumentationSection({
       defaultOpen={defaultOpen}
     >
       <p className="text-muted-foreground text-sm leading-relaxed">
-        Data is arriving through the ingestion API without a Langfuse SDK
+        Data is arriving through the ingestion API without a Tracelight SDK
         header, so this looks like custom instrumentation or a very old SDK
         version. Please upgrade to the latest version of{" "}
         <ExternalLink
@@ -629,7 +629,7 @@ export function V4MigrationCustomInstrumentationSection({
             link: "sdk_overview_docs",
           }}
         >
-          any Langfuse SDK
+          any Tracelight SDK
         </ExternalLink>
         , or use the{" "}
         <ExternalLink
@@ -1002,7 +1002,7 @@ export function V4MigrationApisSection({
                             return "Unknown callers";
                           }
                           if (caller.sdkName) {
-                            return `Langfuse ${caller.sdkName === "python" ? "Python" : "JavaScript"} SDK${caller.sdkVersion ? ` ${caller.sdkVersion}` : ""}`;
+                            return `Tracelight ${caller.sdkName === "python" ? "Python" : "JavaScript"} SDK${caller.sdkVersion ? ` ${caller.sdkVersion}` : ""}`;
                           }
                           if (codingAgent) {
                             return codingAgent;
@@ -1244,7 +1244,7 @@ export function V4MigrationIntegrationsSection({
 /**
  * Whether this deployment is bound by the dated v3 sunset.
  *
- * `V4_MIGRATION_DEADLINE` is a Langfuse Cloud commitment. On a self-hosted
+ * `V4_MIGRATION_DEADLINE` is a Tracelight Cloud commitment. On a self-hosted
  * deployment nothing happens on that date — the legacy surfaces keep working
  * until the operator moves the write mode off `dual`, so quoting a date would
  * be plainly wrong. The Fern deprecation messages scope the same date to Cloud
@@ -1334,7 +1334,7 @@ export function V4MigrationHeaderContent({
       </div>
       <div className="text-muted-foreground flex flex-col gap-2 text-sm leading-relaxed">
         <p>
-          Langfuse v4 is live: a re-architecture of our data model and database
+          Tracelight v4 is live: a re-architecture of our data model and database
           tables. It is up to 165× more performant in UI and on APIs. It also
           enables new features such as{" "}
           <ExternalLink
@@ -1369,7 +1369,7 @@ export function V4MigrationHeaderContent({
             href={LANGFUSE_ASSISTANT_URL}
             analytics={{ section: "header", link: "langfuse_assistant_docs" }}
           >
-            Langfuse Halo
+            Tracelight Halo
           </ExternalLink>
           .
           {actionNeeded

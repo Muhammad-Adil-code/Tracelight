@@ -8,7 +8,7 @@ type LangfuseIconProps = {
 
 export const LangfuseIcon = ({
   size = 32,
-  alt = "Langfuse",
+  alt = "Tracelight",
 }: LangfuseIconProps) => (
   // eslint-disable-next-line @next/next/no-img-element
   <img

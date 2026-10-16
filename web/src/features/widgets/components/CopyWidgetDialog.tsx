@@ -10,7 +10,7 @@ import {
 import { Button } from "@/src/components/ui/button";
 
 /**
- * Copy-first flow for Langfuse-managed widgets on a project dashboard:
+ * Copy-first flow for Tracelight-managed widgets on a project dashboard:
  * editing one creates the project's own copy (the placement is rewired to
  * it) and opens the copy in the widget editor.
  */
@@ -46,7 +46,7 @@ export function CopyWidgetDialog({
             <span className="text-foreground font-bold">
               &ldquo;{widgetName}&rdquo;
             </span>{" "}
-            is maintained by Langfuse and can&rsquo;t be edited directly.
+            is maintained by Tracelight and can&rsquo;t be edited directly.
             We&rsquo;ll replace this tile with your own editable copy and open
             it in the widget editor — the rest of the dashboard stays unchanged.
           </p>

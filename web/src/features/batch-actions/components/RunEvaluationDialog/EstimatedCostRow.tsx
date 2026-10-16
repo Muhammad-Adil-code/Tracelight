@@ -69,7 +69,7 @@ export function EstimatedCostRow(props: EstimatedCostRowProps) {
           content={
             <div className="space-y-2">
               <p className="text-xs">
-                Expected cost on your linked API key (not Langfuse). Estimated
+                Expected cost on your linked API key (not Tracelight). Estimated
                 from average evaluator execution cost over the last 7 days.
               </p>
               <div className="space-y-1">

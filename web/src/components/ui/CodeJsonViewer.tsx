@@ -138,7 +138,7 @@ export function JSONView(props: {
               }
               displaySize={isFullyCollapsed ? "collapsed" : "expanded"}
               matchesURL={true}
-              // Render previewable media (Langfuse refs, data URIs, media URLs)
+              // Render previewable media (Tracelight refs, data URIs, media URLs)
               // as a hover-to-peek chip instead of the raw string; everything
               // else falls through to the default value rendering.
               customizeNode={({ node }) => {

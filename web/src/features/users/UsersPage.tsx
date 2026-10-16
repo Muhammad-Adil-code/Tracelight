@@ -49,7 +49,7 @@ export default function UsersPage() {
         help: {
           description: (
             <>
-              Attribute data in Langfuse to a user by adding a userId to your
+              Attribute data in Tracelight to a user by adding a userId to your
               traces. See{" "}
               <a
                 href="https://langfuse.com/docs/observability/features/users"

@@ -93,7 +93,7 @@ const getPythonCode = (
   labels: string[],
 ) => `from langfuse import Langfuse
 
-# Initialize Langfuse client
+# Initialize Tracelight client
 langfuse = Langfuse()
 
 # Get production prompt
@@ -113,7 +113,7 @@ const getJsCode = (
   labels: string[],
 ) => `import { LangfuseClient } from "@langfuse/client";
 
-// Initialize the Langfuse client
+// Initialize the Tracelight client
 const langfuse = new LangfuseClient();
 
 // Get production prompt
@@ -416,7 +416,7 @@ export const PromptDetail = ({
         itemType: "PROMPT",
         help: {
           description:
-            "You can use this prompt within your application through the Langfuse SDKs and integrations. Refer to the documentation for more information.",
+            "You can use this prompt within your application through the Tracelight SDKs and integrations. Refer to the documentation for more information.",
           href: "https://langfuse.com/docs/prompts",
         },
         breadcrumb: [

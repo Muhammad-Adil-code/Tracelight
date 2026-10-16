@@ -75,7 +75,7 @@ export const LangfuseMediaView = ({
   const projectId = useProjectIdFromURL();
 
   if (!mediaData) {
-    const text = "Invalid Langfuse Media Tag";
+    const text = "Invalid Tracelight Media Tag";
 
     return (
       <div className="flex items-center gap-2">

@@ -97,7 +97,7 @@ export function DashboardGrid({
   dashboardOwner: "LANGFUSE" | "PROJECT" | undefined;
   getWidgetSchedulerId?: (widgetPlacementId: string) => string;
   /**
-   * Present on Langfuse-managed (read-only) dashboards: tiles keep their edit
+   * Present on Tracelight-managed (read-only) dashboards: tiles keep their edit
    * affordances and route edit attempts here (clone-first flow). Layout
    * changes still arrive via onChange — the caller decides whether to persist
    * or route them through the same flow.

@@ -158,12 +158,12 @@ function DashboardDetailView({ readPath }: { readPath: ResolvedReadPath }) {
   const isLockedDashboard = dashboard.data?.owner === "LANGFUSE";
   const hasCUDAccess = hasRbacCUDAccess && !isLockedDashboard;
 
-  // Langfuse-managed dashboards keep full edit affordances; edit attempts
+  // Tracelight-managed dashboards keep full edit affordances; edit attempts
   // route through the clone-first flow instead of mutating.
   const isLockedEditable = hasRbacCUDAccess && isLockedDashboard;
 
   // PostHog is the external system: report one view per dashboard once the
-  // owner is known ("do the Langfuse-maintained templates get used?"). The
+  // owner is known ("do the Tracelight-maintained templates get used?"). The
   // id ref dedupes Strict Mode double-mounts while still re-reporting on
   // client-side navigation between dashboards (same pattern as
   // dashboard:home_dashboard_viewed).
@@ -383,7 +383,7 @@ function DashboardDetailView({ readPath }: { readPath: ResolvedReadPath }) {
     [insertWidgetPlacement],
   );
 
-  // Add a Langfuse Home card as a preset placement (no widget row involved).
+  // Add a Tracelight Home card as a preset placement (no widget row involved).
   // Defaults to a 6x6 tile below all existing widgets; callers can pass an
   // explicit position (e.g. paste/duplicate next to an anchor tile).
   const insertPresetPlacement = useCallback(
@@ -632,7 +632,7 @@ function DashboardDetailView({ readPath }: { readPath: ResolvedReadPath }) {
         });
         showErrorToast(
           "No widget in clipboard",
-          "The clipboard does not contain a Langfuse widget JSON. Copy one via a widget's ⋯ menu first.",
+          "The clipboard does not contain a Tracelight widget JSON. Copy one via a widget's ⋯ menu first.",
           {
             operation: "widget.paste",
             errorOrigin: "frontend",
@@ -648,7 +648,7 @@ function DashboardDetailView({ readPath }: { readPath: ResolvedReadPath }) {
   );
 
   // Cmd/Ctrl+V on the dashboard pastes a copied widget. Only intercepts when
-  // the clipboard actually holds a Langfuse widget payload and the paste is
+  // the clipboard actually holds a Tracelight widget payload and the paste is
   // not aimed at a text input.
   useEffect(() => {
     if (!hasCUDAccess) return;
@@ -831,7 +831,7 @@ function DashboardDetailView({ readPath }: { readPath: ResolvedReadPath }) {
         if (imported.skippedPresetCount > 0) {
           showErrorToast(
             "Some cards were skipped",
-            `${imported.skippedPresetCount} preset card(s) in the file are not available in this Langfuse version.`,
+            `${imported.skippedPresetCount} preset card(s) in the file are not available in this Tracelight version.`,
             {
               operation: "dashboard.import",
               errorOrigin: "frontend",
@@ -920,7 +920,7 @@ function DashboardDetailView({ readPath }: { readPath: ResolvedReadPath }) {
         });
         showErrorToast(
           "Unsupported file",
-          "Only Langfuse dashboard or widget JSON files can be dropped here.",
+          "Only Tracelight dashboard or widget JSON files can be dropped here.",
           {
             operation: "dashboard.import",
             errorOrigin: "frontend",
@@ -1283,7 +1283,7 @@ function DashboardDetailView({ readPath }: { readPath: ResolvedReadPath }) {
                     title:
                       (dashboard.data?.name || "Dashboard") +
                       (dashboard.data?.owner === "LANGFUSE"
-                        ? " (Langfuse Maintained)"
+                        ? " (Tracelight Maintained)"
                         : ""),
                     breadcrumb: [
                       {
@@ -1446,7 +1446,7 @@ function DashboardDetailView({ readPath }: { readPath: ResolvedReadPath }) {
                         <div className="border-primary bg-background rounded-lg border-2 border-dashed px-8 py-6 text-center shadow-lg">
                           <p className="font-bold">Drop to import</p>
                           <p className="text-muted-foreground text-sm">
-                            Langfuse dashboard or widget JSON
+                            Tracelight dashboard or widget JSON
                           </p>
                         </div>
                       </div>

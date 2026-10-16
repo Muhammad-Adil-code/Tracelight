@@ -86,7 +86,7 @@ export function V4MigrationBanner({
               <Zap className="icon-base mt-0.5 shrink-0 sm:mt-0" />
               <span>
                 <span className="font-bold">
-                  Langfuse v4 is here: real-time and up to 165× faster.
+                  Tracelight v4 is here: real-time and up to 165× faster.
                 </span>{" "}
                 {projectsNeedingMigration === totalProjects
                   ? projectsNeedingMigration === 1

@@ -198,7 +198,7 @@ function MediaTagWidgetPortals({ store }: { store: MediaTagWidgetStore }) {
 }
 
 /**
- * Renders Langfuse media reference tags in a CodeMirror editor as inline,
+ * Renders Tracelight media reference tags in a CodeMirror editor as inline,
  * hover-to-peek chips. Spread `extension` into the editor's `extensions` and
  * render `portals` anywhere inside the component (it must stay within the app's
  * providers). The underlying tag text is preserved and treated atomically.

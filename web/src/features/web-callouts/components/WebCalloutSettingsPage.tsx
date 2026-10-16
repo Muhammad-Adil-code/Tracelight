@@ -80,7 +80,7 @@ const webCalloutFormSchema = z
       if (WEB_CALLOUT_BLOCKED_HEADER_NAMES.has(lowerName)) {
         ctx.addIssue({
           code: "custom",
-          message: "This header is set by Langfuse and cannot be customized.",
+          message: "This header is set by Tracelight and cannot be customized.",
           path: ["headers", index, "name"],
         });
       }
@@ -228,7 +228,7 @@ function WebCalloutEndpointDialog(props: {
           {props.endpoint ? "Edit Callout Endpoint" : "Add Callout Endpoint"}
         </DialogTitle>
         <DialogDescription>
-          Langfuse sends a backend JSON POST when a user clicks a web callout
+          Tracelight sends a backend JSON POST when a user clicks a web callout
           action.{" "}
           <a
             href="https://langfuse.com/docs/observability/features/web-callouts"
@@ -276,7 +276,7 @@ function WebCalloutEndpointDialog(props: {
                   </FormControl>
                   <FormDescription>
                     HTTP or HTTPS URL. Custom ports are allowed. The endpoint is
-                    called from the Langfuse backend.
+                    called from the Tracelight backend.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>

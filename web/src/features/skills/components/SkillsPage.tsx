@@ -523,7 +523,7 @@ function EmptySkills({
         {
           title: "Manage Skills",
           description:
-            "Create a new skill directly in the Langfuse UI, upload existing skill files, or push skills from your repository with the CLI.",
+            "Create a new skill directly in the Tracelight UI, upload existing skill files, or push skills from your repository with the CLI.",
           icon: FileCode2,
         },
         {
@@ -541,7 +541,7 @@ function EmptySkills({
         {
           title: "Use via CLI or SDK",
           description:
-            "Install skills into your agent's skills directory with the CLI or fetch them with the Langfuse SDK.",
+            "Install skills into your agent's skills directory with the CLI or fetch them with the Tracelight SDK.",
           icon: Terminal,
         },
       ]}

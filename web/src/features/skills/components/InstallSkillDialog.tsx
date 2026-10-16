@@ -33,7 +33,7 @@ export function InstallSkillDialog({
       <Dialog.Body>
         <p>
           Run these commands in your local project directory. Requires Node.js
-          20 or later. The Langfuse CLI is in beta.
+          20 or later. The Tracelight CLI is in beta.
         </p>
         <div className="flex flex-col gap-2">
           <h3 className="font-bold">1. Install the CLI</h3>

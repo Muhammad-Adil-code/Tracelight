@@ -625,8 +625,8 @@ function V4MigrationStatusPageContent() {
           <div className="text-muted-foreground flex flex-col gap-2 text-sm leading-relaxed">
             <p>
               {actionNeededProjects > 0
-                ? "Langfuse v4 is here: real-time ingestion and up to 165× faster queries. Complete the action items on each project below to avoid disruption. "
-                : "Langfuse v4 is here: real-time ingestion and up to 165× faster queries. "}
+                ? "Tracelight v4 is here: real-time ingestion and up to 165× faster queries. Complete the action items on each project below to avoid disruption. "
+                : "Tracelight v4 is here: real-time ingestion and up to 165× faster queries. "}
               <V4MigrationDocsLink />
             </p>
             {actionNeededProjects > 0 && <V4MigrationDeadlineNote />}

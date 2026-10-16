@@ -50,7 +50,7 @@ export const webhookSchema = z.object({
         },
         {
           message:
-            "This header is automatically added by Langfuse and cannot be customized",
+            "This header is automatically added by Tracelight and cannot be customized",
         },
       ),
       value: z.string(),
@@ -83,7 +83,7 @@ export const WebhookActionForm: React.FC<WebhookActionFormProps> = ({
     name: "webhook.headers",
   });
 
-  // Filter out headers managed by Langfuse from the user-editable headers
+  // Filter out headers managed by Tracelight from the user-editable headers
   const customHeaderFields = headerFields.filter((field, index) => {
     const headerName = form.watch(`webhook.headers.${index}.name`);
     return !WebhookProtectedHeaders.includes(headerName?.toLowerCase());
@@ -139,7 +139,7 @@ export const WebhookActionForm: React.FC<WebhookActionFormProps> = ({
         {/* Default Headers Section */}
         <div className="mb-4">
           <FormDescription className="mb-2">
-            Default headers (automatically added by Langfuse):
+            Default headers (automatically added by Tracelight):
           </FormDescription>
           {Object.entries({
             ...WebhookDefaultHeaders,

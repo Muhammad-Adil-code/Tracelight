@@ -94,7 +94,7 @@ interface SelectWidgetDialogProps {
   onOpenChange: (open: boolean) => void;
   projectId: string;
   onSelectWidget: (widget: WidgetItem) => void;
-  /** Adds a Langfuse Home card as a preset placement. */
+  /** Adds a Tracelight Home card as a preset placement. */
   onSelectPreset?: (presetId: HomeDashboardPresetId) => void;
   dashboardId: string;
 }
@@ -121,7 +121,7 @@ export function SelectWidgetDialog({
     openCapturedRef.current = open;
   }, [open, dashboardId, capture]);
 
-  // Fetch widgets (project-owned and Langfuse-maintained)
+  // Fetch widgets (project-owned and Tracelight-maintained)
   const widgets = api.dashboardWidgets.all.useQuery(
     {
       projectId,

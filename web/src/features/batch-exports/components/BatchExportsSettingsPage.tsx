@@ -14,7 +14,7 @@ export function BatchExportsSettingsPage(props: { projectId: string }) {
       <Header title="Exports" />
       <p className="mb-4 text-sm">
         Export large datasets in your preferred format via the export buttons
-        across Langfuse. Exports are processed asynchronously and remain
+        across Tracelight. Exports are processed asynchronously and remain
         available for download until the expiry shown for each export below. You
         will receive an email notification once your export is ready.
       </p>

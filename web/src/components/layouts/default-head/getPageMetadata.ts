@@ -19,26 +19,26 @@ type PageMetadata = {
 
 const cloudAuthPages: Record<string, PageMetadata> = {
   "/auth/sign-in": {
-    title: "Sign in | Langfuse Cloud",
+    title: "Sign in | Tracelight Cloud",
     description:
-      "Sign in to Langfuse Cloud, the open source agent evals & observability platform. EU, US, Japan, and HIPAA data regions.",
+      "Sign in to Tracelight Cloud, the open source agent evals & observability platform. EU, US, Japan, and HIPAA data regions.",
   },
   "/auth/sign-up": {
-    title: "Sign up | Langfuse Cloud",
+    title: "Sign up | Tracelight Cloud",
     description:
-      "Create a free Langfuse Cloud account. No credit card required. Trace, evaluate, and manage prompts for your LLM application.",
+      "Create a free Tracelight Cloud account. No credit card required. Trace, evaluate, and manage prompts for your LLM application.",
   },
 };
 
 const selfHostedAuthPages: Record<string, PageMetadata> = {
   "/auth/sign-in": {
-    title: "Sign in | Langfuse",
+    title: "Sign in | Tracelight",
     description:
-      "Sign in to Langfuse, the open source agent evals & observability platform.",
+      "Sign in to Tracelight, the open source agent evals & observability platform.",
   },
   "/auth/sign-up": {
-    title: "Sign up | Langfuse",
-    description: "Create a Langfuse account.",
+    title: "Sign up | Tracelight",
+    description: "Create a Tracelight account.",
   },
 };
 
@@ -47,16 +47,16 @@ const selfHostedAuthPages: Record<string, PageMetadata> = {
 // shows the user has no password yet; that cannot be known from the route.
 const passwordPages: Record<string, PageMetadata> = {
   "/auth/reset-password": {
-    title: "Reset password | Langfuse",
-    description: "Reset the password of your Langfuse account.",
+    title: "Reset password | Tracelight",
+    description: "Reset the password of your Tracelight account.",
   },
   "/auth/setup-password": {
-    title: "Set password | Langfuse",
-    description: "Set the password of your Langfuse account.",
+    title: "Set password | Tracelight",
+    description: "Set the password of your Tracelight account.",
   },
 };
 
-const defaultMetadata: PageMetadata = { title: "Langfuse" };
+const defaultMetadata: PageMetadata = { title: "Tracelight" };
 
 /**
  * Metadata that must be in the server-rendered HTML. Pages own their own

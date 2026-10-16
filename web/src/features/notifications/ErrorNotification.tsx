@@ -125,7 +125,7 @@ export const ErrorNotification: React.FC<ErrorNotificationProps> = ({
               });
             }}
           >
-            Report issue to Langfuse team
+            Report issue to Tracelight team
           </Button>
         )}
       </div>

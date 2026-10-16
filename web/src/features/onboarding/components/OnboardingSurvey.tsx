@@ -110,7 +110,7 @@ export function OnboardingSurvey(props: OnboardingSurveyProps) {
                       otherInput={
                         <DesignSystemInput
                           {...form.register("buildIntentOther")}
-                          aria-label="What else will you use Langfuse for?"
+                          aria-label="What else will you use Tracelight for?"
                           maxLength={BUILD_INTENT_OTHER_MAX_LENGTH}
                           placeholder="Tell us briefly"
                         />
@@ -159,7 +159,7 @@ export function OnboardingSurvey(props: OnboardingSurveyProps) {
                           <FormLabel>Enable AI powered features</FormLabel>
                           <p className="text-muted-foreground text-sm">
                             Relevant project data can be sent to AWS Bedrock
-                            within your Langfuse data region. Your data will not
+                            within your Tracelight data region. Your data will not
                             be used to train models.{" "}
                             <a
                               href="https://langfuse.com/security/ai-features"

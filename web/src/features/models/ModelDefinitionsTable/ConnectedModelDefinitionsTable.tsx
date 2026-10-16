@@ -223,7 +223,7 @@ function convertToTableRow(model: GetModelResult): ModelTableRow {
   const prices = model.pricingTiers.find((tier) => tier.isDefault)?.prices;
   return {
     modelId: model.id,
-    maintainer: model.projectId ? "User" : "Langfuse",
+    maintainer: model.projectId ? "User" : "Tracelight",
     modelName: model.modelName,
     matchPattern: model.matchPattern,
     prices,

@@ -9,7 +9,7 @@ import useProjectIdFromURL from "@/src/hooks/useProjectIdFromURL";
 /** MonitorScope is the RBAC scope a monitor page can require for entry. */
 type MonitorScope = "alerts:read" | "alerts:CUD";
 
-/** MonitorPagePermissions gates a monitor page on Langfuse Cloud and a project RBAC scope. */
+/** MonitorPagePermissions gates a monitor page on Tracelight Cloud and a project RBAC scope. */
 export function MonitorPagePermissions({
   scope,
   children,

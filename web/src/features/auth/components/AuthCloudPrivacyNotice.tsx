@@ -17,7 +17,7 @@ export const CloudPrivacyNotice = ({ action }: { action: string }) => (
       rel="noopener noreferrer"
       className="italic"
     >
-      Langfuse Cloud Addendum
+      Tracelight Cloud Addendum
     </a>
     , and{" "}
     <a
@@ -26,7 +26,7 @@ export const CloudPrivacyNotice = ({ action }: { action: string }) => (
       rel="noopener noreferrer"
       className="italic"
     >
-      Langfuse Privacy Policy
+      Tracelight Privacy Policy
     </a>
     . You also confirm that the entered data is accurate.
   </div>

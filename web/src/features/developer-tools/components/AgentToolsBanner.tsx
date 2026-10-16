@@ -6,7 +6,7 @@ const DOCS_HREF =
   "https://langfuse.com/docs/api-and-data-platform/features/agent-skill";
 
 /**
- * Informational, dismissible banner that highlights Langfuse's support for AI
+ * Informational, dismissible banner that highlights Tracelight's support for AI
  * coding agents via the Agent Skill, MCP server, and CLI. Rendered on the
  * organization overview page.
  */
@@ -25,10 +25,10 @@ export function AgentToolsBanner() {
               <Bot className="icon-base mt-0.5 shrink-0 sm:mt-0" />
               <span>
                 <span className="font-bold">
-                  Langfuse works great with your AI coding agents.
+                  Tracelight works great with your AI coding agents.
                 </span>{" "}
                 Connect Claude Code, Codex, and other agents to your data with
-                the Langfuse Agent Skill, MCP server, and CLI.
+                the Tracelight Agent Skill, MCP server, and CLI.
               </span>
             </div>
           </Callout>

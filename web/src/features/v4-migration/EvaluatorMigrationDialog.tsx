@@ -37,7 +37,7 @@ type EvaluatorMigrationDialogProps = {
 type SelectedMigrationAction = "assistant";
 
 const ADMIN_REQUEST_MESSAGE =
-  "Hi! Could you enable AI features for our Langfuse organization? I need them to use Halo to upgrade our deprecated evaluators for v4. Thanks!";
+  "Hi! Could you enable AI features for our Tracelight organization? I need them to use Halo to upgrade our deprecated evaluators for v4. Thanks!";
 
 export function EvaluatorMigrationDialog({
   open,

@@ -358,7 +358,7 @@ export const VariableMappingCard = ({
                               <div className="flex min-w-0 items-start gap-2">
                                 <VariableMappingDescription
                                   title="Object"
-                                  description="Langfuse object to retrieve the data from."
+                                  description="Tracelight object to retrieve the data from."
                                   href="https://langfuse.com/docs/evaluation/evaluation-methods/llm-as-a-judge"
                                 />
                                 <FormItem className="min-w-0 flex-1">
@@ -419,7 +419,7 @@ export const VariableMappingCard = ({
                                   <div className="flex min-w-0 items-start gap-2">
                                     <VariableMappingDescription
                                       title="Object Name"
-                                      description="Name of the Langfuse object to retrieve the data from."
+                                      description="Name of the Tracelight object to retrieve the data from."
                                       href="https://langfuse.com/docs/evaluation/evaluation-methods/llm-as-a-judge"
                                     />
                                     <FormItem className="min-w-0 flex-1">
@@ -515,7 +515,7 @@ export const VariableMappingCard = ({
                               <div className="flex min-w-0 items-start gap-2">
                                 <VariableMappingDescription
                                   title="Object Field"
-                                  description="Field on the Langfuse object to insert into the template."
+                                  description="Field on the Tracelight object to insert into the template."
                                   href="https://langfuse.com/docs/evaluation/evaluation-methods/llm-as-a-judge"
                                 />
                                 <FormItem className="min-w-0 flex-1">

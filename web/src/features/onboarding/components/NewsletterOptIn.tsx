@@ -32,14 +32,14 @@ const DESCRIPTIONS = {
   installer:
     "Monthly product updates, plus a heads-up when a new major version or a required upgrade affects your instance.",
   invited:
-    "One email a month with the newest Langfuse features and improvements.",
+    "One email a month with the newest Tracelight features and improvements.",
 } as const;
 
 const EXPLAINER_INTROS = {
   installer:
-    "By subscribing, you'll be added to the Langfuse mailing lists for product updates and self-hosting notices. Expect a monthly email about new features, plus a heads-up when a new major version or a required upgrade affects your instance.",
+    "By subscribing, you'll be added to the Tracelight mailing lists for product updates and self-hosting notices. Expect a monthly email about new features, plus a heads-up when a new major version or a required upgrade affects your instance.",
   invited:
-    "By subscribing, you'll be added to the Langfuse product updates list. Expect one email a month about new features.",
+    "By subscribing, you'll be added to the Tracelight product updates list. Expect one email a month about new features.",
 } as const;
 
 const FALLBACK_REASONS = {
@@ -189,7 +189,7 @@ function NewsletterExplainer({ audience }: { audience: Audience }) {
         links instead.
       </p>
       <p>
-        Langfuse admins can disable this question entirely by setting{" "}
+        Tracelight admins can disable this question entirely by setting{" "}
         <span className="font-mono break-words">
           LANGFUSE_DISABLE_SIGNUP_ONBOARDING=true
         </span>

@@ -14,7 +14,7 @@ import { useIsInAppAgentLauncherVisible } from "@/src/features/in-app-agent";
 
 /**
  * Slim mobile top chrome for the minimal-chrome shell: hamburger · centered
- * Langfuse wordmark · account. Everything page-specific (title, actions,
+ * Tracelight wordmark · account. Everything page-specific (title, actions,
  * controls, tabs) lives below in the scrollable content (see MobilePageTitle),
  * so this stays a thin, sticky brand bar.
  *
@@ -56,7 +56,7 @@ export const MobileTopBar = ({
         {envLabel.visible && <EnvLabelBadge region={envLabel.region} />}
       </div>
 
-      {/* Center: the Langfuse wordmark. */}
+      {/* Center: the Tracelight wordmark. */}
       {hasAppSidebar && <TopbarBrand variant="wordmark" />}
 
       {/* Right: the assistant launcher (prominent, gradient-bordered so it

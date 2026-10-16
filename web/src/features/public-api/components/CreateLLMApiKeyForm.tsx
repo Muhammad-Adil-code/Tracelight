@@ -903,7 +903,7 @@ export function CreateLLMApiKeyForm({
                   <FormItem>
                     <FormLabel>Provider name</FormLabel>
                     <FormDescription>
-                      Key to identify the connection within Langfuse. Cannot
+                      Key to identify the connection within Tracelight. Cannot
                       contain colons.
                     </FormDescription>
                     <FormControl>
@@ -970,7 +970,7 @@ export function CreateLLMApiKeyForm({
                         <FormDescription>
                           Base URL of a TypeSafe-compatible API, e.g.{" "}
                           <code>https://gateway.example.com/typesafe/v1</code>.
-                          Langfuse appends <code>/systemone</code>, so leave it
+                          Tracelight appends <code>/systemone</code>, so leave it
                           out.
                         </FormDescription>
                         <FormControl>
@@ -995,7 +995,7 @@ export function CreateLLMApiKeyForm({
                       <FormItem>
                         <FormLabel>Authentication Method</FormLabel>
                         <FormDescription>
-                          Select how Langfuse should authenticate to Bedrock.
+                          Select how Tracelight should authenticate to Bedrock.
                         </FormDescription>
                         <FormControl>
                           <div className="w-full">
@@ -1552,7 +1552,7 @@ export function CreateLLMApiKeyForm({
                             <FormLabel>Enable default models</FormLabel>
                             <FormDescription>
                               Default models for the selected adapter will be
-                              available in Langfuse features.
+                              available in Tracelight features.
                             </FormDescription>
                           </span>
 

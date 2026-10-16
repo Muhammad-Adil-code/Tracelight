@@ -163,7 +163,7 @@ const ImportPromptsDialogContent: React.FC<{
     <>
       <DialogBody className="flex flex-col gap-4">
         <p className="text-muted-foreground text-sm">
-          Upload a JSON file exported from Langfuse. Each prompt will be created
+          Upload a JSON file exported from Tracelight. Each prompt will be created
           as a new version if the name already exists.
         </p>
         <p className="text-muted-foreground text-sm">

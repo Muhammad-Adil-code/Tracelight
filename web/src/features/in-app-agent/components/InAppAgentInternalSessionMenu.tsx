@@ -25,7 +25,7 @@ function getOpenSessionItem({
   const item = {
     type: "item",
     id: "open-session",
-    title: "Open session in Langfuse",
+    title: "Open session in Tracelight",
     icon: ExternalLink,
   } as const;
   // A disabled button, not a placeholder link, so middle-click cannot open a tab.
@@ -54,7 +54,7 @@ function getOpenSessionItem({
 }
 
 /**
- * Debug shortcuts for the Langfuse team: assistant turns are traced into the
+ * Debug shortcuts for the Tracelight team: assistant turns are traced into the
  * instance's AI-features project with the conversation id as session id.
  */
 export function InAppAgentInternalSessionMenu({

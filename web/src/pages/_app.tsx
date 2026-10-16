@@ -103,7 +103,7 @@ import {
   isProductAnalyticsAvailable,
 } from "@/src/features/posthog-analytics";
 
-// Session replay is a Langfuse Cloud feature, so self-hosted never records.
+// Session replay is a Tracelight Cloud feature, so self-hosted never records.
 // The product-analytics gate makes this redundant in HIPAA (PostHog is not
 // initialized there at all); it stays in the expression as defense in depth for
 // a compliance-sensitive flag.

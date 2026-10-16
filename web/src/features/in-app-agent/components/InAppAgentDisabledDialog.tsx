@@ -31,7 +31,7 @@ export function InAppAgentDisabledDialog({
               onOpenChange(false);
             }}
           >
-            Langfuse Halo requires AI features to be enabled for this
+            Tracelight Halo requires AI features to be enabled for this
             organization.
           </AIFeaturesDisabledNotice>
         </DialogBody>

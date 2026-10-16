@@ -49,7 +49,7 @@ export function DefaultHead() {
           <meta property="og:title" content={title} />
           <meta property="og:description" content={description} />
           <meta property="og:type" content="website" />
-          <meta property="og:site_name" content="Langfuse" />
+          <meta property="og:site_name" content="Tracelight" />
         </>
       )}
       {canonicalUrl && (

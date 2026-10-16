@@ -12,7 +12,7 @@ export type VersionUpdateBannerViewProps = {
 };
 
 /**
- * Presentational "Langfuse just got an update" notification — a floating,
+ * Presentational "Tracelight just got an update" notification — a floating,
  * frosted-glass pill pinned center-top, NOT a layout-pushing top bar. It sits
  * over page content (the connected banner renders it into the top-most overlay
  * layer), so it may cover whatever is directly behind it; the rest of the app
@@ -56,7 +56,7 @@ export function VersionUpdateBannerView({
     >
       <Sparkles className="text-primary icon-base shrink-0" />
       <span className="text-foreground text-sm whitespace-nowrap">
-        Langfuse just got an update
+        Tracelight just got an update
       </span>
       <Button size="sm" className="rounded-full" onClick={onReload}>
         <RotateCw className="icon-base mr-1.5" />

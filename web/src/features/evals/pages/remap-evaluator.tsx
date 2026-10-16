@@ -198,7 +198,7 @@ export default function RemapEvaluatorPage() {
                   <Zap className="icon-base mt-0.5 shrink-0" />
                   <span>
                     <span className="font-bold">
-                      This evaluator needs an upgrade for Langfuse v4.
+                      This evaluator needs an upgrade for Tracelight v4.
                     </span>{" "}
                     Evaluators are moving to observation-level. Upgrade this
                     configuration to keep its scores aligned with the v4 data

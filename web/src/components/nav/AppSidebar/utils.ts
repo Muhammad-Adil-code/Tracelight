@@ -17,7 +17,7 @@ export const SIDEBAR_NOTIFICATIONS: SidebarNotification[] = [
     id: "lw5-1",
     title: "Launch Week: Day 1",
     description:
-      "Run experiments inside GitHub Actions to test every PR against a Langfuse dataset.",
+      "Run experiments inside GitHub Actions to test every PR against a Tracelight dataset.",
     link: "https://langfuse.com/changelog/2026-05-25-experiment-ci-cd-gates",
     linkTitle: "Learn more",
     createdAt: "2026-05-25",
@@ -26,7 +26,7 @@ export const SIDEBAR_NOTIFICATIONS: SidebarNotification[] = [
     id: "lw5-2",
     title: "Launch Week: Day 2",
     description:
-      "Langfuse agent skill turns Langfuse into a headless platform to evaluate, query and instrument your application.",
+      "Tracelight agent skill turns Tracelight into a headless platform to evaluate, query and instrument your application.",
     link: "https://langfuse.com/changelog/2026-05-26-langfuse-agent-skill",
     linkTitle: "Learn more",
     createdAt: "2026-05-26",
@@ -52,19 +52,19 @@ export const SIDEBAR_NOTIFICATIONS: SidebarNotification[] = [
     id: "lw5-5",
     title: "Launch Week: Day 5",
     description:
-      "Langfuse MCP now covers observations, metrics, scores, datasets, comments, and more.",
+      "Tracelight MCP now covers observations, metrics, scores, datasets, comments, and more.",
     link: "https://langfuse.com/changelog/2026-05-29-mcp-update",
     linkTitle: "Learn more",
     createdAt: "2026-05-29",
   },
   {
     id: "github-star",
-    title: "Star Langfuse",
+    title: "Star Tracelight",
     description:
       "See the latest releases and help grow the community on GitHub",
     link: "https://github.com/langfuse/langfuse",
     linkImage: {
-      alt: "Langfuse GitHub stars",
+      alt: "Tracelight GitHub stars",
       src: "https://img.shields.io/github/stars/langfuse/langfuse?label=langfuse&style=social",
     },
   },

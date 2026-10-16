@@ -129,7 +129,7 @@ export default function AIFeatureSwitch() {
             {isLangfuseCloud ? (
               <p className="text-sm">
                 This setting applies to all users and projects. Any data{" "}
-                <i>can</i> be sent to AWS Bedrock within the Langfuse data
+                <i>can</i> be sent to AWS Bedrock within the Tracelight data
                 region. Your data will not be used to train models. Applicable
                 HIPAA, SOC2, GDPR, and ISO 27001 compliance remains intact.{" "}
                 <a
@@ -172,7 +172,7 @@ export default function AIFeatureSwitch() {
                   AI Data Use for Product/Service Improvement
                 </h4>
                 <p className="text-sm">
-                  Share data about your use of AI with Langfuse for product and
+                  Share data about your use of AI with Tracelight for product and
                   service improvement.
                 </p>
               </div>

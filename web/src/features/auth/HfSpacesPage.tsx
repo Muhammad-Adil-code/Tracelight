@@ -1,5 +1,5 @@
 /**
- * When running Langfuse in HuggingFace Spaces, the app needs to be opened in a new tab.
+ * When running Tracelight in HuggingFace Spaces, the app needs to be opened in a new tab.
  * Otherwise, the app will not be able to access the session cookie.
  */
 
@@ -18,7 +18,7 @@ export default function HfSpacesPage({ deploymentDomain }: PageProps) {
   return (
     <>
       <Head>
-        <title>Langfuse on Hugging Face</title>
+        <title>Tracelight on Hugging Face</title>
       </Head>
       <div className="flex flex-1 flex-col py-6 sm:min-h-full sm:justify-center sm:px-6 sm:py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -34,7 +34,7 @@ export default function HfSpacesPage({ deploymentDomain }: PageProps) {
             />
           </div>
           <h2 className="text-primary mt-4 text-center text-2xl leading-9 font-bold tracking-tight">
-            Langfuse on Hugging Face
+            Tracelight on Hugging Face
           </h2>
         </div>
 

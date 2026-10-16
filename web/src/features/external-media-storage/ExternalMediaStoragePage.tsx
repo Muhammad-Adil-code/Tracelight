@@ -227,7 +227,7 @@ export default function ExternalMediaStoragePage() {
                     {config ? (
                       <ConfirmationDialogController
                         title="Delete external media storage?"
-                        text="Media stored in this bucket will no longer be resolved in Langfuse."
+                        text="Media stored in this bucket will no longer be resolved in Tracelight."
                         confirmLabel="Delete"
                         variant="destructive"
                         loading={deleteMutation.isPending}

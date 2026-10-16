@@ -298,7 +298,7 @@ export function SupportForm({
   return (
     <ConfirmationDialogController
       title="Confirm Severity 1 (Critical Business Impact)"
-      text="Please confirm that your issue has critical business impact. This means it severely impacts your use of Langfuse in production, such as loss of production data, ingestion issues, or prompt fetching issues."
+      text="Please confirm that your issue has critical business impact. This means it severely impacts your use of Tracelight in production, such as loss of production data, ingestion issues, or prompt fetching issues."
       confirmLabel="Confirm & Submit"
       variant="default"
       loading={isSubmittingLocal}

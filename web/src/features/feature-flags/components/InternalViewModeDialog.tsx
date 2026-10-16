@@ -28,7 +28,7 @@ export function InternalViewModeDialog({
         </DialogHeader>
         <DialogBody>
           <DialogDescription className="m-0 leading-relaxed">
-            Internal view includes unreleased features for the Langfuse team.
+            Internal view includes unreleased features for the Tracelight team.
             Switch it off for the external view. Permissions and feature preview
             settings stay unchanged.
           </DialogDescription>

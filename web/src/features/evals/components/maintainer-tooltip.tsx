@@ -7,7 +7,7 @@ import { UserCircle2Icon } from "lucide-react";
 function MaintainerIcon({ maintainer }: { maintainer: string }) {
   if (maintainer.includes("Ragas")) {
     return <RagasLogoIcon />;
-  } else if (maintainer.includes("Langfuse")) {
+  } else if (maintainer.includes("Tracelight")) {
     return <LangfuseIcon size={16} />;
   }
   return <UserCircle2Icon className="icon-base" />;

@@ -381,7 +381,7 @@ export const ValueCell = memo(
         case "string": {
           const stringValue = String(value);
 
-          // Render previewable media (Langfuse refs, data URIs, media URLs) as a
+          // Render previewable media (Tracelight refs, data URIs, media URLs) as a
           // hover-to-peek chip instead of the raw string.
           const mediaDescriptor = classifyMediaValue(stringValue);
           if (mediaDescriptor) {

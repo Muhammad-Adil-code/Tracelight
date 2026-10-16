@@ -62,7 +62,7 @@ export function HomeDashboardSelect({
           ]
         : []),
       {
-        heading: "Langfuse-maintained",
+        heading: "Tracelight-maintained",
         options: curated.map(toOption),
       },
     ];

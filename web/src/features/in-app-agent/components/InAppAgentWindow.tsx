@@ -142,7 +142,7 @@ function InAppAgentQuickActionPicker({
   return (
     <>
       <p className="text-foreground mt-3 text-sm font-bold">
-        Hi I&apos;m Halo, your Langfuse assistant
+        Hi I&apos;m Halo, your Tracelight assistant
       </p>
       <p className="text-muted-foreground mt-1 max-w-xs text-center text-xs leading-relaxed">
         What do you want to do?

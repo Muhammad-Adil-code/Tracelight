@@ -63,7 +63,7 @@ export function MobileRightDrawer() {
             {/* sr-only for screen readers and accessibility */}
             <DrawerTitle className="sr-only">{migrationTitle}</DrawerTitle>
             <DrawerDescription className="sr-only">
-              Action items to keep your integrations compatible with Langfuse v4
+              Action items to keep your integrations compatible with Tracelight v4
               and upcoming deprecations.
             </DrawerDescription>
           </DrawerHeader>

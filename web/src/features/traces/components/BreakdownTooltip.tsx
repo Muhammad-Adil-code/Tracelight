@@ -31,7 +31,7 @@ interface BreakdownTooltipProps {
   isCost?: boolean;
   pricingTierName?: string;
   priceSource?: PriceSource;
-  /** Whether cost was calculated by Langfuse or provided at ingestion. */
+  /** Whether cost was calculated by Tracelight or provided at ingestion. */
   costSource?: CostSource;
 }
 

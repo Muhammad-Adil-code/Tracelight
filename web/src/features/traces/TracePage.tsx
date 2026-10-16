@@ -65,10 +65,10 @@ export function TracePage({
             asChild
             size="sm"
             variant="outline"
-            title="Back to Langfuse"
+            title="Back to Tracelight"
             className="px-3"
           >
-            <Link href="/">Langfuse</Link>
+            <Link href="/">Tracelight</Link>
           </Button>
         );
       }
@@ -77,7 +77,7 @@ export function TracePage({
           asChild
           size="sm"
           variant="default"
-          title="Sign in to Langfuse"
+          title="Sign in to Tracelight"
           className="px-3"
         >
           <Link href={`/auth/sign-in?targetPath=${encodedTargetPath}`}>

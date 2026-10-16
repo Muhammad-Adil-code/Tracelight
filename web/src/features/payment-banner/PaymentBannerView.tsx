@@ -57,7 +57,7 @@ export function PaymentBannerView({
         <AlertCircle className="icon-base mt-0.5 shrink-0 sm:mt-0" />
         <p className="min-w-0 text-sm wrap-break-word">
           <span className="font-bold">Billing Issue:</span>{" "}
-          {`We have problems collecting subscription payment for your organization '${organizationName}'. Please update your payment information to continue using Langfuse.`}
+          {`We have problems collecting subscription payment for your organization '${organizationName}'. Please update your payment information to continue using Tracelight.`}
         </p>
       </div>
       <Button

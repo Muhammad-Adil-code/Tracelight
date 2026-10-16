@@ -30,7 +30,7 @@ export function BuildIntentFieldset({
   return (
     <fieldset>
       <legend className="text-xl font-bold">
-        What will you use Langfuse for?
+        What will you use Tracelight for?
       </legend>
       <div className="mt-1 flex flex-col gap-3">
         <p className="text-muted-foreground text-sm">
