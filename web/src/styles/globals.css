@@ -377,30 +377,30 @@
     --line-dotted: 240 5.2% 33.9%; /* zinc-600 */
     --input: 240 5.9% 90%; /* zinc-200 */
 
-    --primary: 240 5.9% 10%; /* zinc-900 */
-    --primary-foreground: 0 0% 98%; /* zinc-50 */
+    --primary: 252 83% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 4.8% 95.9%; /* zinc-100 */
-    --secondary-foreground: 240 5.9% 10%; /* zinc-900 */
+    --secondary: 252 40% 96%;
+    --secondary-foreground: 252 40% 22%;
 
-    --tertiary: 240 5.9% 90%; /* zinc-200 */
-    --tertiary-foreground: 240 5.9% 10%; /* zinc-900 */
+    --tertiary: 252 30% 91%;
+    --tertiary-foreground: 252 40% 22%;
 
-    --accent: 240 4.8% 95.9%; /* zinc-100 */
-    --accent-foreground: 240 3.7% 15.9%; /* zinc-800 */
+    --accent: 174 45% 93%;
+    --accent-foreground: 174 70% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%; /* zinc-50 */
 
-    --ring: 240 5% 64.9%; /* zinc-400 */
+    --ring: 252 83% 60%;
 
-    --primary-accent: 243 75.4% 58.6%;
+    --primary-accent: 174 72% 40%;
     --primary-accent-fill: hsl(var(--primary-accent));
     /* Hyperlinks get their own pair (tabs/selection stay on primary-accent):
        same lavender family as dark, but muted — links shouldn't be the
        loudest thing on a light page — with a clearly darker hover step. */
-    --link: 246 40% 50%;
-    --link-hover: 246 55% 36%;
+    --link: 252 65% 52%;
+    --link-hover: 252 70% 38%;
     /* Preview-deployment strip (PR previews only): soft blue tint with text
        darker than the fill, links a step brighter than body text. Values are
        the blue-100/950/200/700/800 ramp. */
@@ -507,28 +507,28 @@
     --json-value-boolean: var(--color-orange-800);
     --json-value-nullish: var(--color-gray-500);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
     --sidebar-background: var(--surface-sunken);
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 5.2% 93.5%; /* between zinc-100 and zinc-200 */
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 240 5.9% 90%; /* zinc-200 */
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-foreground: 252 15% 28%;
+    --sidebar-primary: 252 83% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 252 60% 95%;
+    --sidebar-accent-foreground: 252 50% 28%;
+    --sidebar-border: 252 20% 90%;
+    --sidebar-ring: 252 83% 60%;
 
     --find-match-background: 60 60% 85%;
     --find-match-selected-background: 60 100% 50%;
     --find-match-selected-foreground: 0 0% 0%;
 
-    --chart-1: 237 60% 61%; /* indigo */
-    --chart-2: 28 100% 41%; /* orange */
-    --chart-3: 171 100% 29%; /* teal */
-    --chart-4: 271 48% 55%; /* violet */
-    --chart-5: 38 100% 36%; /* amber */
-    --chart-6: 213 80% 55%; /* blue */
-    --chart-7: 115 63% 34%; /* green */
-    --chart-8: 322 46% 49%; /* magenta */
+    --chart-1: 252 83% 60%;
+    --chart-2: 174 72% 40%;
+    --chart-3: 280 65% 58%;
+    --chart-4: 190 80% 42%;
+    --chart-5: 38 100% 36%;
+    --chart-6: 213 80% 55%;
+    --chart-7: 115 63% 34%;
+    --chart-8: 322 46% 49%;
     --chart-fill-1: 234 90% 77%;
     --chart-fill-2: 25 87% 64%;
     --chart-fill-3: 173 100% 37%;
@@ -580,7 +580,7 @@
        dimmer than content until active. Bright tiers cap near 91% (the docs
        site caps at 90%) — never near-white. Don't compress the ramp — the
        gap is the hierarchy. */
-    --background: 0 0% 6%;
+    --background: 252 12% 7%;
     --foreground: 0 0% 70%;
 
     --muted: 0 0% 11.6%;
@@ -611,29 +611,29 @@
     --line-dotted: 0 0% 42%;
     --input: 0 0% 18%;
 
-    --primary: 0 0% 90%;
-    --primary-foreground: 0 0% 3.5%;
+    --primary: 252 90% 72%;
+    --primary-foreground: 252 40% 8%;
 
-    --secondary: 0 0% 11.6%;
-    --secondary-foreground: 0 0% 88%;
+    --secondary: 252 15% 13%;
+    --secondary-foreground: 252 20% 88%;
 
-    --tertiary: 0 0% 16.5%;
-    --tertiary-foreground: 0 0% 88%;
+    --tertiary: 252 12% 18%;
+    --tertiary-foreground: 252 20% 88%;
 
     /* One clear step above --popover (12%) — focus:bg-accent is the only
        focus cue in menus/selects/⌘K, and 14.3% was a near-invisible ~1.13:1. */
-    --accent: 0 0% 18%;
-    --accent-foreground: 0 0% 70%;
+    --accent: 174 25% 18%;
+    --accent-foreground: 174 40% 80%;
 
     --destructive: 0 78.7% 63.1%;
     --destructive-foreground: 0 0% 100%;
 
-    --ring: 246 55% 70%;
+    --ring: 252 90% 72%;
 
-    --primary-accent: 246 55% 70%;
-    --primary-accent-fill: oklch(50% 0.11 287);
-    --link: 246 55% 70%;
-    --link-hover: 246 95% 85%;
+    --primary-accent: 174 65% 50%;
+    --primary-accent-fill: oklch(52% 0.11 185);
+    --link: 174 65% 55%;
+    --link-hover: 174 80% 72%;
     /* Preview-deployment strip: fill is blue-500/25 precomposed over the 6%
        canvas, border is blue-300/20 precomposed over that fill — the strip
        needs opaque colors. Body text stays on the neutral foreground tier;
@@ -735,29 +735,29 @@
     --json-value-boolean: hsl(27 50% 61%);
     --json-value-nullish: var(--color-gray-400);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 4%; /* one step below the page */
+    --sidebar-background: 252 18% 5%; /* one step below the page */
     --sidebar-foreground: 0 0% 60%;
-    --sidebar-primary: 0 0% 90%;
-    --sidebar-primary-foreground: 0 0% 3.5%;
-    --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 91%;
-    --sidebar-border: 0 0% 12%;
-    --sidebar-ring: 246 55% 70%;
+    --sidebar-primary: 252 90% 72%;
+    --sidebar-primary-foreground: 252 40% 8%;
+    --sidebar-accent: 252 20% 13%;
+    --sidebar-accent-foreground: 252 30% 92%;
+    --sidebar-border: 252 15% 14%;
+    --sidebar-ring: 252 90% 72%;
 
     --find-match-background: 60 100% 20%;
     --find-match-selected-background: 60 100% 50%;
     --find-match-selected-foreground: 0 0% 0%;
 
-    --chart-1: 236 75% 68%; /* indigo */
-    --chart-2: 30 100% 43%; /* orange */
-    --chart-3: 172 100% 32%; /* teal */
-    --chart-4: 270 59% 62%; /* violet */
-    --chart-5: 39 100% 39%; /* amber */
-    --chart-6: 213 90% 60%; /* blue */
-    --chart-7: 115 50% 41%; /* green */
-    --chart-8: 323 53% 56%; /* magenta */
+    --chart-1: 252 90% 72%;
+    --chart-2: 174 65% 50%;
+    --chart-3: 280 70% 68%;
+    --chart-4: 190 85% 52%;
+    --chart-5: 39 100% 39%;
+    --chart-6: 213 90% 60%;
+    --chart-7: 115 50% 41%;
+    --chart-8: 323 53% 56%;
     --chart-fill-1: 235 44% 56%;
     --chart-fill-2: 30 97% 36%;
     --chart-fill-3: 172 100% 27%;
