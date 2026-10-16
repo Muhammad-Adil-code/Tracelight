@@ -90,7 +90,7 @@ const OrganizationProjectTiles = ({
             >
               {!project.deletedAt && (
                 <Link
-                  href={`/project/${project.id}`}
+                  href={`/project/${project.id}/traces`}
                   className="absolute inset-0"
                   aria-label={`Go to project ${project.name}`}
                 />
@@ -145,7 +145,7 @@ const OrganizationProjectTiles = ({
               {!project.deletedAt ? (
                 <CardFooter className="gap-2">
                   <Button asChild variant="secondary">
-                    <Link href={`/project/${project.id}`}>Go to project</Link>
+                    <Link href={`/project/${project.id}/traces`}>Go to project</Link>
                   </Button>
                   <Button asChild variant="ghost">
                     <Link href={`/project/${project.id}/settings`}>

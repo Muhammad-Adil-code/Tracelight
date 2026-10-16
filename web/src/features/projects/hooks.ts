@@ -101,7 +101,7 @@ export const useOrgProjectSwitchPaths = () => {
           router.query.projectId as string,
           projectId,
         )
-      : `/project/${projectId}`;
+      : `/project/${projectId}/traces`;
 
   const getOrgPath = (orgId: string) =>
     router.query.organizationId

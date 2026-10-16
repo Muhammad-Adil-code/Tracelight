@@ -44,10 +44,10 @@ export enum RouteSection {
 }
 
 export enum RouteGroup {
-  Observability = "Observability",
-  PromptManagement = "Prompt Management",
-  ContextManagement = "Context Management",
-  Evaluation = "Evaluation",
+  Observability = "Trace",
+  PromptManagement = "Build",
+  ContextManagement = "Context",
+  Evaluation = "Evals",
 }
 
 export type Route = {
@@ -84,7 +84,7 @@ export type Route = {
 
 export const ROUTES: Route[] = [
   {
-    title: "Go to...",
+    title: "Search...",
     href: "", // Empty pathname since this is a dropdown
     icon: Search,
     menuNode: <CommandMenuTrigger />,
@@ -104,20 +104,9 @@ export const ROUTES: Route[] = [
     section: RouteSection.Main,
   },
   {
-    title: "Home",
+    title: "Overview",
     href: `/project/[projectId]`,
     icon: Home,
-    section: RouteSection.Main,
-  },
-  {
-    title: "Dashboards",
-    href: `/project/[projectId]/dashboards`,
-    isActive: matchesPathname([
-      `/project/[projectId]/dashboards`,
-      `/project/[projectId]/widgets`,
-    ]),
-    icon: LayoutDashboard,
-    productModule: "dashboards",
     section: RouteSection.Main,
   },
   {
@@ -131,6 +120,17 @@ export const ROUTES: Route[] = [
       `/project/[projectId]/traces`,
       `/project/[projectId]/observations`,
     ]),
+  },
+  {
+    title: "Dashboards",
+    href: `/project/[projectId]/dashboards`,
+    isActive: matchesPathname([
+      `/project/[projectId]/dashboards`,
+      `/project/[projectId]/widgets`,
+    ]),
+    icon: LayoutDashboard,
+    productModule: "dashboards",
+    section: RouteSection.Main,
   },
   {
     title: "Sessions",
@@ -167,15 +167,46 @@ export const ROUTES: Route[] = [
     section: RouteSection.Main,
   },
   {
-    title: "Skills",
-    featureFlag: "skillManagement",
-    label: <Badge text="Beta" color="blue" size="sm" />,
-    href: "/project/[projectId]/skills",
-    icon: FolderCode,
-    projectRbacScopes: ["skills:read"],
-    productModule: "prompt-management",
-    group: RouteGroup.PromptManagement,
+    title: "Evals",
+    icon: Lightbulb,
+    productModule: "evaluation",
+    projectRbacScopes: ["evaluator:read", "evaluationRule:read"],
+    group: RouteGroup.Evaluation,
     section: RouteSection.Main,
+    href: `/project/[projectId]/evals`,
+    legacyPathname: `/project/[projectId]/evals/legacy`,
+  },
+  {
+    title: "Datasets",
+    href: `/project/[projectId]/datasets`,
+    icon: Database,
+    productModule: "datasets",
+    projectRbacScopes: ["datasets:read"],
+    group: RouteGroup.Evaluation,
+    section: RouteSection.Main,
+  },
+  {
+    title: "Experiments",
+    href: `/project/[projectId]/experiments`,
+    icon: Beaker,
+    featureFlag: "experimentsV4Enabled",
+    group: RouteGroup.Evaluation,
+    section: RouteSection.Main,
+  },
+  {
+    title: "Scores",
+    href: `/project/[projectId]/scores`,
+    group: RouteGroup.Evaluation,
+    section: RouteSection.Main,
+    icon: SquarePercent,
+  },
+  {
+    title: "Review Queues",
+    href: `/project/[projectId]/annotation-queues`,
+    projectRbacScopes: ["annotationQueues:read"],
+    group: RouteGroup.Evaluation,
+    section: RouteSection.Main,
+    icon: ClipboardPen,
   },
   {
     title: "Prompts",
@@ -195,45 +226,14 @@ export const ROUTES: Route[] = [
     section: RouteSection.Main,
   },
   {
-    title: "Scores",
-    href: `/project/[projectId]/scores`,
-    group: RouteGroup.Evaluation,
-    section: RouteSection.Main,
-    icon: SquarePercent,
-  },
-  {
-    title: "Evaluators",
-    icon: Lightbulb,
-    productModule: "evaluation",
-    projectRbacScopes: ["evaluator:read", "evaluationRule:read"],
-    group: RouteGroup.Evaluation,
-    section: RouteSection.Main,
-    href: `/project/[projectId]/evals`,
-    legacyPathname: `/project/[projectId]/evals/legacy`,
-  },
-  {
-    title: "Human Annotation",
-    href: `/project/[projectId]/annotation-queues`,
-    projectRbacScopes: ["annotationQueues:read"],
-    group: RouteGroup.Evaluation,
-    section: RouteSection.Main,
-    icon: ClipboardPen,
-  },
-  {
-    title: "Datasets",
-    href: `/project/[projectId]/datasets`,
-    icon: Database,
-    productModule: "datasets",
-    projectRbacScopes: ["datasets:read"],
-    group: RouteGroup.Evaluation,
-    section: RouteSection.Main,
-  },
-  {
-    title: "Experiments",
-    href: `/project/[projectId]/experiments`,
-    icon: Beaker,
-    featureFlag: "experimentsV4Enabled",
-    group: RouteGroup.Evaluation,
+    title: "Skills",
+    featureFlag: "skillManagement",
+    label: <Badge text="Beta" color="blue" size="sm" />,
+    href: "/project/[projectId]/skills",
+    icon: FolderCode,
+    projectRbacScopes: ["skills:read"],
+    productModule: "prompt-management",
+    group: RouteGroup.PromptManagement,
     section: RouteSection.Main,
   },
   {
@@ -324,7 +324,7 @@ function CommandMenuTrigger() {
       className="whitespace-nowrap"
     >
       <Search className="icon-base" />
-      Go to...
+      Search...
       <span className="-mr-px ml-auto hidden md:inline-flex">
         <KeyboardShortcut keys={["Mod", "K"]} />
       </span>

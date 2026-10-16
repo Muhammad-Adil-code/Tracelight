@@ -393,7 +393,7 @@ function ProjectsGroup({
               });
               onNavigate({
                 title: item.title,
-                url: `/project/${item.projectId}`,
+                url: `/project/${item.projectId}/traces`,
                 type: "project",
               });
             }}
