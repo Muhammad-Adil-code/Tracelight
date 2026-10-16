@@ -1,8 +1,11 @@
+# Tracelight (a Langfuse fork) self-hosting stack. Service names keep their upstream
+# identifiers so existing config and env vars continue to work.
 # Make sure to update the credential placeholders with your own secrets.
 # We mark them with # CHANGEME in the file below.
 # In addition, we recommend to restrict inbound traffic on the host to langfuse-web (port 3000) and minio (port 9090) only.
 # All other components are bound to localhost (127.0.0.1) to only accept connections from the local machine.
 # External connections from other machines will not be able to reach these services directly.
+name: tracelight
 services:
   langfuse-worker:
     image: docker.langfuse.com/langfuse/langfuse-worker:4
