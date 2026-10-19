@@ -44,7 +44,7 @@ export function formatEvaluatorCostCalculation({
     const window = isSelection ? "" : " from the last 7 days";
     return {
       calculation: null,
-      explanation: `No cost-bearing evaluator trace was available${window}, and the fallback test call did not return a usable model cost. Expected cost would be charged to your linked API key, not Langfuse.`,
+      explanation: `No cost-bearing evaluator trace was available${window}, and the fallback test call did not return a usable model cost. Expected cost would be charged to your linked API key, not Tracelight.`,
     };
   }
 

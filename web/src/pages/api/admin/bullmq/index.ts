@@ -17,7 +17,7 @@ import {
 } from "@langfuse/shared/src/server";
 import { AdminApiAuthService } from "@/src/ee/features/admin-api/server";
 /* 
-This API route is used by Langfuse Cloud to retry failed bullmq jobs.
+This API route is used by Tracelight Cloud to retry failed bullmq jobs.
 */
 
 const BullStatus = z.enum([

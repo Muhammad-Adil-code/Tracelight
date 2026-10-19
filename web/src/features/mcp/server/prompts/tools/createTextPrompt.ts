@@ -72,7 +72,7 @@ const CreateTextPromptInputSchema = z.object({
 export const [createTextPromptTool, handleCreateTextPrompt] = defineTool({
   name: "createTextPrompt",
   description: [
-    "Create a new text prompt version in Langfuse.",
+    "Create a new text prompt version in Tracelight.",
     "",
     "Important:",
     "- Prompts are immutable - cannot modify existing versions",

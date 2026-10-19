@@ -261,7 +261,7 @@ class EvaluationResult:
 `;
 
 export const DEFAULT_PYTHON_CODE_EVAL_SOURCE = `def evaluate(ctx: EvaluationContext) -> EvaluationResult:
-  """Evaluates one observation and returns one or more Langfuse scores."""
+  """Evaluates one observation and returns one or more Tracelight scores."""
   input = ctx.observation.input
   matches_output = input is not None and ctx.observation.output == input
 

@@ -38,7 +38,7 @@ const EvaluationRuleEvaluatorInputBase = {
 const VariableMappingSchema = z
   .array(ObservationPromptVariableMappingInput)
   .describe(
-    "Optional rule-specific variable mapping for LLM-as-a-judge and decision-model evaluators. Omit for code evaluators, whose mapping is managed by Langfuse.",
+    "Optional rule-specific variable mapping for LLM-as-a-judge and decision-model evaluators. Omit for code evaluators, whose mapping is managed by Tracelight.",
   );
 
 export const AttachEvaluatorToEvaluationRuleBaseSchema = z.object({

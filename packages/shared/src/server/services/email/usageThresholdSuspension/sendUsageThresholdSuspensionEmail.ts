@@ -43,7 +43,7 @@ export const sendUsageThresholdSuspensionEmail = async ({
     const mailer = createMailTransport(env.SMTP_CONNECTION_URL);
 
     // const emailSubject = `🚨 URGENT: Action required for ${organizationName} - enforcement begins next week`;
-    const emailSubject = `🚨 URGENT: Langfuse ingestion suspended for ${organizationName}`;
+    const emailSubject = `🚨 URGENT: Tracelight ingestion suspended for ${organizationName}`;
     const emailHtml = await render(
       UsageThresholdSuspensionEmailTemplate({
         organizationName,

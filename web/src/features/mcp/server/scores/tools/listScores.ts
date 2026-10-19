@@ -156,7 +156,7 @@ const ListScoresInputSchema = ListScoresBaseSchema.superRefine((data, ctx) => {
 export const [listScoresTool, handleListScores] = defineTool({
   name: "listScores",
   description: [
-    "Find scores in Langfuse.",
+    "Find scores in Tracelight.",
     "Use this to review quality, evaluation, or feedback scores for traces, observations, sessions, and experiments (dataset runs).",
     "Each score carries a polymorphic value matching its dataType (number, boolean, or string) and a subject describing what it scores: { kind: trace | observation | session | experiment, id }.",
     "Results are paginated with an opaque cursor: pass meta.cursor from the previous response to fetch the next page; a response without meta.cursor is the last page.",

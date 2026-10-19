@@ -81,7 +81,7 @@ export const featurePreviewLabels = {
   externalMediaStorage: "External Media Storage",
   sessionViewV2: "Redesigned Session View",
   sessionViewV2Timeline: "Session Timeline",
-  langfuseTopics: "Langfuse Topics",
+  langfuseTopics: "Tracelight Topics",
 } satisfies Record<FeaturePreviewFlag | PersonalFeaturePreviewFlag, string>;
 
 export type FeaturePreviewAvailabilityContext = {
