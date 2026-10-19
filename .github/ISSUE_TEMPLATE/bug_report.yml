@@ -17,10 +17,10 @@ body:
       required: true
   - type: dropdown
     attributes:
-      label: Langfuse Cloud or self-hosted?
+      label: Tracelight deployment
       options:
-        - "Langfuse Cloud"
         - "Self-hosted"
+        - "Local development"
     validations:
       required: true
   - type: input
