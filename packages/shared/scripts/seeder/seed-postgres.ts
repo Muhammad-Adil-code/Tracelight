@@ -77,7 +77,7 @@ async function main() {
       name: "Demo User",
       email: "demo@tracelight.dev",
       password: await hash("password", 12),
-      image: "https://static.langfuse.com/langfuse-dev%2Fexample-avatar.png",
+      image: null,
       featureFlags: ["langfuseTopics"],
       v4BetaEnabled: true,
     },
