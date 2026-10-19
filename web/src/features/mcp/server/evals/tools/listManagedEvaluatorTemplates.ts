@@ -23,7 +23,7 @@ export const [
 ] = defineTool({
   name: "listManagedEvaluatorTemplates",
   description: [
-    "List the evaluator templates maintained by Langfuse and partners.",
+    "List the evaluator templates maintained by Tracelight and partners.",
     "LLM-as-a-judge and code definitions can be copied into createEvaluator.",
     "For decision-model templates, copy questions, convert each state entry into a variableMapping entry, and provide a modelConfig for an OpenAI connection using an allowlisted decision model (currently `gpt-6-luna`) or a TypeSafe connection.",
   ].join(" "),

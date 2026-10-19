@@ -42,7 +42,7 @@ import {
 export const promptsFeature = {
   name: "prompts",
   description:
-    "Manage Langfuse prompts - create, retrieve, and update prompt versions",
+    "Manage Tracelight prompts - create, retrieve, and update prompt versions",
 
   tools: [
     {

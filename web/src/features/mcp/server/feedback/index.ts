@@ -8,7 +8,7 @@ import {
 export const feedbackFeature = {
   name: "feedback",
   description:
-    "Submit feedback about Langfuse skills, MCP tools, CLI, docs, or API",
+    "Submit feedback about Tracelight skills, MCP tools, CLI, docs, or API",
   tools: [
     {
       definition: submitFeedbackTool,

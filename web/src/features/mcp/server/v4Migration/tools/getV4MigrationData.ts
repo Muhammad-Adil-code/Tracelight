@@ -11,7 +11,7 @@ export const [getV4MigrationDataTool, handleGetV4MigrationData] = defineTool({
   name: "getV4MigrationData",
   action: "project:read",
   description:
-    "Get project-specific evidence for upgrading to Langfuse v4, including SDK versions and compatibility, experiment instrumentation, legacy integrations, deprecated API usage, and trace-level evaluators. Use this before giving v4 migration guidance.",
+    "Get project-specific evidence for upgrading to Tracelight v4, including SDK versions and compatibility, experiment instrumentation, legacy integrations, deprecated API usage, and trace-level evaluators. Use this before giving v4 migration guidance.",
   baseSchema: GetV4MigrationDataInput,
   inputSchema: GetV4MigrationDataInput,
   handler: async (_input, context) =>

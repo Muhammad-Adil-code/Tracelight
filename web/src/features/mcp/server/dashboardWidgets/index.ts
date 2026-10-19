@@ -7,7 +7,7 @@ import * as dashboardCrud from "./tools/dashboardCrud";
 
 export const dashboardWidgetsFeature = {
   name: "dashboardWidgets",
-  description: "Manage dashboard widgets in the current Langfuse project",
+  description: "Manage dashboard widgets in the current Tracelight project",
   tools: [
     {
       definition: dashboardCrud.listDashboardWidgetsTool,

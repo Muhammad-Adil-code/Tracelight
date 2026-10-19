@@ -3,7 +3,7 @@ import { getHealthTool, handleGetHealth } from "./tools/getHealth";
 
 export const healthFeature = {
   name: "health",
-  description: "Check Langfuse health",
+  description: "Check Tracelight health",
   tools: [
     {
       definition: getHealthTool,

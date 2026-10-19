@@ -51,7 +51,7 @@ import { handleTestEvaluator, testEvaluatorTool } from "./tools/testEvaluator";
 export const evalsFeature = {
   name: "evals",
   description:
-    "Manage evaluators and evaluation rules in the current Langfuse project",
+    "Manage evaluators and evaluation rules in the current Tracelight project",
   tools: [
     {
       definition: listManagedEvaluatorTemplatesTool,

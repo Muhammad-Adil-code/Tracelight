@@ -39,7 +39,7 @@ const GetObservationBaseSchema = z.object({
 export const [getObservationTool, handleGetObservation] = defineTool({
   name: "getObservation",
   description: [
-    "Get the details for a single observation in the current Langfuse project by observation ID.",
+    "Get the details for a single observation in the current Tracelight project by observation ID.",
     "Use this when you already know the observation ID and want to inspect its timing, model, status, payload, metadata, usage, cost, or prompt fields.",
     "Requires explicit fromStartTime (inclusive) and toStartTime (exclusive) with 0 < toStartTime - fromStartTime <= 2160 hours (90 days). The limit measures elapsed time, not calendar dates; do not extend the upper bound to the end of the 90th day. Reuse the observation startTime and traceId from earlier results to narrow the lookup; traceId does not replace time bounds. When using the observation startTime as fromStartTime, choose a later toStartTime.",
     "",

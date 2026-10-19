@@ -8,7 +8,7 @@ import {
 export const [deleteScoreConfigTool, handleDeleteScoreConfig] = defineTool({
   name: "deleteScoreConfig",
   description:
-    "Delete a score configuration from the current Langfuse project by archiving it.",
+    "Delete a score configuration from the current Tracelight project by archiving it.",
   action: "scoreConfigs:CUD",
   baseSchema: PutScoreConfigQuery,
   inputSchema: PutScoreConfigQuery,

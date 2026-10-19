@@ -10,7 +10,7 @@ import { createMcpRuleService, toMcpEvaluationRule } from "../rule-service";
 export const [listEvaluationRulesTool, handleListEvaluationRules] = defineTool({
   name: "listEvaluationRules",
   description:
-    "List observation evaluation rules in the current Langfuse project, including all evaluator assignments. Results are paginated.",
+    "List observation evaluation rules in the current Tracelight project, including all evaluator assignments. Results are paginated.",
   action: "evaluationRule:read",
   baseSchema: ListEvaluationRulesBaseSchema,
   inputSchema: ListEvaluationRulesInputSchema,

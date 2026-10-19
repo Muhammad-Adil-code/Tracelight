@@ -12,7 +12,7 @@ import { clampToDataAccessDays } from "@/src/features/entitlements/server";
 export const [listExperimentItemsTool, handleListExperimentItems] = defineTool({
   name: "listExperimentItems",
   description: [
-    "List experiment items in the current Langfuse project with cursor-based pagination.",
+    "List experiment items in the current Tracelight project with cursor-based pagination.",
     "Use this to inspect experiment item inputs, outputs, expected outputs, metadata, and optionally item or trace scores.",
     "Results are sorted newest first by experiment item startTime.",
     "fromStartTime is required. Request io and metadata fields only when needed because they can be large.",

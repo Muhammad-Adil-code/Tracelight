@@ -21,7 +21,7 @@ const ListCommentsBaseSchema = z
 export const [listCommentsTool, handleListComments] = defineTool({
   name: "listComments",
   description:
-    "List comments in the current Langfuse project, optionally filtered by object or author.",
+    "List comments in the current Tracelight project, optionally filtered by object or author.",
   action: "comments:read",
   baseSchema: ListCommentsBaseSchema,
   inputSchema: GetCommentsV1Query,

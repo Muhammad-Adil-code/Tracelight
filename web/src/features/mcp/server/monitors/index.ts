@@ -6,7 +6,7 @@ import { listMonitorsTool, handleListMonitors } from "./tools/listMonitors";
 
 export const monitorsFeature = {
   name: "alerts",
-  description: "Inspect alerts in the current Langfuse project",
+  description: "Inspect alerts in the current Tracelight project",
   tools: [
     { definition: listMonitorsTool, handler: handleListMonitors },
     { definition: getMonitorTool, handler: handleGetMonitor },

@@ -70,7 +70,7 @@ export async function assertRuleAssignmentsReplaceableViaMcp(
   );
   if (hidden.length > 0) {
     throw new InvalidRequestError(
-      "This rule uses internal evaluators that are not visible through MCP. Update its evaluator assignments in the Langfuse UI.",
+      "This rule uses internal evaluators that are not visible through MCP. Update its evaluator assignments in the Tracelight UI.",
     );
   }
 }

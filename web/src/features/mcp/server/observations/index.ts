@@ -24,7 +24,7 @@ import { env } from "@/src/env.mjs";
 export const observationsFeature = {
   name: "observations",
   description:
-    "Inspect traces, generations, spans, events, and other observations in Langfuse",
+    "Inspect traces, generations, spans, events, and other observations in Tracelight",
   tools: [
     {
       definition: listObservationsTool,

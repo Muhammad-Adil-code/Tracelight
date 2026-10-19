@@ -6,7 +6,7 @@ import {
 
 export const v4MigrationFeature = {
   name: "v4Migration",
-  description: "Inspect project-specific Langfuse v4 migration evidence",
+  description: "Inspect project-specific Tracelight v4 migration evidence",
   tools: [
     {
       definition: getV4MigrationDataTool,

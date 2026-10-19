@@ -22,7 +22,7 @@ export const [getHealthTool, handleGetHealth] = defineTool({
   name: "getHealth",
   action: __dangerouslySkipAuthz,
   description:
-    "Check Langfuse API health. Optionally verify database availability and recent trace/observation ingestion.",
+    "Check Tracelight API health. Optionally verify database availability and recent trace/observation ingestion.",
   baseSchema: HealthInputSchema,
   inputSchema: HealthInputSchema,
   handler: async (input, context) =>

@@ -26,7 +26,7 @@ import {
 export const scoresFeature = {
   name: "scores",
   description:
-    "Read scores and manage score configurations in the current Langfuse project",
+    "Read scores and manage score configurations in the current Tracelight project",
   tools: [
     {
       definition: listScoresTool,

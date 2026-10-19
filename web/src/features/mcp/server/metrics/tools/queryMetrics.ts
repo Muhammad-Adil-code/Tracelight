@@ -154,7 +154,7 @@ export const [queryMetricsTool, handleQueryMetrics] = defineTool({
   name: "queryMetrics",
   action: "metrics:read",
   description:
-    "Answer analytics questions about the current Langfuse project, such as usage over time, model costs, latency, errors, scores, or grouped breakdowns by environment, trace, observation, model, user, session, tag, or score name.",
+    "Answer analytics questions about the current Tracelight project, such as usage over time, model costs, latency, errors, scores, or grouped breakdowns by environment, trace, observation, model, user, session, tag, or score name.",
   baseSchema: MetricsQueryObjectV2BaseSchema,
   inputSchema: MetricsQueryObjectV2,
   handler: async (input, context) => {

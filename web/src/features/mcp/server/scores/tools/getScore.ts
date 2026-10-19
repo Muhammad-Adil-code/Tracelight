@@ -11,7 +11,7 @@ const GetScoreInputSchema = z.object({ scoreId: z.string() }).strict();
 export const [getScoreTool, handleGetScore] = defineTool({
   name: "getScore",
   description: [
-    "Fetch one score by ID from the current Langfuse project.",
+    "Fetch one score by ID from the current Tracelight project.",
     "The score carries a polymorphic value matching its dataType (number, boolean, or string) and a subject describing what it scores: { kind: trace | observation | session | experiment, id }.",
     "Score reads are eventually consistent: a score created with createScore may not be returned by getScore immediately. If a newly created score is not found, wait briefly and retry.",
   ].join("\n"),

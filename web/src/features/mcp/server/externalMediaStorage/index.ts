@@ -17,7 +17,7 @@ import {
 export const externalMediaStorageFeature = {
   name: "external-media-storage",
   description:
-    "Configure S3 external media storage for the current Langfuse project",
+    "Configure S3 external media storage for the current Tracelight project",
   tools: [
     {
       definition: getExternalMediaStorageTool,

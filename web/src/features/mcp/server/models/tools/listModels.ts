@@ -10,7 +10,7 @@ import { runMcpTool } from "../../../core/run-mcp-tool";
 export const [listModelsTool, handleListModels] = defineTool({
   name: "listModels",
   description:
-    "List custom and Langfuse-managed model definitions visible to the current project.",
+    "List custom and Tracelight-managed model definitions visible to the current project.",
   action: "models:read",
   baseSchema: GetModelsV1Query,
   inputSchema: GetModelsV1Query,

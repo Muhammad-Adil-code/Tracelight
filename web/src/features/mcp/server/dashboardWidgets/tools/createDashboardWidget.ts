@@ -115,7 +115,7 @@ export const [createDashboardWidgetTool, handleCreateDashboardWidget] =
     action: "dashboards:CUD",
     description: [
       "Create a dashboard widget (a standalone chart definition you place on any dashboard).",
-      "Widgets are useful to visualize Langfuse project data and give informative breakdowns to the user.",
+      "Widgets are useful to visualize Tracelight project data and give informative breakdowns to the user.",
       "This creates the widget only; place it on a dashboard with the addDashboardPlacement tool.",
       "The result includes a url field; use it to link to the created widget.",
     ].join(" "),

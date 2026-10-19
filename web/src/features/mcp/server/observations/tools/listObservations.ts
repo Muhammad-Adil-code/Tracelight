@@ -342,7 +342,7 @@ const assertAllowedObservationAccess = (
 export const [listObservationsTool, handleListObservations] = defineTool({
   name: "listObservations",
   description: [
-    "Find and review observations in the current Langfuse project, such as generations, spans, events, agent steps, and tool calls.",
+    "Find and review observations in the current Tracelight project, such as generations, spans, events, agent steps, and tool calls.",
     "Traces consist of observations. Use this tool when the user asks to inspect traces: pass traceId to page through the observations for a specific trace; those observation records are the trace data returned by the API.",
     "Use filters to narrow results by trace, name, type, level, environment, time range, or advanced filter conditions. Results are paginated with an opaque cursor.",
     'For metadata filters, first inspect metadata by passing both fromStartTime and toStartTime with a maximum range of 14 days (336 elapsed hours) and fields: ["id", "metadata"]. Then use a discovered key in a stringObject filter.',
