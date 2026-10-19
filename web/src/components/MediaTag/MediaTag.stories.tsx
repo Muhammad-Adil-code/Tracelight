@@ -120,7 +120,7 @@ export const OversizedField = meta.story({
     contentType: "text/plain",
     label: "Full value attached",
     description:
-      "This field was too large to process inline, so Langfuse saved the complete original value as an attachment at ingestion.",
+      "This field was too large to process inline, so Tracelight saved the complete original value as an attachment at ingestion.",
     openActionLabel: "Open original",
     intent: "attachment",
     open: true,

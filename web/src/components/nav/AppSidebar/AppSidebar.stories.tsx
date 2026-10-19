@@ -202,7 +202,7 @@ export const GitHubStar = meta.story({
     } satisfies NotificationState,
   },
   play: async ({ canvas }) => {
-    await expect(canvas.getByAltText("Langfuse GitHub stars")).toHaveAttribute(
+    await expect(canvas.getByAltText("Tracelight GitHub stars")).toHaveAttribute(
       "src",
       "https://img.shields.io/github/stars/langfuse/langfuse?label=langfuse&style=social",
     );

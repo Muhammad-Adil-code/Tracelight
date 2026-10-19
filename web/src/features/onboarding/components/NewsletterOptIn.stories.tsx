@@ -17,7 +17,7 @@ const meta = preview.meta({
 const INSTALLER_DESCRIPTION =
   "Monthly product updates, plus a heads-up when a new major version or a required upgrade affects your instance.";
 const INVITED_DESCRIPTION =
-  "One email a month with the newest Langfuse features and improvements.";
+  "One email a month with the newest Tracelight features and improvements.";
 
 const formArgs = (lists: ("product" | "oss")[], defaultEmail: string) => ({
   state: "form" as const,
@@ -319,9 +319,9 @@ export const FocusesTheFailureReason = meta.story({
 });
 
 const INSTALLER_EXPLAINER_INTRO =
-  "By subscribing, you'll be added to the Langfuse mailing lists for product updates and self-hosting notices.";
+  "By subscribing, you'll be added to the Tracelight mailing lists for product updates and self-hosting notices.";
 const INVITED_EXPLAINER_INTRO =
-  "By subscribing, you'll be added to the Langfuse product updates list. Expect one email a month about new features.";
+  "By subscribing, you'll be added to the Tracelight product updates list. Expect one email a month about new features.";
 
 /** A bare click, as a tap delivers it: no hover and no keyboard focus that could open the card instead. */
 const openExplainer = async (canvasElement: HTMLElement) => {

@@ -71,7 +71,7 @@ describe("buildAiContext", () => {
     expect(ctx).toBeUndefined();
   });
 
-  it("parses JSON-string metadata (Langfuse's row shape) with dotted keys", () => {
+  it("parses JSON-string metadata (Tracelight's row shape) with dotted keys", () => {
     const ctx =
       buildAiContext({
         observed: undefined,

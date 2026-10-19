@@ -8,7 +8,7 @@ describe("classifyMediaValue", () => {
   const ref =
     "@@@langfuseMedia:type=image/png|id=cc48838a-3da8-4ca4-a007-2cf8df930e69|source=bytes@@@";
 
-  it("parses a Langfuse media reference", () => {
+  it("parses a Tracelight media reference", () => {
     expect(classifyMediaValue(ref)).toEqual({
       kind: "langfuseRef",
       contentType: "image/png",

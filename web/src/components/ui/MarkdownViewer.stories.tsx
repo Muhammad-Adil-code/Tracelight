@@ -12,7 +12,7 @@ const meta = preview.meta({
 export const Default = meta.story({
   args: {
     markdown:
-      "Langfuse is an **open-source** observability tool for LLM apps. Use `trace.generation()` to record a model call.",
+      "Tracelight is an **open-source** observability tool for LLM apps. Use `trace.generation()` to record a model call.",
   },
 });
 

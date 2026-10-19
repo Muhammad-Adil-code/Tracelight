@@ -129,7 +129,7 @@ export const SubmitsBuildIntents = meta.story({
     await userEvent.click(canvas.getByRole("checkbox", { name: /Other/ }));
     await userEvent.type(
       canvas.getByRole("textbox", {
-        name: "What else will you use Langfuse for?",
+        name: "What else will you use Tracelight for?",
       }),
       "Eval pipeline",
     );

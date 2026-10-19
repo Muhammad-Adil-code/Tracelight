@@ -467,7 +467,7 @@ describe("V4MigrationDetailsContent", () => {
 
     render(<V4MigrationDetailsContent projectId="project-1" />);
 
-    expect(screen.getByText("Langfuse Python SDK 3.9.0")).toBeInTheDocument();
+    expect(screen.getByText("Tracelight Python SDK 3.9.0")).toBeInTheDocument();
     expect(screen.getByText("client.api.trace.get")).toBeInTheDocument();
     expect(
       screen.getByText("client.api.observations.get_many"),
@@ -480,7 +480,7 @@ describe("V4MigrationDetailsContent", () => {
       screen.queryByTitle("Last seen at 2026-07-23T10:37:00Z"),
     ).not.toBeInTheDocument();
 
-    for (const callerName of ["Langfuse Python SDK 3.9.0", "Codex"]) {
+    for (const callerName of ["Tracelight Python SDK 3.9.0", "Codex"]) {
       const caller = screen.getByText(callerName).closest("li");
       expect(caller).toHaveClass("bg-muted/50", "border-l-4", "p-2");
       expect(caller?.firstElementChild).toHaveTextContent(callerName);
@@ -1141,7 +1141,7 @@ describe("V4MigrationDetailsContent", () => {
     // The guidance stays language-agnostic: the upgrade applies to every
     // Langfuse SDK, so the copy must not read as Python-or-JS-only.
     expect(
-      screen.getByRole("link", { name: "any Langfuse SDK" }),
+      screen.getByRole("link", { name: "any Tracelight SDK" }),
     ).toHaveAttribute(
       "href",
       "https://langfuse.com/docs/observability/sdk/overview",
@@ -1319,7 +1319,7 @@ describe("V4MigrationDetailsContent", () => {
       }),
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/enable AI features for our Langfuse organization/),
+      screen.getByText(/enable AI features for our Tracelight organization/),
     ).toBeInTheDocument();
     expect(
       screen.queryByRole("button", { name: "Continue with manual upgrade" }),
@@ -1359,8 +1359,8 @@ describe("V4MigrationHeaderContent", () => {
     ).toBeInTheDocument();
     expect(screen.queryByText("Upgrade to v4")).not.toBeInTheDocument();
     expect(screen.queryByText(/Project 1/)).not.toBeInTheDocument();
-    expect(screen.getByText(/Langfuse v4 is live/)).toHaveTextContent(
-      "Langfuse v4 is live: a re-architecture of our data model and database tables. It is up to 165× more performant in UI and on APIs. It also enables new features such as full-text search, a new filter search bar, alerts, code evaluators, and the Langfuse Halo. Complete the action items below to avoid disruption. See docs.",
+    expect(screen.getByText(/Tracelight v4 is live/)).toHaveTextContent(
+      "Tracelight v4 is live: a re-architecture of our data model and database tables. It is up to 165× more performant in UI and on APIs. It also enables new features such as full-text search, a new filter search bar, alerts, code evaluators, and the Tracelight Halo. Complete the action items below to avoid disruption. See docs.",
     );
     expect(
       screen.getByRole("link", { name: "full-text search" }),
@@ -1384,7 +1384,7 @@ describe("V4MigrationHeaderContent", () => {
       "href",
       "https://langfuse.com/docs/evaluation/evaluation-methods/code-evaluators",
     );
-    expect(screen.getByRole("link", { name: "Langfuse Halo" })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: "Tracelight Halo" })).toHaveAttribute(
       "href",
       "https://langfuse.com/docs/langfuse-assistant",
     );
@@ -1442,7 +1442,7 @@ describe("V4MigrationHeaderContent", () => {
       expect(
         screen.queryByText(/Complete the action items below/),
       ).not.toBeInTheDocument();
-      expect(screen.getByText(/Langfuse v4 is live/)).toBeInTheDocument();
+      expect(screen.getByText(/Tracelight v4 is live/)).toBeInTheDocument();
       expect(
         screen.queryByText(/some features may stop working/),
       ).not.toBeInTheDocument();

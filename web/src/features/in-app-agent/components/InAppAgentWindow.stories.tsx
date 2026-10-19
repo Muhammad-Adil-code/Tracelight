@@ -1031,7 +1031,7 @@ export const Conversation = meta.story({
             "##### Heading 5",
             "###### Heading 6",
             "",
-            "You can use **Langfuse** to inspect _production traces_ and compare `input`, `output`, and metadata across releases.",
+            "You can use **Tracelight** to inspect _production traces_ and compare `input`, `output`, and metadata across releases.",
             "",
             "- Inspect traces with nested observations",
             "- Evaluate outputs with scores",
@@ -2211,7 +2211,7 @@ export const LoadingConversation = meta.story({
     const canvas = within(canvasElement);
 
     await expect(
-      canvas.queryByText("Hi I'm Halo, your Langfuse assistant"),
+      canvas.queryByText("Hi I'm Halo, your Tracelight assistant"),
     ).not.toBeInTheDocument();
     await expect(
       canvas.queryByRole("button", { name: /^Create a prompt/ }),
@@ -2386,7 +2386,7 @@ export const RefocusAfterSubmit = meta.story({
     const previousAnswerCount = canvas.queryAllByText(answer).length;
 
     await expect(
-      canvas.queryByText("Hi I'm Halo, your Langfuse assistant"),
+      canvas.queryByText("Hi I'm Halo, your Tracelight assistant"),
     ).not.toBeInTheDocument();
     await userEvent.clear(textarea);
     await userEvent.type(textarea, "Check the latest latency regression");

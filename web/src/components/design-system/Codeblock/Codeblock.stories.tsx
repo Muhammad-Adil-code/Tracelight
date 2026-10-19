@@ -10,7 +10,7 @@ const meta = preview.meta({
 export const Default = meta.story({
   args: {
     language: "typescript",
-    value: 'const greeting = "Hello, Langfuse!";',
+    value: 'const greeting = "Hello, Tracelight!";',
     theme: "light",
   },
 });
@@ -34,7 +34,7 @@ export const LightThemeTokenRendering = Default.extend({
     const keyword = preview.querySelector(".token.keyword")!;
     await expect(keyword).toHaveTextContent("const");
     await expect(preview.querySelector(".token.string")).toHaveTextContent(
-      '"Hello, Langfuse!"',
+      '"Hello, Tracelight!"',
     );
     const theme = args.theme === "dark" ? themes.vsDark : themes.github;
     const keywordStyle = theme.styles

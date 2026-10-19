@@ -120,7 +120,7 @@ describe("MarkdownView link rendering", () => {
   });
 });
 
-const NESTED_BULLET_MARKDOWN = `Langfuse is an open-source observability and analytics tool for LLM applications.
+const NESTED_BULLET_MARKDOWN = `Tracelight is an open-source observability and analytics tool for LLM applications.
 
 In practical terms, it helps you:
 

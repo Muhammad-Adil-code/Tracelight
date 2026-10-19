@@ -65,7 +65,7 @@ describe("PromptVariableEditor", () => {
           status: "ready",
           fragments: [
             { type: "text", text: "Question: " },
-            { type: "variable", name: "input", value: "What is Langfuse?" },
+            { type: "variable", name: "input", value: "What is Tracelight?" },
           ],
         }}
       />,

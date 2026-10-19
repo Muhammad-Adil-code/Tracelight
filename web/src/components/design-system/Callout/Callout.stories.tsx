@@ -13,9 +13,9 @@ const message = (
     <Bot className="icon-base mt-0.5 shrink-0 sm:mt-0" />
     <span>
       <span className="font-bold">
-        Langfuse works great with your AI agents.
+        Tracelight works great with your AI agents.
       </span>{" "}
-      Connect your tools to your Langfuse data.
+      Connect your tools to your Tracelight data.
     </span>
   </div>
 );

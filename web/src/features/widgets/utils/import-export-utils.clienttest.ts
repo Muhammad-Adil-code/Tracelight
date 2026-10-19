@@ -253,7 +253,7 @@ describe("parseAndNormalizeImportedWidget", () => {
 });
 
 describe("buildWidgetExport", () => {
-  it("wraps the widget config in the Langfuse widget envelope", () => {
+  it("wraps the widget config in the Tracelight widget envelope", () => {
     const exported = buildWidgetExport({
       name: "My widget",
       description: "",

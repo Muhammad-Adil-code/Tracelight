@@ -11,7 +11,7 @@ const meta = preview.meta({ component: ModelDefinitionsTable });
 
 const model: ModelTableRow = {
   modelId: "model-1",
-  maintainer: "Langfuse",
+  maintainer: "Tracelight",
   modelName: "example-model",
   matchPattern: "^example-model$",
   prices: { input: 0.000001, output: 0.000002 },

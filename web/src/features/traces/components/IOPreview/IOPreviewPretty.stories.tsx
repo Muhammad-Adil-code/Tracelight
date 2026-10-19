@@ -81,7 +81,7 @@ const trace = langfuse.trace({
     },
     output: {
       role: "assistant",
-      content: `Use the Langfuse SDK to wrap the model call:
+      content: `Use the Tracelight SDK to wrap the model call:
 
 \`\`\`typescript
 const generation = trace.generation({
@@ -101,13 +101,13 @@ export const NestedMarkdownLists = meta.story({
       messages: [
         {
           role: "user",
-          content: "What is Langfuse useful for?",
+          content: "What is Tracelight useful for?",
         },
       ],
     },
     output: {
       role: "assistant",
-      content: `Langfuse is an open-source observability and analytics tool for LLM applications.
+      content: `Tracelight is an open-source observability and analytics tool for LLM applications.
 
 In practical terms, it helps you:
 

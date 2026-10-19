@@ -48,7 +48,7 @@ describe("MediaReferenceTag", () => {
 
     expect(
       screen.getByText(
-        "This field was too large to process inline, so Langfuse saved the complete original value as an attachment at ingestion.",
+        "This field was too large to process inline, so Tracelight saved the complete original value as an attachment at ingestion.",
       ),
     ).toBeInTheDocument();
     expect(

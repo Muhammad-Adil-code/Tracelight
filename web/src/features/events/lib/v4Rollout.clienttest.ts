@@ -28,7 +28,7 @@ describe("canToggleV4", () => {
     expect(canToggleV4(postRolloutContext)).toBe(false);
   });
 
-  it("always allows the toggle for a Langfuse Cloud admin, even when new", () => {
+  it("always allows the toggle for a Tracelight Cloud admin, even when new", () => {
     expect(
       canToggleV4(postRolloutContext, { isLangfuseCloudAdmin: true }),
     ).toBe(true);
@@ -55,7 +55,7 @@ describe("isV4UpgradeUiAvailable", () => {
       dualPreviewAvailable: isLangfuseCloud || allowPreviewOptIn,
     });
 
-  it("is on for Langfuse Cloud on dual and events_only", () => {
+  it("is on for Tracelight Cloud on dual and events_only", () => {
     expect(availability(true, "dual")).toBe(true);
     expect(availability(true, "events_only")).toBe(true);
   });

@@ -37,7 +37,7 @@ export const VariantMatrix = meta.story({
 });
 
 export const ExternalLangfuseLink = meta.story({
-  name: "(Test) External Langfuse Link",
+  name: "(Test) External Tracelight Link",
   args: {
     href: "https://langfuse.com/docs",
     text: "View docs",

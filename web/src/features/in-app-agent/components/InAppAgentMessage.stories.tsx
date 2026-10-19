@@ -32,7 +32,7 @@ export const AssistantText = meta.story({
     role: "assistant",
     content: {
       type: "text",
-      text: "Langfuse tracks traces, observations, scores, and metadata so teams can debug LLM applications.",
+      text: "Tracelight tracks traces, observations, scores, and metadata so teams can debug LLM applications.",
     },
     timestamp: storyTimestamp,
   },
@@ -43,7 +43,7 @@ export const AssistantTextWithFeedback = meta.story({
     role: "assistant",
     content: {
       type: "text",
-      text: "Langfuse tracks traces, observations, scores, and metadata so teams can debug LLM applications.",
+      text: "Tracelight tracks traces, observations, scores, and metadata so teams can debug LLM applications.",
     },
     onSubmitFeedback: fn(),
   },
@@ -54,7 +54,7 @@ export const AssistantTextWithSources = meta.story({
     role: "assistant" as const,
     content: {
       type: "text" as const,
-      text: "Scores are Langfuse's universal data object for storing evaluation results.",
+      text: "Scores are Tracelight's universal data object for storing evaluation results.",
       sources: [
         {
           title: "Scores",
@@ -88,7 +88,7 @@ export const AssistantTextWithFeedbackComment = meta.story({
     role: "assistant",
     content: {
       type: "text",
-      text: "Langfuse tracks traces, observations, scores, and metadata so teams can debug LLM applications.",
+      text: "Tracelight tracks traces, observations, scores, and metadata so teams can debug LLM applications.",
       feedback: {
         value: "thumbs_up",
         comment: "Helpful answer.",
@@ -103,7 +103,7 @@ export const AssistantTextWithLongFeedbackComment = meta.story({
     role: "assistant",
     content: {
       type: "text",
-      text: "Langfuse tracks traces, observations, scores, and metadata so teams can debug LLM applications.",
+      text: "Tracelight tracks traces, observations, scores, and metadata so teams can debug LLM applications.",
       feedback: {
         value: "thumbs_down",
         comment:
@@ -142,7 +142,7 @@ export const AssistantMarkdown = meta.story({
         "##### Heading 5",
         "###### Heading 6",
         "",
-        "You can use **[Langfuse](https://langfuse.com)** to inspect _production traces_ and compare `input`, `output`, `metadata` and `scores` across releases.",
+        "You can use **[Tracelight](https://langfuse.com)** to inspect _production traces_ and compare `input`, `output`, `metadata` and `scores` across releases.",
         "",
         "- Inspect traces with nested observations",
         "- Evaluate outputs with scores",
@@ -256,7 +256,7 @@ export const CopyMarkdownSelectionInteraction = meta.story({
     content: {
       type: "text",
       text: [
-        "You can use **[Langfuse](https://langfuse.com)** to inspect _production traces_ and compare `input` values.",
+        "You can use **[Tracelight](https://langfuse.com)** to inspect _production traces_ and compare `input` values.",
         "",
         "Repeated text appears here.",
         "",
@@ -291,10 +291,10 @@ export const CopyMarkdownSelectionInteraction = meta.story({
 
     expect(copyEvent.defaultPrevented).toBe(true);
     expect(clipboardData.getData("text/plain")).toBe(
-      "You can use **[Langfuse](https://langfuse.com)** to inspect _production traces_ and compare `input` values.",
+      "You can use **[Tracelight](https://langfuse.com)** to inspect _production traces_ and compare `input` values.",
     );
     expect(clipboardData.getData("text/html")).toBe(
-      'You can use <strong><a href="https://langfuse.com/" target="_blank" rel="noopener noreferrer">Langfuse</a></strong> to inspect <em>production traces</em> and compare <code>input</code> values.',
+      'You can use <strong><a href="https://langfuse.com/" target="_blank" rel="noopener noreferrer">Tracelight</a></strong> to inspect <em>production traces</em> and compare <code>input</code> values.',
     );
 
     const heading = message.querySelector("h1");
@@ -606,7 +606,7 @@ export const FeedbackPopoverInteraction = meta.story({
     role: "assistant",
     content: {
       type: "text",
-      text: "Langfuse tracks traces, observations, scores, and metadata so teams can debug LLM applications.",
+      text: "Tracelight tracks traces, observations, scores, and metadata so teams can debug LLM applications.",
     },
     onSubmitFeedback: fn(),
   },
@@ -643,7 +643,7 @@ export const OptimisticFeedbackInteraction = meta.story({
     role: "assistant",
     content: {
       type: "text",
-      text: "Langfuse tracks traces, observations, scores, and metadata so teams can debug LLM applications.",
+      text: "Tracelight tracks traces, observations, scores, and metadata so teams can debug LLM applications.",
     },
     onSubmitFeedback: fn(
       () => new Promise<void>((resolve) => setTimeout(resolve, 1_000)),

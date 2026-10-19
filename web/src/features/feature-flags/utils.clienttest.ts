@@ -78,7 +78,7 @@ describe("parseFlags", () => {
     expect(parseFlags(["langfuseTopics"], context).langfuseTopics).toBe(true);
   });
 
-  it("enables feature previews by default for Langfuse team members", () => {
+  it("enables feature previews by default for Tracelight team members", () => {
     const flags = parseFlags([], {
       email: "team.member@langfuse.com",
       v4BetaEnabled: true,
@@ -164,7 +164,7 @@ describe("parseFlags", () => {
     ).toBe(false);
   });
 
-  it("honors a Langfuse team member's explicit opt-out", () => {
+  it("honors a Tracelight team member's explicit opt-out", () => {
     const flags = parseFlags(
       [getFeaturePreviewOptOutFlag("sessionViewV2"), "templateFlag"],
       {

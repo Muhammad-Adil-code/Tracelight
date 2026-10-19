@@ -17,7 +17,7 @@ describe("formatEvaluatorCostCalculation", () => {
       calculation:
         "1,840 matching observations × 40% sampling × $0.001 per evaluation ≈ $0.74 / week",
       explanation:
-        "Expected cost on your linked API key (not Langfuse). Matching observations are based on the last 7 days. Per-evaluation cost uses the latest cost-bearing evaluator trace from that period, or a fallback test call.",
+        "Expected cost on your linked API key (not Tracelight). Matching observations are based on the last 7 days. Per-evaluation cost uses the latest cost-bearing evaluator trace from that period, or a fallback test call.",
     });
   });
 
@@ -33,7 +33,7 @@ describe("formatEvaluatorCostCalculation", () => {
     ).toEqual({
       calculation: null,
       explanation:
-        "No cost-bearing evaluator trace was available from the last 7 days, and the fallback test call did not return a usable model cost. Expected cost would be charged to your linked API key, not Langfuse.",
+        "No cost-bearing evaluator trace was available from the last 7 days, and the fallback test call did not return a usable model cost. Expected cost would be charged to your linked API key, not Tracelight.",
     });
   });
 
@@ -49,7 +49,7 @@ describe("formatEvaluatorCostCalculation", () => {
     ).toEqual({
       calculation: "0 matching observations × 100% sampling ≈ $0.00 / week",
       explanation:
-        "Expected cost on your linked API key (not Langfuse). Matching observations are based on the last 7 days.",
+        "Expected cost on your linked API key (not Tracelight). Matching observations are based on the last 7 days.",
     });
   });
 
@@ -82,7 +82,7 @@ describe("formatEvaluatorCostCalculation", () => {
     ).toEqual({
       calculation: null,
       explanation:
-        "No cost-bearing evaluator trace was available, and the fallback test call did not return a usable model cost. Expected cost would be charged to your linked API key, not Langfuse.",
+        "No cost-bearing evaluator trace was available, and the fallback test call did not return a usable model cost. Expected cost would be charged to your linked API key, not Tracelight.",
     });
   });
 
@@ -100,7 +100,7 @@ describe("formatEvaluatorCostCalculation", () => {
       calculation:
         "12 observations × 100% sampling × $0.01 per evaluation ≈ $0.12 for this run",
       explanation:
-        "Expected cost on your linked API key (not Langfuse). Per-evaluation cost uses the latest cost-bearing evaluator trace from that period, or a fallback test call.",
+        "Expected cost on your linked API key (not Tracelight). Per-evaluation cost uses the latest cost-bearing evaluator trace from that period, or a fallback test call.",
     });
   });
 });

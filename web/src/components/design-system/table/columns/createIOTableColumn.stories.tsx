@@ -82,7 +82,7 @@ const meta = preview.meta({
 });
 
 const defaultValue = {
-  prompt: "What is Langfuse?",
+  prompt: "What is Tracelight?",
   response: "An open-source LLM engineering platform.",
 };
 
@@ -103,7 +103,7 @@ export const Input = meta.story({
     data: {
       isLoading: false,
       isError: false,
-      data: [{ value: { prompt: "What is Langfuse?" } }],
+      data: [{ value: { prompt: "What is Tracelight?" } }],
     },
   },
 });
@@ -294,7 +294,7 @@ export const TestLoadedCellBackgrounds = meta.story({
         isError: false,
         data: [
           {
-            input: { prompt: "What is Langfuse?" },
+            input: { prompt: "What is Tracelight?" },
             output: {
               response: "An open-source LLM engineering platform.",
             },

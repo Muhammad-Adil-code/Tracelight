@@ -25,7 +25,7 @@ const allShapes = Object.keys({
 
 export const Default = meta.story({
   args: {
-    displayName: "Langfuse",
+    displayName: "Tracelight",
     src: "/apple-touch-icon.png",
   },
 });

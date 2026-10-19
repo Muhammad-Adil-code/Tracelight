@@ -218,7 +218,7 @@ describe("V4MigrationStatusPage", () => {
     expect(screen.getByRole("status")).toHaveClass("text-base");
     expect(screen.getByRole("status")).not.toHaveClass("text-2xl", "font-bold");
     expect(
-      screen.queryByRole("img", { name: "Langfuse" }),
+      screen.queryByRole("img", { name: "Tracelight" }),
     ).not.toBeInTheDocument();
   });
 

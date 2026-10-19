@@ -162,7 +162,7 @@ describe("ErrorNotification", () => {
 
     await waitFor(() => expect(mocks.capture).toHaveBeenCalledTimes(1));
     fireEvent.click(
-      screen.getByRole("button", { name: "Report issue to Langfuse team" }),
+      screen.getByRole("button", { name: "Report issue to Tracelight team" }),
     );
 
     expect(mocks.capture).toHaveBeenLastCalledWith("toast:report_issue", {

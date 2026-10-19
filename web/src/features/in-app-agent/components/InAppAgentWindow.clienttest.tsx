@@ -204,7 +204,7 @@ describe("InAppAgentWindow quick actions", () => {
 
     await waitFor(() => {
       expect(onSubmit).toHaveBeenCalledWith(
-        "Help me create a new prompt in Langfuse prompt management, including choosing between a text and chat prompt, defining its variables, and setting a label.",
+        "Help me create a new prompt in Tracelight prompt management, including choosing between a text and chat prompt, defining its variables, and setting a label.",
         undefined,
       );
     });
@@ -503,7 +503,7 @@ describe("ControlledInAppAgentWindow internal session menu", () => {
     expect(within(menu).getByText("Internal")).toBeInTheDocument();
     expect(within(menu).getByText("Copy session ID")).toBeInTheDocument();
     const openSession = within(menu).getByRole("link", {
-      name: "Open session in Langfuse",
+      name: "Open session in Tracelight",
     });
     expect(openSession).toHaveAttribute(
       "href",
@@ -531,7 +531,7 @@ describe("ControlledInAppAgentWindow internal session menu", () => {
     });
     expect(within(menu).queryByRole("link")).not.toBeInTheDocument();
     expect(
-      within(menu).getByRole("menuitem", { name: "Open session in Langfuse" }),
+      within(menu).getByRole("menuitem", { name: "Open session in Tracelight" }),
     ).toHaveAttribute("title", "Could not load the telemetry project.");
   });
 });

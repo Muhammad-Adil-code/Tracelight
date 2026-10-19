@@ -38,7 +38,7 @@ const renderMapping = (
   );
 
 describe("EditableVariableMapping", () => {
-  it("resolves a mapped Langfuse media reference in the value preview", () => {
+  it("resolves a mapped Tracelight media reference in the value preview", () => {
     renderMapping("preview");
 
     expect(screen.getByTestId("resolved-media-tag")).toHaveTextContent(
@@ -61,7 +61,7 @@ describe("EditableVariableMapping", () => {
     expect(onActiveMappingChange).not.toHaveBeenCalled();
   });
 
-  it("resolves a Langfuse media reference in the sample data tree", () => {
+  it("resolves a Tracelight media reference in the sample data tree", () => {
     renderMapping("editing");
 
     const mediaTag = screen.getByTestId("resolved-media-tag");

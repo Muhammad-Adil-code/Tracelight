@@ -88,7 +88,7 @@ describe("AIFeatureSwitch", () => {
       screen.queryByText("AI Data Use for Product/Service Improvement"),
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByText(/Traces are sent to Langfuse Cloud/),
+      screen.queryByText(/Traces are sent to Tracelight Cloud/),
     ).not.toBeInTheDocument();
   });
 
@@ -99,7 +99,7 @@ describe("AIFeatureSwitch", () => {
       screen.getByText("AI Data Use for Product/Service Improvement"),
     ).toBeInTheDocument();
     expect(
-      screen.queryByText(/Traces are sent to Langfuse Cloud/),
+      screen.queryByText(/Traces are sent to Tracelight Cloud/),
     ).not.toBeInTheDocument();
   });
 

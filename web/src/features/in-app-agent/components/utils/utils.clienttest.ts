@@ -159,7 +159,7 @@ describe("getInAppAgentToolProgressLabel", () => {
   });
 
   it.each([
-    ["docs_search", "Reading Langfuse docs"],
+    ["docs_search", "Reading Tracelight docs"],
     ["skill", "Learning skill"],
     ["customThing", "Custom Thing"],
   ])("labels %s as %s", (toolName, expected) => {
@@ -218,7 +218,7 @@ describe("getInAppAgentError", () => {
     expect(
       getInAppAgentError(
         {
-          message: `Failed to initialize Langfuse MCP: Streamable HTTP error: Error POSTing to endpoint: ${JSON.stringify(rateLimitError)}`,
+          message: `Failed to initialize Tracelight MCP: Streamable HTTP error: Error POSTing to endpoint: ${JSON.stringify(rateLimitError)}`,
         },
         now,
       ),
@@ -252,7 +252,7 @@ describe("getInAppAgentError", () => {
   });
 
   it("does not classify malformed embedded JSON as a rate limit", () => {
-    const message = 'Failed to initialize Langfuse MCP: {"code":"rate_limited"';
+    const message = 'Failed to initialize Tracelight MCP: {"code":"rate_limited"';
 
     expect(getInAppAgentError({ message }, now)).toEqual({
       type: "generic",
@@ -389,13 +389,13 @@ describe("getDrawerMessages", () => {
         {
           id: "user-1",
           role: "user",
-          content: "Does Langfuse have access logging?",
+          content: "Does Tracelight have access logging?",
         },
         {
           id: "assistant-1",
           role: "assistant",
           content:
-            "I'll search the Langfuse documentation for information about access logging.",
+            "I'll search the Tracelight documentation for information about access logging.",
           toolCalls: [
             {
               id: "tool-call-1",
@@ -416,7 +416,7 @@ describe("getDrawerMessages", () => {
         {
           id: "assistant-2",
           role: "assistant",
-          content: "Yes, Langfuse has audit logging available.",
+          content: "Yes, Tracelight has audit logging available.",
         },
       ] satisfies AgUiMessage[],
     });
@@ -430,7 +430,7 @@ describe("getDrawerMessages", () => {
         id: "assistant-1",
         content: {
           type: "text",
-          text: "I'll search the Langfuse documentation for information about access logging.",
+          text: "I'll search the Tracelight documentation for information about access logging.",
         },
       },
       {
@@ -441,7 +441,7 @@ describe("getDrawerMessages", () => {
         id: "assistant-2",
         content: {
           type: "text",
-          text: "Yes, Langfuse has audit logging available.",
+          text: "Yes, Tracelight has audit logging available.",
           sources: [
             {
               title: "Audit Logs",

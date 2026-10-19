@@ -22,20 +22,20 @@ const meta = preview.meta({
 
 export const Default = meta.story({
   args: {
-    data: { prompt: "What is Langfuse?", model: "gpt-5" },
+    data: { prompt: "What is Tracelight?", model: "gpt-5" },
   },
 });
 
 export const SingleLine = meta.story({
   args: {
-    data: "Langfuse is an open-source LLM engineering platform.",
+    data: "Tracelight is an open-source LLM engineering platform.",
     singleLine: true,
   },
 });
 
 export const Input = meta.story({
   args: {
-    data: { prompt: "What is Langfuse?" },
+    data: { prompt: "What is Tracelight?" },
     variant: "input",
   },
 });
@@ -88,7 +88,7 @@ export const TestMediaTitleSuppression = meta.story({
 export const TestExpandSuppressesNativeTitle = meta.story({
   name: "(Test) Expand preview suppresses native title",
   args: {
-    data: "Langfuse is an open-source LLM engineering platform.",
+    data: "Tracelight is an open-source LLM engineering platform.",
     enableExpandOnHover: true,
     singleLine: true,
   },
@@ -135,7 +135,7 @@ export const TestTruncatesLongContent = meta.story({
 export const TestOutputVariant = meta.story({
   name: "(Test) Output variant",
   args: {
-    data: { answer: "Langfuse" },
+    data: { answer: "Tracelight" },
     variant: "output",
   },
   play: async ({ canvasElement }) => {

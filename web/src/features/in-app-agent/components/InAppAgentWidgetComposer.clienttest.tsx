@@ -28,7 +28,7 @@ describe("InAppAgentWidgetComposer", () => {
       target: { value: "  Show p95 latency by model  " },
     });
     fireEvent.click(
-      screen.getByRole("button", { name: "Add with Langfuse Halo" }),
+      screen.getByRole("button", { name: "Add with Tracelight Halo" }),
     );
 
     await waitFor(() => {
@@ -55,7 +55,7 @@ describe("InAppAgentWidgetComposer", () => {
     });
 
     expect(
-      screen.getByRole("button", { name: "Add with Langfuse Halo" }),
+      screen.getByRole("button", { name: "Add with Tracelight Halo" }),
     ).toBeDisabled();
   });
 
@@ -73,7 +73,7 @@ describe("InAppAgentWidgetComposer", () => {
       target: { value: "Show p95 latency" },
     });
     const submitButton = screen.getByRole("button", {
-      name: "Add with Langfuse Halo",
+      name: "Add with Tracelight Halo",
     });
 
     expect(submitButton).toBeEnabled();
@@ -99,7 +99,7 @@ describe("InAppAgentWidgetComposer", () => {
     const input = screen.getByLabelText("Describe the widget you want");
     fireEvent.change(input, { target: { value: "Show error rate" } });
     fireEvent.click(
-      screen.getByRole("button", { name: "Add with Langfuse Halo" }),
+      screen.getByRole("button", { name: "Add with Tracelight Halo" }),
     );
 
     await waitFor(() => {
