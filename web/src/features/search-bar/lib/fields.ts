@@ -849,7 +849,7 @@ export function negationIssue(
     return null; // -has: is valid (missing value); in: was rejected above.
   }
   if (op === "^" || op === "$") {
-    return `negation of ${label(op)} is not representable in the Langfuse filter contract`;
+    return `negation of ${label(op)} is not representable in the Tracelight filter contract`;
   }
   if (op === "exact" || op === "=") {
     if (ref.type === "metadata") {

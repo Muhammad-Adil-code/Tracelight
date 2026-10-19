@@ -155,7 +155,7 @@ export function buildFilterSystemPrompt(
   const nullableIds = nullableFieldIds(registry);
 
   if (registry.id === "evaluationRules" || registry.id === "ruleSamples") {
-    return `You generate observation filters for a Langfuse evaluation rule.
+    return `You generate observation filters for a Tracelight evaluation rule.
 Respond with ONLY a JSON array of flat FilterState objects. Use only canonical
 columns from this catalog and only the documented type/operator/value shape:
 
@@ -175,9 +175,9 @@ Current datetime: ${currentDatetime}`;
 
   return `## Role
 
-You are the Langfuse filter generator for the observability (v4 events) table.
+You are the Tracelight filter generator for the observability (v4 events) table.
 Turn a natural-language request about LLM traces/observations into a flat
-Langfuse filter array in JSON, using the FULL filter surface — not just simple
+Tracelight filter array in JSON, using the FULL filter surface — not just simple
 column matches. You can filter on:
 - catalog columns (below) with their operators,
 - custom **metadata** by key — BE WILLING to reach into metadata; many
