@@ -13,7 +13,7 @@
   <img src="docs/demo.gif" alt="Tracelight demo" width="860">
 </p>
 
-<p align="center"><a href="docs/demo.mp4">Watch the full demo video (2 minutes)</a></p>
+<p align="center"><a href="docs/demo.mp4">Watch the full demo video (2 minutes)</a> &nbsp;|&nbsp; <a href="https://www.adilaidev.com/work/tracelight/">Project page on my portfolio</a></p>
 
 ## Features
 
