@@ -59,7 +59,7 @@ export async function generateLangfuseAIText(params: {
   const modelConfig = getInAppAgentModelConfig({ modelId: params.model });
 
   if (!modelConfig) {
-    throw new Error("Langfuse AI completion model is not configured.");
+    throw new Error("Tracelight AI completion model is not configured.");
   }
 
   const maxTokens: { max_tokens?: number } =
@@ -164,7 +164,7 @@ function toLangfuseAICompletionParams(params: {
     default: {
       const _exhaustive: never = modelConfig;
       throw new Error(
-        `Unsupported Langfuse AI provider: ${(_exhaustive as InAppAgentModelConfig).provider}`,
+        `Unsupported Tracelight AI provider: ${(_exhaustive as InAppAgentModelConfig).provider}`,
       );
     }
   }

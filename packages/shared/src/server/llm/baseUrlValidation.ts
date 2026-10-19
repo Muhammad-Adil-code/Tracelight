@@ -57,7 +57,7 @@ export async function validateLlmConnectionBaseURL(
   if (env.NEXT_PUBLIC_LANGFUSE_CLOUD_REGION && url.protocol !== "https:") {
     throw new OutboundUrlValidationError(
       "https-required",
-      "Only HTTPS base URLs are allowed on Langfuse Cloud",
+      "Only HTTPS base URLs are allowed on Tracelight Cloud",
     );
   }
 }

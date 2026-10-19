@@ -47,7 +47,7 @@ export function resolveAiSdkModelConfig(params: {
       throw new LLMValidationError({
         code: "invalid-connection",
         message:
-          "Langfuse credentials are only supported for Amazon Bedrock, Anthropic, OpenAI, and Vertex AI",
+          "Tracelight credentials are only supported for Amazon Bedrock, Anthropic, OpenAI, and Vertex AI",
       });
     }
 

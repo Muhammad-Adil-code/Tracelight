@@ -9,7 +9,7 @@ export const getBaseUrl = () => {
 
   if (!rawBaseUrl) {
     throw new Error(
-      "NEXTAUTH_URL must be set to derive the Langfuse base URL.",
+      "NEXTAUTH_URL must be set to derive the Tracelight base URL.",
     );
   }
 

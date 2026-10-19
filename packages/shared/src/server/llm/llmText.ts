@@ -480,7 +480,7 @@ const rejectRemoteMediaDownloads: Experimental_DownloadFunction = async (
     throw new LLMValidationError({
       code: "invalid-request",
       message:
-        "Remote media downloads are not supported on the Langfuse server; use provider-supported URLs or inline data instead",
+        "Remote media downloads are not supported on the Tracelight server; use provider-supported URLs or inline data instead",
     });
   }
   return [];
