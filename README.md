@@ -9,6 +9,12 @@
   ship prompts with confidence.
 </p>
 
+<p align="center">
+  <img src="docs/demo.gif" alt="Tracelight demo" width="860">
+</p>
+
+<p align="center"><a href="docs/demo.mp4">Watch the full demo video (2 minutes)</a></p>
+
 ## Features
 
 - **Tracing**: capture LLM calls, agent steps, tool use, latency, and cost as nested traces, sessions, and per-user views.
@@ -17,6 +23,24 @@
 - **Datasets and experiments**: build test sets from production traces and compare runs side by side.
 - **Dashboards**: cost, latency, and quality charts, with a fresh indigo and teal theme in light and dark.
 - **Open API and SDKs**: OpenTelemetry ingestion and a public REST API.
+
+## Screenshots
+
+| Tracing | Trace detail |
+| --- | --- |
+| ![Tracing](docs/screenshots/tracing.png) | ![Trace detail](docs/screenshots/trace-detail.png) |
+
+| Dashboards | Sessions |
+| --- | --- |
+| ![Dashboards](docs/screenshots/dashboards.png) | ![Sessions](docs/screenshots/sessions.png) |
+
+| Evals | Datasets |
+| --- | --- |
+| ![Evals](docs/screenshots/evals.png) | ![Datasets](docs/screenshots/datasets.png) |
+
+| Prompts | Playground |
+| --- | --- |
+| ![Prompts](docs/screenshots/prompts.png) | ![Playground](docs/screenshots/playground.png) |
 
 ## Run it locally
 
