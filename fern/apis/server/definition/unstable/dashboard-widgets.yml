@@ -225,7 +225,7 @@ types:
 
   DashboardWidgetFilter:
     docs: |
-      A filter in Langfuse filter-state shape. The `value` shape and the
+      A filter in Tracelight filter-state shape. The `value` shape and the
       allowed operators depend on `type`:
 
       | `type` | `value` | operators |

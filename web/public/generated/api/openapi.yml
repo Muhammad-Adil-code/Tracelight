@@ -26,9 +26,9 @@ info:
     keys in the project settings:
 
 
-    - username: Langfuse Public Key
+    - username: Tracelight Public Key
 
-    - password: Langfuse Secret Key
+    - password: Tracelight Secret Key
 
 
     ## Exports
@@ -1670,7 +1670,7 @@ paths:
         Create an evaluator in the authenticated project.
 
 
-        An evaluator defines **how** Langfuse should score data. LLM-as-a-judge
+        An evaluator defines **how** Tracelight should score data. LLM-as-a-judge
         evaluators define a prompt, expected structured output, and optional
         model configuration. Code evaluators define source code and a runtime
         language.
@@ -2377,7 +2377,7 @@ paths:
   /api/public/feedback:
     post:
       description: >-
-        Submit explicit user-approved feedback about Langfuse skills, MCP tools,
+        Submit explicit user-approved feedback about Tracelight skills, MCP tools,
         CLI, docs, or public API. Do not include secrets, credentials, customer
         data, trace payloads, or unrelated use-case details.
 
@@ -2911,7 +2911,7 @@ paths:
   /api/public/v2/metrics:
     get:
       description: >-
-        Get metrics from the Langfuse project using a query object. V2 endpoint
+        Get metrics from the Tracelight project using a query object. V2 endpoint
         with optimized performance.
 
 
@@ -3450,7 +3450,7 @@ paths:
       security: *ref_0
     delete:
       description: >-
-        Delete a model. Cannot delete models managed by Langfuse. You can create
+        Delete a model. Cannot delete models managed by Tracelight. You can create
         your own definition with the same modelName to override the definition
         though.
       operationId: models_delete
@@ -3944,7 +3944,7 @@ paths:
 
 
         This endpoint implements the OTLP/HTTP specification for trace
-        ingestion, providing native OpenTelemetry integration for Langfuse
+        ingestion, providing native OpenTelemetry integration for Tracelight
         Observability.
 
 
@@ -4873,7 +4873,7 @@ paths:
                   description: >-
                     New labels for the prompt version. Labels are unique across
                     versions. The "latest" label is reserved and managed by
-                    Langfuse.
+                    Tracelight.
               required:
                 - newLabels
   /api/public/v2/prompts/{promptName}:
@@ -6870,7 +6870,7 @@ paths:
         existing tiles as a 6x6 tile. Returns the created placement.
 
         The referenced widget must exist in the same project or be a
-        Langfuse-managed widget. The API returns `409` if a placement with
+        Tracelight-managed widget. The API returns `409` if a placement with
         the same `id` already exists on the dashboard.
       operationId: unstable_dashboards_addPlacement
       tags:
@@ -7825,7 +7825,7 @@ components:
             self-hosted deployments, pass `__GCS_DEFAULT_CREDENTIALS__` instead
             to use the deployment's Application Default Credentials; the bucket
             must then be listed in `LANGFUSE_BLOB_STORAGE_GCS_ALLOWED_BUCKETS`.
-            Default credentials are not available on Langfuse Cloud.
+            Default credentials are not available on Tracelight Cloud.
         prefix:
           type: string
           nullable: true
@@ -7864,7 +7864,7 @@ components:
           description: >-
             Data to export. When omitted on update, the existing value is
             preserved. When omitted on create, the default is `OBSERVATIONS_V2`
-            on Langfuse Cloud, and on self-hosted deployments
+            on Tracelight Cloud, and on self-hosted deployments
             `LEGACY_TRACES_OBSERVATIONS` — or `OBSERVATIONS_V2` where the
             deployment no longer populates the legacy tables. The default is
             never a source the deployment cannot serve. Required when
@@ -7872,7 +7872,7 @@ components:
 
 
             **Cloud-only project deprecation gate (effective 2026-05-20):** For
-            projects created on or after 2026-05-20 on Langfuse Cloud,
+            projects created on or after 2026-05-20 on Tracelight Cloud,
             `LEGACY_TRACES_OBSERVATIONS` and
             `LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS` are rejected with HTTP
             400. Use `OBSERVATIONS_V2` for all new integrations. Self-hosted
@@ -7880,7 +7880,7 @@ components:
 
 
             **Cloud-only integration deprecation gate (effective 2026-06-22):**
-            On Langfuse Cloud, legacy export sources are only accepted for blob
+            On Tracelight Cloud, legacy export sources are only accepted for blob
             storage integrations created before 2026-06-22, regardless of
             project age. Requests that would create a new integration with
             `LEGACY_TRACES_OBSERVATIONS` or
@@ -8142,7 +8142,7 @@ components:
       properties:
         id:
           type: string
-          description: The id of the created object in Langfuse
+          description: The id of the created object in Tracelight
       required:
         - id
     GetCommentsResponse:
@@ -8305,7 +8305,7 @@ components:
         internalModelId:
           type: string
           nullable: true
-          description: The internal model ID matched by Langfuse
+          description: The internal model ID matched by Tracelight
         modelParameters:
           nullable: true
           description: The parameters of the model used for the observation
@@ -8876,7 +8876,7 @@ components:
           items:
             $ref: '#/components/schemas/DatasetItemMediaReference'
           description: >-
-            Resolved Langfuse media references found in input, expectedOutput,
+            Resolved Tracelight media references found in input, expectedOutput,
             and metadata.
       required:
         - id
@@ -8901,7 +8901,7 @@ components:
         referenceString:
           type: string
           description: >-
-            The Langfuse media reference string, e.g.
+            The Tracelight media reference string, e.g.
             `@@@langfuseMedia:type=image/png|id=...|source=bytes@@@`
         jsonPath:
           type: string
@@ -9441,7 +9441,7 @@ components:
         - SECONDS
         - IMAGES
         - REQUESTS
-      description: Unit of usage in Langfuse
+      description: Unit of usage in Tracelight
     ObservationLevel:
       title: ObservationLevel
       type: string
@@ -9677,7 +9677,7 @@ components:
         Structured score type returned by an evaluator.
 
 
-        This controls the type of score value Langfuse stores for evaluation
+        This controls the type of score value Tracelight stores for evaluation
         results:
 
         - `NUMERIC`: a numeric score such as `0.82`
@@ -10105,7 +10105,7 @@ components:
 
 
         Manual mappings are used for `llm_as_judge` evaluators. `code`
-        evaluators use a fixed runtime mapping managed by Langfuse.
+        evaluators use a fixed runtime mapping managed by Tracelight.
 
 
         How to build a valid mapping list:
@@ -10252,7 +10252,7 @@ components:
         - guardrail
         - dataset_item
       description: >-
-        **Deprecated:** Legacy Langfuse object kind used by trace and dataset
+        **Deprecated:** Legacy Tracelight object kind used by trace and dataset
         evaluation rules.
     EvaluationRuleFilter:
       title: EvaluationRuleFilter
@@ -10826,7 +10826,7 @@ components:
         Explicit model configuration for an evaluator.
 
 
-        If the complete `modelConfig` is `null`, Langfuse uses the project's
+        If the complete `modelConfig` is `null`, Tracelight uses the project's
         default evaluation model.
 
         If provided, the model must be available to the project when the
@@ -11053,7 +11053,7 @@ components:
         status:
           $ref: '#/components/schemas/EvaluatorStatus'
           description: >-
-            Effective evaluator status after Langfuse validates its runtime
+            Effective evaluator status after Tracelight validates its runtime
             configuration.
         pausedAt:
           type: string
@@ -11225,7 +11225,7 @@ components:
 
         - `active`: the evaluator can run.
 
-        - `paused`: Langfuse paused execution until the underlying issue is
+        - `paused`: Tracelight paused execution until the underlying issue is
         resolved.
     CreateLlmAsJudgeEvaluatorRequest:
       title: CreateLlmAsJudgeEvaluatorRequest
@@ -11674,7 +11674,7 @@ components:
           type: string
           nullable: true
           description: >-
-            Optional HTTP(S) reference URL. Langfuse stores it as text for
+            Optional HTTP(S) reference URL. Tracelight stores it as text for
             triage and does not fetch it.
       required:
         - targetType
@@ -11695,7 +11695,7 @@ components:
       properties:
         version:
           type: string
-          description: Langfuse server version
+          description: Tracelight server version
         status:
           type: string
       required:
@@ -11820,7 +11820,7 @@ components:
             Adapter-specific configuration. Validation rules: - **Bedrock**:
             Required. Must be `{"region": "<aws-region>"}` (e.g.,
             `{"region":"us-east-1"}`) - **OpenAI**: Optional. If provided, must
-            be `{"useResponsesApi": <boolean>}` to control whether Langfuse
+            be `{"useResponsesApi": <boolean>}` to control whether Tracelight
             routes calls through OpenAI's Responses API. - **VertexAI**:
             Optional. If provided, must be `{"location": "<gcp-location>"}`
             (e.g., `{"location":"us-central1"}`) - **Other adapters**: Not
@@ -12047,7 +12047,7 @@ components:
       enum:
         - openai
         - claude
-      description: Tokenizer supported by Langfuse for model usage inference.
+      description: Tokenizer supported by Tracelight for model usage inference.
     PaginatedModels:
       title: PaginatedModels
       type: object
@@ -12290,7 +12290,7 @@ components:
             $ref: '#/components/schemas/OtelAttribute'
           nullable: true
           description: >-
-            Span attributes including Langfuse-specific attributes
+            Span attributes including Tracelight-specific attributes
             (langfuse.observation.*)
         status:
           nullable: true
@@ -13253,7 +13253,7 @@ components:
           type: string
           nullable: true
           description: >-
-            Description is shown across the Langfuse UI and can be used to e.g.
+            Description is shown across the Tracelight UI and can be used to e.g.
             explain the config categories in detail, why a numeric range was
             set, or provide additional context on config name or usage
       required:
@@ -13300,7 +13300,7 @@ components:
           type: string
           nullable: true
           description: >-
-            Description is shown across the Langfuse UI and can be used to e.g.
+            Description is shown across the Tracelight UI and can be used to e.g.
             explain the config categories in detail, why a numeric range was
             set, or provide additional context on config name or usage
     CreateScoresRequest:
@@ -13890,7 +13890,7 @@ components:
       title: unstableDashboardWidgetFilter
       type: object
       description: >-
-        A filter in Langfuse filter-state shape. The `value` shape and the
+        A filter in Tracelight filter-state shape. The `value` shape and the
 
         allowed operators depend on `type`:
 

@@ -177,7 +177,7 @@ components:
       properties:
         id:
           type: string
-          description: The id of the created object in Langfuse
+          description: The id of the created object in Tracelight
       required:
         - id
     CreateScoreBatchResults:

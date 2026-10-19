@@ -12,7 +12,7 @@ service:
       docs: |
         Create an evaluator in the authenticated project.
 
-        An evaluator defines **how** Langfuse should score data. LLM-as-a-judge evaluators define a prompt, expected structured output, and optional model configuration. Code evaluators define source code and a runtime language.
+        An evaluator defines **how** Tracelight should score data. LLM-as-a-judge evaluators define a prompt, expected structured output, and optional model configuration. Code evaluators define source code and a runtime language.
 
         This always creates a new evaluator with version `1`. Names are not identifiers and do not need to be unique.
       method: POST
@@ -168,7 +168,7 @@ types:
     docs: |
       Explicit model configuration for an evaluator.
 
-      If the complete `modelConfig` is `null`, Langfuse uses the project's default evaluation model.
+      If the complete `modelConfig` is `null`, Tracelight uses the project's default evaluation model.
       If provided, the model must be available to the project when the evaluator or evaluation rule is enabled.
     properties:
       provider:
@@ -304,7 +304,7 @@ types:
         docs: User who created this evaluator, or `null` when no user can be resolved.
       status:
         type: EvaluatorStatus
-        docs: Effective evaluator status after Langfuse validates its runtime configuration.
+        docs: Effective evaluator status after Tracelight validates its runtime configuration.
       pausedAt:
         type: nullable<datetime>
         docs: Timestamp when the evaluator was paused, otherwise `null`.
@@ -388,7 +388,7 @@ types:
       Effective evaluator runtime status.
 
       - `active`: the evaluator can run.
-      - `paused`: Langfuse paused execution until the underlying issue is resolved.
+      - `paused`: Tracelight paused execution until the underlying issue is resolved.
     enum:
       - active
       - paused

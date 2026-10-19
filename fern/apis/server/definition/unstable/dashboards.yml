@@ -101,7 +101,7 @@ service:
         existing tiles as a 6x6 tile. Returns the created placement.
 
         The referenced widget must exist in the same project or be a
-        Langfuse-managed widget. The API returns `409` if a placement with
+        Tracelight-managed widget. The API returns `409` if a placement with
         the same `id` already exists on the dashboard.
       method: POST
       path: /dashboards/{dashboardId}/placements

@@ -6,7 +6,7 @@ info:
     ## General Notes
 
 
-    This admin API is only available on self-hosted instances, not on Langfuse
+    This admin API is only available on self-hosted instances, not on Tracelight
     Cloud.
 
     An administrator must set the `ADMIN_API_KEY` environment variable to use
@@ -29,10 +29,10 @@ info:
     https://cloud.langfuse.com/generated/organizations-api/openapi.yml
 
 
-    ## Looking for the Langfuse API?
+    ## Looking for the Tracelight API?
 
 
-    Are you looking for the full Langfuse API?
+    Are you looking for the full Tracelight API?
 
     Check out our [API reference](https://api.reference.langfuse.com/#overview).
 paths:

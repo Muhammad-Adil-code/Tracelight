@@ -113,7 +113,7 @@ types:
         docs: The model name as provided by the user
       internalModelId:
         type: optional<nullable<string>>
-        docs: The internal model ID matched by Langfuse
+        docs: The internal model ID matched by Tracelight
       modelParameters:
         type: optional<unknown>
         docs: The parameters of the model used for the observation
@@ -400,7 +400,7 @@ types:
         docs: When this version of the dataset item became current. Listing dataset items with a `version` at or after this timestamp returns this item version, until the item is changed again. Self-hosted deployments that set `LANGFUSE_DATASET_SERVICE_WRITE_TO_VERSIONED_IMPLEMENTATION=false` update items in place, so there it stays at the item's first write.
       mediaReferences:
         type: list<DatasetItemMediaReference>
-        docs: Resolved Langfuse media references found in input, expectedOutput, and metadata.
+        docs: Resolved Tracelight media references found in input, expectedOutput, and metadata.
   # Source: web/src/features/public-api/types/datasets.ts - APIDatasetItemMediaReference
   DatasetItemMediaReference:
     properties:
@@ -409,7 +409,7 @@ types:
         docs: The dataset item field containing the reference
       referenceString:
         type: string
-        docs: The Langfuse media reference string, e.g. `@@@langfuseMedia:type=image/png|id=...|source=bytes@@@`
+        docs: The Tracelight media reference string, e.g. `@@@langfuseMedia:type=image/png|id=...|source=bytes@@@`
       jsonPath:
         type: string
         docs: JSONPath of the string holding the reference within the field, e.g. `$['image']`
@@ -712,7 +712,7 @@ types:
 
   # Utilities
   ModelUsageUnit:
-    docs: Unit of usage in Langfuse
+    docs: Unit of usage in Tracelight
     enum:
       - CHARACTERS
       - TOKENS

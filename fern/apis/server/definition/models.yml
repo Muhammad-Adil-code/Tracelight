@@ -43,14 +43,14 @@ service:
       response: commons.Model
     delete:
       method: DELETE
-      docs: Delete a model. Cannot delete models managed by Langfuse. You can create your own definition with the same modelName to override the definition though.
+      docs: Delete a model. Cannot delete models managed by Tracelight. You can create your own definition with the same modelName to override the definition though.
       path: /models/{id}
       path-parameters:
         id: string
 
 types:
   ModelTokenizerId:
-    docs: Tokenizer supported by Langfuse for model usage inference.
+    docs: Tokenizer supported by Tracelight for model usage inference.
     enum:
       - openai
       - claude
