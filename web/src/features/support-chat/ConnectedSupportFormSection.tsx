@@ -105,7 +105,7 @@ export function ConnectedSupportFormSection({
     if (data.pylonIssueFailed) {
       showErrorToast(
         "Support request was not sent",
-        "Please contact support@langfuse.com",
+        "Please contact the Tracelight maintainer at adil.mern.ai@gmail.com",
         {
           operation: "support_request.submit",
           errorOrigin: "backend",
