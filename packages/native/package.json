@@ -1,7 +1,7 @@
 {
   "name": "@langfuse/native",
   "version": "0.0.0",
-  "description": "Rust native addon (napi-rs) loaded by the Langfuse worker",
+  "description": "Rust native addon (napi-rs) loaded by the Tracelight worker",
   "license": "MIT",
   "private": true,
   "main": "index.js",
