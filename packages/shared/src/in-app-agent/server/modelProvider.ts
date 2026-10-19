@@ -44,7 +44,7 @@ export type InAppAgentModelConfig =
     };
 
 export const LANGFUSE_AI_MODEL_UNCONFIGURED_MESSAGE =
-  "Langfuse AI is not configured. Set LANGFUSE_AI_PROVIDER and LANGFUSE_AI_MODEL, plus LANGFUSE_AI_API_KEY when LANGFUSE_AI_PROVIDER is anthropic or openai.";
+  "Tracelight AI is not configured. Set LANGFUSE_AI_PROVIDER and LANGFUSE_AI_MODEL, plus LANGFUSE_AI_API_KEY when LANGFUSE_AI_PROVIDER is anthropic or openai.";
 
 const extraHeadersRecordSchema = z.record(z.string(), z.string());
 
@@ -208,7 +208,7 @@ function warnIfInstanceCredentialsIgnoreKeyEnv(provider: "bedrock" | "vertex") {
         };
 
   logger.warn(
-    `Ignoring ${ignored.join(" and ")} because the Langfuse AI provider is ${provider}. ${label} uses ${credentialChain}, not an API key, base URL, extra headers, or the OpenAI Responses API toggle.`,
+    `Ignoring ${ignored.join(" and ")} because the Tracelight AI provider is ${provider}. ${label} uses ${credentialChain}, not an API key, base URL, extra headers, or the OpenAI Responses API toggle.`,
   );
 }
 

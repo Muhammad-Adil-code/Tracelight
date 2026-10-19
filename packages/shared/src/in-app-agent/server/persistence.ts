@@ -495,7 +495,7 @@ export async function maybeInferAndPersistConversationTitle(params: {
           role: ChatMessageRole.System,
           type: ChatMessageType.System,
           content: `
-Generate a concise title for this Langfuse assistant conversation.
+Generate a concise title for this Tracelight assistant conversation.
 The title should be 3-6 words, one sentence, and not exceed 100 characters.
 The title should focus on the user's task, problem, or topic, and preserve important product names, entities, or task intent.
 
@@ -534,7 +534,7 @@ Bad titles:
 - "User: cluster these traces based on tags"
 - "No response from assistant"
 - "Conversation about traces"
-- "Langfuse setup improvement recommendations"
+- "Tracelight setup improvement recommendations"
 - "I have the low-scoring traces now Let me also dig into what makes them fail"
 - "Here are the patterns I found across your failed and low-scoring traces"
 
