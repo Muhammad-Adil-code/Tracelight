@@ -7,7 +7,7 @@
 #   - the local branch matches its origin counterpart
 #   - for `main` releases only: any migrations on main but not yet on
 #     production are confirmed as applied (`main` is the only branch that
-#     promotes to Langfuse Cloud; `v3` releases are OSS-only)
+#     promotes to Tracelight Cloud; `v3` releases are OSS-only)
 # Helpers (log/fail/require_command) are exposed for sourcing callers to reuse.
 
 set -euo pipefail
@@ -148,7 +148,7 @@ run_release_preflight() {
   ensure_on_release_branch
   ensure_branch_matches_origin
 
-  # Only `main` promotes to Langfuse Cloud production. Releases from other
+  # Only `main` promotes to Tracelight Cloud production. Releases from other
   # branches never reach the production databases, so confirming migrations
   # against origin/production would be meaningless there.
   if [[ "$(current_branch)" != "main" ]]; then

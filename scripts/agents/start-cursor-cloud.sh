@@ -125,4 +125,4 @@ curl --fail --silent --show-error "http://127.0.0.1:3030/api/health" >/dev/null
 compose ps
 trap - ERR
 
-echo "Cursor Cloud Langfuse stack is healthy: 6 services, web :3000, worker :3030."
+echo "Cursor Cloud Tracelight stack is healthy: 6 services, web :3000, worker :3030."

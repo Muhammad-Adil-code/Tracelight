@@ -51,7 +51,7 @@ wait_for_health() {
       return 0
     fi
     if ! kill -0 "$pid" 2>/dev/null; then
-      echo "Langfuse exited before $url became healthy:" >&2
+      echo "Tracelight exited before $url became healthy:" >&2
       tail -n 100 /tmp/langfuse-start.log >&2
       return 1
     fi
@@ -86,7 +86,7 @@ case "$SUITE" in
     pnpm --filter web run build:otel-worker
     endgroup
 
-    group "Start Langfuse"
+    group "Start Tracelight"
     # Docker sets HOSTNAME to the container's host name, and the worker binds
     # to HOSTNAME; bind all interfaces so localhost reaches it.
     HOSTNAME="0.0.0.0" \
