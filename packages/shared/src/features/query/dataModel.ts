@@ -1402,7 +1402,7 @@ export const eventsObservationsView: ViewDeclarationType = {
       type: "arrayString",
       explodeArray: true,
       uiHidden: true,
-      description: "Langfuse IDs of skill versions made available.",
+      description: "Tracelight IDs of skill versions made available.",
     },
     skillIdsLoaded: {
       sql: "arrayDistinct(events_observations.skills_resource_loaded.langfuseSkillId)",
@@ -1410,7 +1410,7 @@ export const eventsObservationsView: ViewDeclarationType = {
       type: "arrayString",
       explodeArray: true,
       uiHidden: true,
-      description: "Langfuse IDs of skill versions with loaded files.",
+      description: "Tracelight IDs of skill versions with loaded files.",
     },
     loadedFilePaths: {
       sql: "arrayDistinct(events_observations.skills_resource_loaded.filePath)",

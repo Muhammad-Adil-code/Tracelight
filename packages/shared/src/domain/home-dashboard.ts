@@ -84,7 +84,7 @@ export const LANGFUSE_HOME_DASHBOARD_DEFINITION: DashboardDefinition = {
 
 export const LANGFUSE_HOME_DASHBOARD = {
   id: LANGFUSE_HOME_DASHBOARD_ID,
-  name: "Langfuse Home",
+  name: "Tracelight Home",
   description:
     "Overview of traces, costs, scores, usage, and latencies in this project. Shown on the project home page.",
   definition: LANGFUSE_HOME_DASHBOARD_DEFINITION,

@@ -231,7 +231,7 @@ export const UpdateSkillLabelsBodySchema = z.object({
   labels: z
     .array(PromptLabelSchema)
     .refine((labels) => !labels.includes(SKILL_LATEST_LABEL), {
-      message: `The '${SKILL_LATEST_LABEL}' label is managed by Langfuse`,
+      message: `The '${SKILL_LATEST_LABEL}' label is managed by Tracelight`,
     }),
 });
 

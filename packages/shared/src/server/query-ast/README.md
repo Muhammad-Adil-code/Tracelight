@@ -62,7 +62,7 @@ pnpm --filter @langfuse/shared run test .golden.test -- -u
 The `*.golden.test.ts` suites need the `clickhouse` binary (the `format`
 subcommand, shipped in `clickhouse-common-static`); without it they
 `describe.skip`. The `tests-shared` CI job installs it pinned to **26.4.5.143** —
-the ClickHouse version recommended for Langfuse v4, also pinned in
+the ClickHouse version recommended for Tracelight v4, also pinned in
 `scripts/codex/cloud_services.sh`.
 
 `clickhouse format` output is version-sensitive (e.g. how `UNION ALL` branches

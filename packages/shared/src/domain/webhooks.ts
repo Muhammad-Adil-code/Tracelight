@@ -5,7 +5,7 @@ import { EventActionSchema } from "./automations";
 export const WebhookContentTypeHeader = "content-type";
 export const WebhookSignatureHeader = "x-langfuse-signature";
 export const WebhookUserAgentHeader = "user-agent";
-export const LangfuseUserAgent = "Langfuse/1.0";
+export const LangfuseUserAgent = "Tracelight/1.0";
 
 export const WebhookDefaultHeaders = {
   [WebhookContentTypeHeader]: "application/json",
