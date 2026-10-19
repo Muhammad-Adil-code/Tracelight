@@ -614,5 +614,5 @@ pnpm dlx fern-api@3.88.0 generate --api server
 
 ## License
 
-Tracelight is a fork of Langfuse and is MIT licensed, except for the `ee/` folder. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md) for more details.
+Tracelight is MIT licensed, except for the `ee/` folder. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md) for more details.
 
