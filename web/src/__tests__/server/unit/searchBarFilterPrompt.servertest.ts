@@ -154,7 +154,7 @@ describe("sample-filter AI registries", () => {
     );
 
     expect(prompt).toContain(
-      "observation filters for a Langfuse evaluation rule",
+      "observation filters for a Tracelight evaluation rule",
     );
     expect(prompt).toContain("- datasetName");
     expect(prompt).not.toContain("observability (v4 events) table");

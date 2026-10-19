@@ -253,6 +253,6 @@ describe("LLM base URL validation", () => {
 
     await expect(
       validateLlmConnectionBaseURL("http://1.1.1.1/v1"),
-    ).rejects.toThrow("Only HTTPS base URLs are allowed on Langfuse Cloud");
+    ).rejects.toThrow("Only HTTPS base URLs are allowed on Tracelight Cloud");
   });
 });

@@ -28,7 +28,7 @@ describe("buildColoredAttachmentSlackMessage", () => {
       buildColoredAttachmentSlackMessage(base).attachments![0].blocks,
     );
     expect(serialized).toContain(`<${base.url}|Something failed>`);
-    expect(serialized).toContain("View in Langfuse");
+    expect(serialized).toContain("View in Tracelight");
   });
 
   it("omits the link and button when no url is provided", () => {
@@ -36,7 +36,7 @@ describe("buildColoredAttachmentSlackMessage", () => {
     const serialized = JSON.stringify(
       buildColoredAttachmentSlackMessage(noUrl).attachments![0].blocks,
     );
-    expect(serialized).not.toContain("View in Langfuse");
+    expect(serialized).not.toContain("View in Tracelight");
     expect(serialized).toContain("*Something failed*");
   });
 
@@ -50,7 +50,7 @@ describe("buildColoredAttachmentSlackMessage", () => {
     expect(actions.elements).toHaveLength(2);
     expect(actions.elements[0]).toMatchObject({
       type: "button",
-      text: { text: "View in Langfuse" },
+      text: { text: "View in Tracelight" },
       url: base.url,
     });
     expect(actions.elements[1]).toMatchObject({

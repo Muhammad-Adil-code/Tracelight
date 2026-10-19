@@ -24,11 +24,11 @@ describe("/api/docs", () => {
 
     expect(res.statusCode).toBe(200);
     expect(res.getHeader("Content-Type")).toBe("text/html; charset=utf-8");
-    expect(body).toContain("<title>Langfuse API Reference</title>");
+    expect(body).toContain("<title>Tracelight API Reference</title>");
     expect(body).toMatch(/src="\?asset=scalar-api-reference-[a-f0-9]{12}\.js"/);
     expect(body).toContain('"url":"openapi.yaml"');
     expect(body).toContain('"agent":{"disabled":true}');
-    expect(body).toContain('"mcp":{"name":"Langfuse API"');
+    expect(body).toContain('"mcp":{"name":"Tracelight API"');
     expect(body).toContain('"telemetry":false');
     expect(body).toContain('"hideClientButton":true');
     expect(body).toContain('"withDefaultFonts":false');

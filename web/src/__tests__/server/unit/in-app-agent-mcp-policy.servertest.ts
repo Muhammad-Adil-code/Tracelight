@@ -18,7 +18,7 @@ describe("IN_APP_AGENT_LANGFUSE_MCP_TOOL_POLICIES", () => {
     }
   });
 
-  it("classifies every Langfuse MCP tool exactly once", () => {
+  it("classifies every Tracelight MCP tool exactly once", () => {
     expect(bootstrapMcpFeatures).toBeTypeOf("function");
     expectTypeOf<InAppAgentLangfuseMcpToolName>().toEqualTypeOf<McpToolName>();
 

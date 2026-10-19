@@ -90,7 +90,7 @@ describe("organization AI feature settings", () => {
       }),
     ).rejects.toMatchObject({
       code: "PRECONDITION_FAILED",
-      message: "AI telemetry controls are only available on Langfuse Cloud.",
+      message: "AI telemetry controls are only available on Tracelight Cloud.",
     });
   });
 

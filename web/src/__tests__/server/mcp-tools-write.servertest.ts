@@ -450,7 +450,7 @@ describe("MCP Write Tools", () => {
           context,
         ),
       ).rejects.toThrow(
-        "Code evaluator mappings are managed by Langfuse and cannot be provided.",
+        "Code evaluator mappings are managed by Tracelight and cannot be provided.",
       );
 
       const evaluator = (await handleCreateEvaluator(
@@ -478,7 +478,7 @@ describe("MCP Write Tools", () => {
           context,
         ),
       ).rejects.toThrow(
-        "Code evaluator mappings are managed by Langfuse and cannot be provided.",
+        "Code evaluator mappings are managed by Tracelight and cannot be provided.",
       );
     });
   });
@@ -692,7 +692,7 @@ describe("MCP Write Tools", () => {
           context,
         ),
       ).rejects.toThrow(
-        "Code evaluator mappings are managed by Langfuse and cannot be provided.",
+        "Code evaluator mappings are managed by Tracelight and cannot be provided.",
       );
     });
   });

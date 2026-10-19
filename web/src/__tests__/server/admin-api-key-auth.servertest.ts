@@ -166,7 +166,7 @@ describe("Admin API Key Authentication", () => {
 
       await expect(verifyAuth(mockReq, true)).rejects.toEqual({
         status: 403,
-        message: "Admin API key auth is not available on Langfuse Cloud",
+        message: "Admin API key auth is not available on Tracelight Cloud",
       });
 
       (env as any).NEXT_PUBLIC_LANGFUSE_CLOUD_REGION = undefined;

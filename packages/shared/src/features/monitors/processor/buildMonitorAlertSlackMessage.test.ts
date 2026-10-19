@@ -98,7 +98,7 @@ describe("buildMonitorAlertSlackMessage", () => {
     expect(actions.elements).toHaveLength(2);
     // Config button kept.
     expect(actions.elements[0]).toMatchObject({
-      text: { text: "View in Langfuse" },
+      text: { text: "View in Tracelight" },
       url: mockMonitorAlert.permalink,
     });
     // Windowed data-table button added.
@@ -132,7 +132,7 @@ describe("buildMonitorAlertSlackMessage", () => {
       (b: any) => b.type === "actions",
     );
     expect(actions.elements).toHaveLength(1);
-    expect(actions.elements[0].text.text).toBe("View in Langfuse");
+    expect(actions.elements[0].text.text).toBe("View in Tracelight");
   });
 
   it("explains an unavailable score link while retaining the alert action", () => {
@@ -165,7 +165,7 @@ describe("buildMonitorAlertSlackMessage", () => {
         (b: any) => b.type === "actions",
       );
       expect(actions.elements).toHaveLength(1);
-      expect(actions.elements[0].text.text).toBe("View in Langfuse");
+      expect(actions.elements[0].text.text).toBe("View in Tracelight");
       expect(attachments![0].blocks![1].text.text).not.toContain(
         "scores link is unavailable",
       );

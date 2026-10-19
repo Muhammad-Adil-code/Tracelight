@@ -130,7 +130,7 @@ describe("FeedbackService", () => {
       blocks: SlackBlockForTest[];
     };
     expect(body.text).toBe(
-      `New Langfuse feedback · Langfuse MCP · mcp-tool · ${result.id}`,
+      `New Tracelight feedback · Tracelight MCP · mcp-tool · ${result.id}`,
     );
     expect(body.unfurl_links).toBe(false);
     expect(body.unfurl_media).toBe(false);

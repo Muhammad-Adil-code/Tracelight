@@ -230,7 +230,7 @@ service:
       definitionDirectory,
     )) {
       const operation = `${method.toUpperCase()} ${endpointPath}`;
-      expect(message, operation).toContain("On Langfuse Cloud,");
+      expect(message, operation).toContain("On Tracelight Cloud,");
       expect(message, operation).toContain(
         "Self-hosted deployments are unaffected",
       );

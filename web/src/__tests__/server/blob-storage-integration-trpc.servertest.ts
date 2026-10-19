@@ -998,7 +998,7 @@ describe("Blob Storage Integration tRPC Router", () => {
         await expect(
           validateBlobStorageEndpoint("http://127.0.0.1:9000"),
         ).rejects.toThrow(
-          "Only HTTPS blob storage endpoints are allowed on Langfuse Cloud",
+          "Only HTTPS blob storage endpoints are allowed on Tracelight Cloud",
         );
       } finally {
         validationEnv.NEXT_PUBLIC_LANGFUSE_CLOUD_REGION =

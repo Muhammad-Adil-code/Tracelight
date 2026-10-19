@@ -724,7 +724,7 @@ describe("shadowAuth maps principals to legacy-identical scopes", () => {
       success: false,
       error: {
         httpCode: 403,
-        message: "Admin API key auth is not available on Langfuse Cloud",
+        message: "Admin API key auth is not available on Tracelight Cloud",
       },
     };
     const { legacy, enforce } = await resultsUnderModes(params);

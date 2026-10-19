@@ -290,7 +290,7 @@ describe("SlackMessageBuilder", () => {
         type: "section",
         text: {
           type: "mrkdwn",
-          text: "*Langfuse Notification*\nunknown-event event: *triggered*",
+          text: "*Tracelight Notification*\nunknown-event event: *triggered*",
         },
       });
     });
@@ -319,7 +319,7 @@ describe("SlackMessageBuilder", () => {
 
       // Should be a fallback message (1 block)
       expect(blocks).toHaveLength(1);
-      expect(blocks[0].text.text).toContain("Langfuse Notification");
+      expect(blocks[0].text.text).toContain("Tracelight Notification");
     });
 
     it("should handle errors gracefully and return fallback", () => {
@@ -334,7 +334,7 @@ describe("SlackMessageBuilder", () => {
 
       // Should fallback to simple message
       expect(blocks).toHaveLength(1);
-      expect(blocks[0].text.text).toContain("Langfuse Notification");
+      expect(blocks[0].text.text).toContain("Tracelight Notification");
     });
   });
 });

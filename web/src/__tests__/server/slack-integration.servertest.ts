@@ -307,7 +307,7 @@ describe("Slack Integration", () => {
           client: expect.any(Object),
           channelId: "C123456",
           blocks: expect.any(Array),
-          text: "Test message from Langfuse",
+          text: "Test message from Tracelight",
         });
 
         // 🔒 CRITICAL: Ensure no bot token is exposed in test results
