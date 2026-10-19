@@ -97,7 +97,7 @@ case "$SUITE" in
       LANGFUSE_INIT_PROJECT_NAME="Seed Project" \
       LANGFUSE_INIT_PROJECT_PUBLIC_KEY="pk-lf-1234567890" \
       LANGFUSE_INIT_PROJECT_SECRET_KEY="sk-lf-1234567890" \
-      LANGFUSE_INIT_USER_EMAIL="demo@langfuse.com" \
+      LANGFUSE_INIT_USER_EMAIL="demo@tracelight.dev" \
       LANGFUSE_INIT_USER_NAME="Demo User" \
       LANGFUSE_INIT_USER_PASSWORD="password" \
       pnpm run start > /tmp/langfuse-start.log 2>&1 &

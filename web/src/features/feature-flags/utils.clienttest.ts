@@ -68,7 +68,7 @@ describe("parseFlags", () => {
 
   it("requires personal Topics opt-in and ignores team and organization defaults", () => {
     const context = {
-      email: "team.member@langfuse.com",
+      email: "team.member@tracelight.dev",
       v4BetaEnabled: true,
     };
     expect(
@@ -80,7 +80,7 @@ describe("parseFlags", () => {
 
   it("enables feature previews by default for Tracelight team members", () => {
     const flags = parseFlags([], {
-      email: "team.member@langfuse.com",
+      email: "team.member@tracelight.dev",
       v4BetaEnabled: true,
     });
 
@@ -158,7 +158,7 @@ describe("parseFlags", () => {
     ).toBe(false);
     expect(
       parseFlags(["aiGateway"], {
-        email: "team.member@langfuse.com",
+        email: "team.member@tracelight.dev",
         v4BetaEnabled: true,
       }).aiGateway,
     ).toBe(false);
@@ -168,7 +168,7 @@ describe("parseFlags", () => {
     const flags = parseFlags(
       [getFeaturePreviewOptOutFlag("sessionViewV2"), "templateFlag"],
       {
-        email: "team.member@langfuse.com",
+        email: "team.member@tracelight.dev",
         v4BetaEnabled: true,
       },
     );

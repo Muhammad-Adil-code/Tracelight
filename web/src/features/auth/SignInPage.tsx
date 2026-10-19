@@ -59,7 +59,7 @@ import { TURNSTILE_ACTIONS } from "@/src/features/auth/constants";
 // (packages/shared/scripts/seeder/seed-postgres.ts) and posted in every
 // preview PR comment (.github/workflows/preview-build.yml). Only used when
 // NEXT_PUBLIC_PREVIEW_DEMO_AUTO_SIGN_IN is baked into the build.
-const PREVIEW_DEMO_USER_EMAIL = "demo@langfuse.com";
+const PREVIEW_DEMO_USER_EMAIL = "demo@tracelight.dev";
 const PREVIEW_DEMO_USER_PASSWORD = "password";
 
 const credentialAuthForm = z.object({

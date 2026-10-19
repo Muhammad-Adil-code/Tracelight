@@ -108,7 +108,7 @@ test.describe("Create project", () => {
       // const errors = await checkConsoleErrors(page);
       await signin(page);
 
-      const projectUrl = await getProjectUrlForEmail("demo@langfuse.com");
+      const projectUrl = await getProjectUrlForEmail("demo@tracelight.dev");
       await page.goto(projectUrl + url, { waitUntil: "networkidle" });
       await expect(page).toHaveURL(projectUrl + url);
       await checkPageHeaderTitle(page, title);

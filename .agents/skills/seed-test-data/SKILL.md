@@ -90,7 +90,7 @@ for batch IDs, dataset contents, and clustering settings.
   under their old dates until then). Independent copies come only from
   `--id-prefix`.
 - Default project is the seeded `7a88fb47-b4e2-43b8-a06c-a5ce950dc53a`
-  (login `demo@langfuse.com` / `password`); override with `--project`.
+  (login `demo@tracelight.dev` / `password`); override with `--project`.
 - Open the printed `links` in the browser to verify visually. The v4
   events-backed UI is the per-user "Fast (Preview)" sidebar toggle, or
   `LANGFUSE_MIGRATION_V4_WRITE_MODE=events_only` server-side.

@@ -88,17 +88,17 @@ describe("ResilientSessionProvider", () => {
   });
 
   it("keeps the last session while re-checking, and asks next-auth to re-fetch", async () => {
-    useSessionMock.mockReturnValue(authenticated("demo@langfuse.com"));
+    useSessionMock.mockReturnValue(authenticated("demo@tracelight.dev"));
     const { rerender } = render(tree());
     expect(screen.getByTestId("session")).toHaveTextContent(
-      "authenticated:demo@langfuse.com",
+      "authenticated:demo@tracelight.dev",
     );
 
     // A blip: next-auth reports no session, so consumers would unmount.
     useSessionMock.mockReturnValue(noSession);
     await act(async () => rerender(tree()));
     expect(screen.getByTestId("session")).toHaveTextContent(
-      "authenticated:demo@langfuse.com",
+      "authenticated:demo@tracelight.dev",
     );
     expect(storageKicks(dispatch)).toBe(1);
 
@@ -109,15 +109,15 @@ describe("ResilientSessionProvider", () => {
     expect(storageKicks(dispatch)).toBe(2);
 
     // The re-fetch lands, so the real session takes over again.
-    useSessionMock.mockReturnValue(authenticated("demo@langfuse.com"));
+    useSessionMock.mockReturnValue(authenticated("demo@tracelight.dev"));
     await act(async () => rerender(tree()));
     expect(screen.getByTestId("session")).toHaveTextContent(
-      "authenticated:demo@langfuse.com",
+      "authenticated:demo@tracelight.dev",
     );
   });
 
   it("reports unauthenticated when the server says the session is gone", async () => {
-    useSessionMock.mockReturnValue(authenticated("demo@langfuse.com"));
+    useSessionMock.mockReturnValue(authenticated("demo@tracelight.dev"));
     const { rerender } = render(tree());
 
     useSessionMock.mockReturnValue(noSession);
@@ -131,7 +131,7 @@ describe("ResilientSessionProvider", () => {
 
   it("never signs the user out while the session endpoint is unreachable", async () => {
     vi.stubGlobal("fetch", endpointUnreachable());
-    useSessionMock.mockReturnValue(authenticated("demo@langfuse.com"));
+    useSessionMock.mockReturnValue(authenticated("demo@tracelight.dev"));
     const { rerender } = render(tree());
 
     useSessionMock.mockReturnValue(noSession);
@@ -143,7 +143,7 @@ describe("ResilientSessionProvider", () => {
     }
 
     expect(screen.getByTestId("session")).toHaveTextContent(
-      "authenticated:demo@langfuse.com",
+      "authenticated:demo@tracelight.dev",
     );
     expect(storageKicks(dispatch)).toBeGreaterThan(2);
   });

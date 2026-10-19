@@ -50,7 +50,7 @@ const caller = () => {
     user: {
       id: "user-1",
       name: "Demo User",
-      email: "demo@langfuse.com",
+      email: "demo@tracelight.dev",
       admin: false,
       organizations: [{ id: ORG_ID, name: "Org", role: "OWNER", projects: [] }],
     },

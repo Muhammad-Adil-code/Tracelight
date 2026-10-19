@@ -294,7 +294,7 @@ When you change the shared MCP setup:
    - [Demo project, http://localhost:3000/project/7a88fb47-b4e2-43b8-a06c-a5ce950dc53a](http://localhost:3000/project/7a88fb47-b4e2-43b8-a06c-a5ce950dc53a)
 
 7. Log in as a test user:
-   - Username: `demo@langfuse.com`
+   - Username: `demo@tracelight.dev`
    - Password: `password`
 
 To get comprehensive example data, you can use the `seed` command:

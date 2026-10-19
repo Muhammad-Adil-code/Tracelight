@@ -68,14 +68,14 @@ async function main() {
     where: { id: seedUserId1 },
     update: {
       name: "Demo User",
-      email: "demo@langfuse.com",
+      email: "demo@tracelight.dev",
       password: await hash("password", 12),
       v4BetaEnabled: true,
     },
     create: {
       id: seedUserId1,
       name: "Demo User",
-      email: "demo@langfuse.com",
+      email: "demo@tracelight.dev",
       password: await hash("password", 12),
       image: "https://static.langfuse.com/langfuse-dev%2Fexample-avatar.png",
       featureFlags: ["langfuseTopics"],
@@ -93,14 +93,14 @@ async function main() {
     where: { id: seedUserId2 },
     update: {
       name: "Demo User 2",
-      email: "member@langfuse.com",
+      email: "member@tracelight.dev",
       password: await hash("password", 12),
       v4BetaEnabled: true,
     },
     create: {
       id: seedUserId2,
       name: "Demo User 2",
-      email: "member@langfuse.com",
+      email: "member@tracelight.dev",
       password: await hash("password", 12),
       v4BetaEnabled: true,
     },

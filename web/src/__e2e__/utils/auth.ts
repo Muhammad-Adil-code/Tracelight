@@ -2,7 +2,7 @@ import { expect, type Page } from "@playwright/test";
 
 /** The account created by `pnpm --filter=shared run db:seed`. */
 const DEMO_USER = {
-  email: "demo@langfuse.com",
+  email: "demo@tracelight.dev",
   password: "password",
 } as const;
 
