@@ -1,6 +1,6 @@
 # Table Column Creators
 
-Column creators define reusable visual column types for Langfuse tables. They keep the loaded cell renderer and its loading skeleton colocated so these states cannot drift apart.
+Column creators define reusable visual column types for Tracelight tables. They keep the loaded cell renderer and its loading skeleton colocated so these states cannot drift apart.
 
 ## Accessors
 
