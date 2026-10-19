@@ -10,7 +10,7 @@ export async function testSignedMediaUrlCors(signedUrl: string) {
     });
   } catch {
     throw new Error(
-      "The browser could not read the signed URL. Check the bucket CORS policy for this Langfuse origin.",
+      "The browser could not read the signed URL. Check the bucket CORS policy for this Tracelight origin.",
     );
   }
 

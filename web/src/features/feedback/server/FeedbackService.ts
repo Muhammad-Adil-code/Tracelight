@@ -111,7 +111,7 @@ const isHipaaCloudRegion = (): boolean =>
 export const isProductFeedbackAvailable = (): boolean => !isHipaaCloudRegion();
 
 const feedbackSourceLabel: Record<FeedbackSource, string> = {
-  "langfuse-mcp": "Langfuse MCP",
+  "langfuse-mcp": "Tracelight MCP",
   "public-api": "Public API",
 };
 
@@ -131,7 +131,7 @@ const buildFeedbackSlackMessage = ({
       type: "header",
       text: {
         type: "plain_text",
-        text: "💬 New Langfuse feedback",
+        text: "💬 New Tracelight feedback",
         emoji: true,
       },
     },
@@ -170,7 +170,7 @@ const buildFeedbackSlackMessage = ({
   );
 
   return {
-    text: `New Langfuse feedback · ${feedbackSourceLabel[source]} · ${input.targetType} · ${id}`,
+    text: `New Tracelight feedback · ${feedbackSourceLabel[source]} · ${input.targetType} · ${id}`,
     blocks,
     unfurl_links: false,
     unfurl_media: false,

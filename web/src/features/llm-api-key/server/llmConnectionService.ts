@@ -230,12 +230,12 @@ async function validateBaseUrl(params: {
     const url = new URL(params.baseURL);
     if (/\/systemone\/?$/.test(url.pathname)) {
       throw new Error(
-        "Remove /systemone from the end of the base URL. Langfuse appends it.",
+        "Remove /systemone from the end of the base URL. Tracelight appends it.",
       );
     }
     if (url.search || url.hash) {
       throw new Error(
-        "Remove the query string from the base URL. Langfuse appends /systemone to it.",
+        "Remove the query string from the base URL. Tracelight appends /systemone to it.",
       );
     }
   }
