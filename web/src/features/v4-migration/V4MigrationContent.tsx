@@ -1828,16 +1828,6 @@ export function V4MigrationDetailsContent({
           >
             Email an engineer
           </button>
-          <span>·</span>
-          <a
-            href="https://cal.com/team/langfuse/v4-upgrade"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => capture("v4_migration:contact_book_call_clicked")}
-            className="underline"
-          >
-            Book a call
-          </a>
           {env.NEXT_PUBLIC_LANGFUSE_CLOUD_REGION && (
             <>
               <span>·</span>

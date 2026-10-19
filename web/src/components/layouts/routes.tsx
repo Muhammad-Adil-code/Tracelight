@@ -29,7 +29,6 @@ import { type Session } from "next-auth";
 import { type OrganizationScope } from "@/src/features/rbac";
 import { SupportButton } from "@/src/components/nav/support-button";
 import { V4SidebarToggle } from "@/src/features/events";
-import { BookACallButton } from "@/src/components/nav/book-a-call-button";
 import { SidebarMenuButton } from "@/src/components/ui/sidebar";
 import { KeyboardShortcut } from "@/src/components/design-system/KeyboardShortcut/KeyboardShortcut";
 import { useCommandMenu } from "@/src/features/command-k-menu/CommandMenuProvider";
@@ -293,12 +292,6 @@ export const ROUTES: Route[] = [
     href: "/organization/[organizationId]/settings",
     icon: Settings,
     section: RouteSection.Secondary,
-  },
-  {
-    title: "Book a call",
-    section: RouteSection.Secondary,
-    href: "",
-    menuNode: <BookACallButton />,
   },
   {
     title: "Support",
