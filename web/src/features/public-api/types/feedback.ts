@@ -44,7 +44,7 @@ export const PostFeedbackBody = z
         message: "referenceUrl must use http or https",
       })
       .optional()
-      .describe("Optional URL reference. Langfuse stores it as text only."),
+      .describe("Optional URL reference. Tracelight stores it as text only."),
   })
   .strict();
 

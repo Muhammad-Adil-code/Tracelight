@@ -196,7 +196,7 @@ export default async function handler(
 
         if (isEventsOnlyMode && rejectedErrors.length > 0) {
           logger.warn(
-            `Rejected ${rejectedErrors.length} event(s) from the legacy /api/public/ingestion endpoint for project ${projectId} because this Langfuse v4 deployment runs in events_only mode. These events were not stored. ${EVENTS_ONLY_INGESTION_REMEDIATION}`,
+            `Rejected ${rejectedErrors.length} event(s) from the legacy /api/public/ingestion endpoint for project ${projectId} because this Tracelight v4 deployment runs in events_only mode. These events were not stored. ${EVENTS_ONLY_INGESTION_REMEDIATION}`,
             {
               sdkName: attribution.ingestionSdkName,
               sdkVersion: attribution.ingestionSdkVersion,

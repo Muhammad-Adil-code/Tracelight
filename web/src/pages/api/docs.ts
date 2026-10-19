@@ -50,7 +50,7 @@ const apiReferenceConfiguration = {
   url: "openapi.yaml",
   agent: { disabled: true },
   mcp: {
-    name: "Langfuse API",
+    name: "Tracelight API",
     url: "../api/public/mcp",
     disabled: true,
   },
@@ -68,7 +68,7 @@ const apiReferenceConfiguration = {
 const apiReferenceHtml = `<!doctype html>
 <html>
   <head>
-    <title>Langfuse API Reference</title>
+    <title>Tracelight API Reference</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>

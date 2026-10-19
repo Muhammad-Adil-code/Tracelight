@@ -29,7 +29,7 @@ export default withMiddlewares({
     fn: async ({ query, auth }) => {
       if (!isMetricsV2Available()) {
         throw new LangfuseNotFoundError(
-          "The metrics v2 API is only available in a Langfuse v4 write mode. Learn more at: https://langfuse.com/docs/v4",
+          "The metrics v2 API is only available in a Tracelight v4 write mode. Learn more at: https://langfuse.com/docs/v4",
         );
       }
 

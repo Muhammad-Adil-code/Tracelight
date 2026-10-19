@@ -90,7 +90,7 @@ function enforceRouteSettings(
     }
     if (env.NEXT_PUBLIC_LANGFUSE_CLOUD_REGION) {
       return forbiddenError(
-        "Admin API key auth is not available on Langfuse Cloud",
+        "Admin API key auth is not available on Tracelight Cloud",
       );
     }
   }

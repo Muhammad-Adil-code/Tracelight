@@ -16,7 +16,7 @@ export const V3_SUNSET_HUMAN = "November 16, 2026";
 export const V3_DELAY_NOTICE =
   "The only path to live data is OpenTelemetry ingestion combined with GET /api/public/v2/observations and GET /api/public/v2/metrics. All other public APIs may have data delays of several minutes.";
 
-const V3_NOTICE = `On Langfuse Cloud, Langfuse v3 is deprecated and this endpoint will be removed on ${V3_SUNSET_HUMAN}. ${V3_DELAY_NOTICE}`;
+const V3_NOTICE = `On Tracelight Cloud, Tracelight v3 is deprecated and this endpoint will be removed on ${V3_SUNSET_HUMAN}. ${V3_DELAY_NOTICE}`;
 
 // v4 replacement endpoints, referenced by both the message and `replacement`.
 // Placeholder style matches rateLimitUpgradePaths (<from>, <to>, filters).
@@ -56,7 +56,7 @@ export const OBSERVATIONS_V1_DEPRECATION: ApiDeprecationInfo = {
 
 // Traces have no drop-in successor; observations v2 is the closest v4 read surface.
 export const TRACES_DEPRECATION: ApiDeprecationInfo = {
-  message: `${V3_NOTICE} In Langfuse v4, read span and trace data via ${REPLACEMENT.observationsV2}.`,
+  message: `${V3_NOTICE} In Tracelight v4, read span and trace data via ${REPLACEMENT.observationsV2}.`,
   replacement: REPLACEMENT.observationsV2,
   docsUrl: DOCS.observationsV2,
   sunsetAt: V3_SUNSET_DATE,
@@ -64,7 +64,7 @@ export const TRACES_DEPRECATION: ApiDeprecationInfo = {
 
 // Sessions have no drop-in successor; filter observations v2 by session instead.
 export const SESSIONS_DEPRECATION: ApiDeprecationInfo = {
-  message: `${V3_NOTICE} In Langfuse v4, read session data via ${REPLACEMENT.observationsV2BySession}.`,
+  message: `${V3_NOTICE} In Tracelight v4, read session data via ${REPLACEMENT.observationsV2BySession}.`,
   replacement: REPLACEMENT.observationsV2BySession,
   docsUrl: DOCS.observationsV2,
   sunsetAt: V3_SUNSET_DATE,
@@ -87,7 +87,7 @@ export const METRICS_DEPRECATION: ApiDeprecationInfo = {
 // Legacy dataset-run-items reads → experiment items (dataset runs are replaced
 // by experiments in v4).
 export const DATASET_RUN_ITEMS_DEPRECATION: ApiDeprecationInfo = {
-  message: `${V3_NOTICE} In Langfuse v4, dataset run items are replaced by experiment items; use ${REPLACEMENT.experimentItems} instead.`,
+  message: `${V3_NOTICE} In Tracelight v4, dataset run items are replaced by experiment items; use ${REPLACEMENT.experimentItems} instead.`,
   replacement: REPLACEMENT.experimentItems,
   docsUrl: DOCS.compatibility,
   sunsetAt: V3_SUNSET_DATE,
@@ -96,7 +96,7 @@ export const DATASET_RUN_ITEMS_DEPRECATION: ApiDeprecationInfo = {
 // Legacy dataset-run reads → experiments (dataset runs are replaced by
 // experiments in v4).
 export const DATASET_RUNS_DEPRECATION: ApiDeprecationInfo = {
-  message: `${V3_NOTICE} In Langfuse v4, dataset runs are replaced by experiments; use ${REPLACEMENT.experiments} instead.`,
+  message: `${V3_NOTICE} In Tracelight v4, dataset runs are replaced by experiments; use ${REPLACEMENT.experiments} instead.`,
   replacement: REPLACEMENT.experiments,
   docsUrl: DOCS.compatibility,
   sunsetAt: V3_SUNSET_DATE,
@@ -106,7 +106,7 @@ export const DATASET_RUNS_DEPRECATION: ApiDeprecationInfo = {
 // events survive the sunset date, so this family does not use V3_NOTICE
 // ("endpoint will be removed").
 export const INGESTION_DEPRECATION: ApiDeprecationInfo = {
-  message: `On Langfuse Cloud, this is the deprecated Langfuse v3 ingestion API and it is shut down on ${V3_SUNSET_HUMAN}, except for score events: from that date it accepts only score-create events and rejects all other event types. To write scores, prefer ${REPLACEMENT.scoreCreate} (${DOCS.scoresV3}). To write traces and observations, always prefer upgrading to the current Python and JS SDKs; if you use custom auto-instrumentation, send them to ${REPLACEMENT.otelTraces} (for example with curl). To read data back, use ${REPLACEMENT.observationsV2} and ${REPLACEMENT.metricsV2} (${DOCS.observationsV2}). ${V3_DELAY_NOTICE}`,
+  message: `On Tracelight Cloud, this is the deprecated Tracelight v3 ingestion API and it is shut down on ${V3_SUNSET_HUMAN}, except for score events: from that date it accepts only score-create events and rejects all other event types. To write scores, prefer ${REPLACEMENT.scoreCreate} (${DOCS.scoresV3}). To write traces and observations, always prefer upgrading to the current Python and JS SDKs; if you use custom auto-instrumentation, send them to ${REPLACEMENT.otelTraces} (for example with curl). To read data back, use ${REPLACEMENT.observationsV2} and ${REPLACEMENT.metricsV2} (${DOCS.observationsV2}). ${V3_DELAY_NOTICE}`,
   replacement: REPLACEMENT.otelTraces,
   docsUrl: DOCS.otelMigration,
   sunsetAt: V3_SUNSET_DATE,

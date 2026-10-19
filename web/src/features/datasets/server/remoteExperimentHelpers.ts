@@ -131,7 +131,7 @@ export function processRemoteExperimentHeaders(
     if (WebhookProtectedHeaders.includes(key)) {
       throw new TRPCError({
         code: "BAD_REQUEST",
-        message: `Header "${rawKey}" is set by Langfuse and cannot be overridden`,
+        message: `Header "${rawKey}" is set by Tracelight and cannot be overridden`,
       });
     }
 

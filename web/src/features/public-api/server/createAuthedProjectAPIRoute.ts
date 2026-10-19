@@ -165,7 +165,7 @@ export const createAuthedProjectAPIRoute = <
         attachDeprecation(
           {
             message:
-              "This endpoint is not available on deployments running in Langfuse v4 events_only mode. Learn more about Langfuse v4 at: https://langfuse.com/docs/v4",
+              "This endpoint is not available on deployments running in Tracelight v4 events_only mode. Learn more about Tracelight v4 at: https://langfuse.com/docs/v4",
           },
           deprecation,
         ),
