@@ -57,7 +57,7 @@ export async function validateBlobStorageEndpoint(
   if (isLangfuseCloudEndpointValidationEnabled() && url.protocol !== "https:") {
     throw new OutboundUrlValidationError(
       "https-required",
-      "Only HTTPS blob storage endpoints are allowed on Langfuse Cloud",
+      "Only HTTPS blob storage endpoints are allowed on Tracelight Cloud",
     );
   }
 

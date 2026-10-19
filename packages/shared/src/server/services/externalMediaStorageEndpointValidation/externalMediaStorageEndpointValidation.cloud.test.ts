@@ -8,7 +8,7 @@ vi.mock("../../../env", () => ({
   },
 }));
 
-describe("validateExternalMediaStorageEndpoint on Langfuse Cloud", () => {
+describe("validateExternalMediaStorageEndpoint on Tracelight Cloud", () => {
   it("requires HTTPS even when an HTTP endpoint is otherwise allowlisted", async () => {
     await expect(
       validateExternalMediaStorageEndpoint("http://storage.example.com", {

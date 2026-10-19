@@ -63,7 +63,7 @@ export function buildColoredAttachmentSlackMessage(args: {
                 type: "button",
                 text: {
                   type: "plain_text",
-                  text: "View in Langfuse",
+                  text: "View in Tracelight",
                   emoji: true,
                 },
                 url: args.url,

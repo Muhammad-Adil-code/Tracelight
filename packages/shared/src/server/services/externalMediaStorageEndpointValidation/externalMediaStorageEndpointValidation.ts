@@ -60,7 +60,7 @@ export async function validateExternalMediaStorageEndpoint(
   if (isLangfuseCloud() && url.protocol !== "https:") {
     throw new OutboundUrlValidationError(
       "https-required",
-      "Only HTTPS external media storage endpoints are allowed on Langfuse Cloud",
+      "Only HTTPS external media storage endpoints are allowed on Tracelight Cloud",
     );
   }
 
