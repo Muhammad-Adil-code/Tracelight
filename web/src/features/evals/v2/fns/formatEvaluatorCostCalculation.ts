@@ -31,8 +31,8 @@ export function formatEvaluatorCostCalculation({
   const samplingRate = `${numberFormatter(sampling * 100, 0, 2)}% sampling`;
   const periodLabel = isSelection ? "for this run" : "/ week";
   const scope = isSelection
-    ? "Expected cost on your linked API key (not Langfuse)."
-    : "Expected cost on your linked API key (not Langfuse). Matching observations are based on the last 7 days.";
+    ? "Expected cost on your linked API key (not Tracelight)."
+    : "Expected cost on your linked API key (not Tracelight). Matching observations are based on the last 7 days.";
 
   if (matchingObservations === 0) {
     return {

@@ -1334,7 +1334,7 @@ export class LegacyEvalCompatibilityService {
           : undefined;
         if (!source) {
           throw new LangfuseNotFoundError(
-            "Langfuse managed template not found",
+            "Tracelight managed template not found",
           );
         }
         if (source.evaluator.type !== params.definition.type) {
@@ -1610,7 +1610,7 @@ export class LegacyEvalCompatibilityService {
 
   async deleteTemplate(projectId: string, templateId: string) {
     if (templateId.startsWith(MANAGED_TEMPLATE_ID_PREFIX)) {
-      throw new ForbiddenError("Langfuse-managed evaluators cannot be deleted");
+      throw new ForbiddenError("Tracelight-managed evaluators cannot be deleted");
     }
 
     return this.prisma.$transaction(async (tx) => {

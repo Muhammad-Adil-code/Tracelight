@@ -50,7 +50,7 @@ export async function prepareBatchEvalEvaluatorMappings(params: {
       if (evaluator.type === EvalTemplateType.CODE) {
         if (mapping.variableMapping !== null) {
           throw new InvalidRequestError(
-            "Code evaluator mappings are managed by Langfuse and cannot be provided.",
+            "Code evaluator mappings are managed by Tracelight and cannot be provided.",
           );
         }
         return {
