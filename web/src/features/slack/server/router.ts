@@ -251,7 +251,7 @@ export const slackRouter = createTRPCRouter({
             type: "header",
             text: {
               type: "plain_text",
-              text: "🎉 Test Message from Langfuse",
+              text: "🎉 Test Message from Tracelight",
               emoji: true,
             },
           },
@@ -259,7 +259,7 @@ export const slackRouter = createTRPCRouter({
             type: "section",
             text: {
               type: "mrkdwn",
-              text: "Hello from Langfuse! This is a test message to verify your Slack integration is working properly.",
+              text: "Hello from Tracelight! This is a test message to verify your Slack integration is working properly.",
             },
           },
           {
@@ -290,7 +290,7 @@ export const slackRouter = createTRPCRouter({
                 type: "button",
                 text: {
                   type: "plain_text",
-                  text: "Open Langfuse",
+                  text: "Open Tracelight",
                   emoji: true,
                 },
                 url: projectUrl.toString(),
@@ -304,7 +304,7 @@ export const slackRouter = createTRPCRouter({
           client,
           channelId: input.channelId,
           blocks: testBlocks,
-          text: "Test message from Langfuse",
+          text: "Test message from Tracelight",
         });
 
         // For manually-typed channel names (id starts with #), resolve
@@ -370,7 +370,7 @@ export const slackRouter = createTRPCRouter({
         const userMessage = (() => {
           switch (slackError) {
             case "channel_not_found":
-              return 'Channel not found. The channel may not exist or is a private channel the bot has not been invited to. For private channels, invite the app with "/invite @Langfuse" in that channel.';
+              return 'Channel not found. The channel may not exist or is a private channel the bot has not been invited to. For private channels, invite the app with "/invite @Tracelight" in that channel.';
             case "not_in_channel":
               return "The bot is not a member of this channel. Please invite the bot to the channel first.";
             case "is_archived":
