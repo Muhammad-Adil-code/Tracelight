@@ -850,7 +850,7 @@ async function executeSlackAction({
       channelId: slackConfig.channelId,
       blocks,
       attachments,
-      text: "Langfuse Notification",
+      text: "Tracelight Notification",
     });
 
     // Update execution status to completed

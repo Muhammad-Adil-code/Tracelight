@@ -381,7 +381,7 @@ export const createEvalJobs = async ({
     sourceEventType === "trace-upsert" &&
     isInternalEvalEnvironment(event.traceEnvironment)
   ) {
-    logger.debug("Skipping eval job creation for internal Langfuse trace", {
+    logger.debug("Skipping eval job creation for internal Tracelight trace", {
       traceId: event.traceId,
       environment: event.traceEnvironment,
     });
@@ -1526,7 +1526,7 @@ export const evaluate = async ({
   // and rely on the scheduling-time guards.
   if (!isEvalTargetEnvironmentAllowed(environment)) {
     logger.warn(
-      "Cancelling eval job targeting an internal Langfuse environment",
+      "Cancelling eval job targeting an internal Tracelight environment",
       {
         jobExecutionId: event.jobExecutionId,
         projectId: event.projectId,

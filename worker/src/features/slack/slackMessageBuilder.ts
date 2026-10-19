@@ -146,7 +146,7 @@ export class SlackMessageBuilder {
         type: "section",
         text: {
           type: "mrkdwn",
-          text: `*Langfuse Notification*\n${payload.type} event: *${action}*`,
+          text: `*Tracelight Notification*\n${payload.type} event: *${action}*`,
         },
       },
     ];

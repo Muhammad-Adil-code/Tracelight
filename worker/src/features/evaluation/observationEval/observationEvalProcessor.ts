@@ -206,7 +206,7 @@ export async function processObservationEval(
   // path created the job. See isEvalTargetEnvironmentAllowed.
   if (!isEvalTargetEnvironmentAllowed(observationData.environment)) {
     logger.warn(
-      "Cancelling eval job targeting an internal Langfuse environment",
+      "Cancelling eval job targeting an internal Tracelight environment",
       {
         jobExecutionId: event.jobExecutionId,
         projectId: event.projectId,

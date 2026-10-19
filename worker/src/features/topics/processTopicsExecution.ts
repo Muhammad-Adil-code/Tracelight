@@ -115,7 +115,7 @@ async function summarizeTrace(
   const accepted = staged.find((row) => row.traceId === traceId);
   if (accepted) {
     if (isInternalEvalEnvironment(accepted.environment))
-      throw new Error("Topics does not process internal Langfuse traces.");
+      throw new Error("Topics does not process internal Tracelight traces.");
     metrics.result("summary", "cached");
     // An accepted payload may expire after the cache read; never renew its TTL.
     return accepted;
@@ -123,7 +123,7 @@ async function summarizeTrace(
   const { unitStartTime, sessionId, environment, traceName, transcript } =
     await getTranscript();
   if (isInternalEvalEnvironment(environment))
-    throw new Error("Topics does not process internal Langfuse traces.");
+    throw new Error("Topics does not process internal Tracelight traces.");
   const source = {
     projectId: execution.projectId,
     facetId: facet.facetId,
@@ -966,7 +966,7 @@ async function processTraces(
           facet.facetId === ref.facetId && facet.version === ref.facetVersion,
       )!;
       const error = new Error(
-        "Topics does not process internal Langfuse traces.",
+        "Topics does not process internal Tracelight traces.",
       );
       metrics.error("summary", error);
       recordTraceFailure(state, progress, ref, error);

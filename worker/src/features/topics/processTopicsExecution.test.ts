@@ -642,7 +642,7 @@ describe("Topics execution", () => {
           traceErrors: [
             {
               traceId: staged[0].summary.traceId,
-              error: "Topics does not process internal Langfuse traces.",
+              error: "Topics does not process internal Tracelight traces.",
             },
           ],
         });

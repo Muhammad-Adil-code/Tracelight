@@ -348,7 +348,7 @@ limits, not a combined trace budget. The preset has no total token budget. It
 omits no middle lines. The rendered text has
 `<run_facts>`, optional `<tools>` and `<earlier_conversation source="replayed input">`,
 `<this_run>`, and `<end_of_run>` sections in that order. Observation markers show
-the Langfuse operation type and name in walk order; matched tool results already
+the Tracelight operation type and name in walk order; matched tool results already
 identify their operation. Trace input appears as the request when no current-run
 user message exists. If it differs from the rendered input messages, it appears
 as trace context alongside the user request, capped at the user block limit

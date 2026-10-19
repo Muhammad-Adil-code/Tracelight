@@ -2,7 +2,7 @@
 
 Turn selected v4 traces into facet summaries, embeddings, discovered topic maps,
 and assignments to an existing map. Open `/project/<projectId>/topics` on the
-current Langfuse instance (locally, normally `http://localhost:3000`).
+current Tracelight instance (locally, normally `http://localhost:3000`).
 
 ## Facets and selection rules
 

@@ -180,7 +180,7 @@ export async function validateAndSetupExperiment(
   );
   if (!validatedRunMetadata.success) {
     throw new UnrecoverableError(
-      "Langfuse in-app experiments require prompt and model configurations in dataset run metadata",
+      "Tracelight in-app experiments require prompt and model configurations in dataset run metadata",
     );
   }
 
