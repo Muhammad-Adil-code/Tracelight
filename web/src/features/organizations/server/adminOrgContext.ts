@@ -41,7 +41,7 @@ export async function buildAdminOrgContext(ctx: {
   if (ctx.session.user?.admin !== true) {
     throw new TRPCError({
       code: "FORBIDDEN",
-      message: "Only Langfuse admins can access this endpoint",
+      message: "Only Tracelight admins can access this endpoint",
     });
   }
 

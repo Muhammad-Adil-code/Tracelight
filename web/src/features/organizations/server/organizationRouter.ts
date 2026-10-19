@@ -324,7 +324,7 @@ export const organizationsRouter = createTRPCRouter({
           throw new TRPCError({
             code: "PRECONDITION_FAILED",
             message:
-              "AI telemetry controls are only available on Langfuse Cloud.",
+              "AI telemetry controls are only available on Tracelight Cloud.",
           });
         }
 
