@@ -198,4 +198,4 @@ Add to your Cursor MCP settings:
 }
 ```
 
-Replace `https://cloud.langfuse.com` with your Tracelight URL (see [Choose Your Tracelight URL](#2-choose-your-langfuse-url)).
+Replace `https://cloud.langfuse.com` with your Tracelight URL (see [Choose Your Tracelight URL](#2-choose-your-tracelight-url)).
