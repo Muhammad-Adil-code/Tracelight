@@ -96,7 +96,7 @@ flowchart TB
   Agent --> HumanLoop
   Agent --> Tools["worker runtime/tools.ts\ncustom tools"]
   Agent --> Tools
-  Agent --> Instrumentation["worker runtime/instrumentation.ts\nLangfuse telemetry"]
+  Agent --> Instrumentation["worker runtime/instrumentation.ts\nTracelight telemetry"]
   Router --> Persistence
 ```
 
