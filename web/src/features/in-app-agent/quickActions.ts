@@ -134,7 +134,7 @@ const IN_APP_AGENT_QUICK_ACTIONS_BY_CONTEXT = {
       description: "Add a new prompt to prompt management",
       icon: FilePlus,
       prompt:
-        "Help me create a new prompt in Langfuse prompt management, including choosing between a text and chat prompt, defining its variables, and setting a label.",
+        "Help me create a new prompt in Tracelight prompt management, including choosing between a text and chat prompt, defining its variables, and setting a label.",
     },
     {
       id: "find-prompts-to-improve",
@@ -267,7 +267,7 @@ const IN_APP_AGENT_FOCUSED_QUICK_ACTIONS = {
     {
       id: "review-prompt-best-practices",
       label: "Review with best practices",
-      description: "Check this prompt against Langfuse guidance",
+      description: "Check this prompt against Tracelight guidance",
       icon: Sparkles,
       prompt:
         "Review this prompt against prompt engineering best practices and suggest concrete improvements to its structure, instructions, and variables while preserving its intent.",
@@ -304,7 +304,7 @@ const IN_APP_AGENT_FOCUSED_QUICK_ACTIONS = {
       description: "Attach evaluators and get ready to run",
       icon: Beaker,
       prompt:
-        "Help me get an experiment ready on this dataset: check that its item keys match my prompt variables, confirm an LLM connection is configured, and attach an evaluator to score the results. Langfuse runs the experiment itself, so point me to the experiments UI to start it, or give me a ready-to-use prompt I can hand a coding agent to run it via the SDK.",
+        "Help me get an experiment ready on this dataset: check that its item keys match my prompt variables, confirm an LLM connection is configured, and attach an evaluator to score the results. Tracelight runs the experiment itself, so point me to the experiments UI to start it, or give me a ready-to-use prompt I can hand a coding agent to run it via the SDK.",
     },
     {
       id: "review-this-dataset",

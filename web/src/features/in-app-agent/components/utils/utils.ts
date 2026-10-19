@@ -182,7 +182,7 @@ export function getInAppAgentToolProgressLabelResolution(toolName: string): {
   label: string;
 } {
   if (isInAppAgentDocsToolName(toolName)) {
-    return { source: "docs", label: "Reading Langfuse docs" };
+    return { source: "docs", label: "Reading Tracelight docs" };
   }
 
   if (isInAppAgentSkillToolName(toolName)) {
