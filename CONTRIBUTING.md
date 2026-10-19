@@ -1,16 +1,8 @@
-<img width="2400" alt="hero-b (1)" src="https://github.com/user-attachments/assets/5810ae13-15d6-4b60-afd2-927adc501861" />
-
-> ### 🧑‍💻 We're hiring
->
-> Langfuse is growing fast (we doubled the team in the last 6 months) - since January 2026 we're part of ClickHouse, we're hiring engineering hybrid across the EU.
-> We hire engineers who love open source and great developer experiences.
-> **[See open roles →](https://langfuse.com/careers?utm_source=github&utm_medium=readme&utm_campaign=hiring&utm_content=langfuse)**
-
-# Contributing to Langfuse
+# Contributing to Tracelight
 
 First off, thanks for taking the time to contribute! ❤️
 
-The best ways to contribute to Langfuse:
+The best ways to contribute to Tracelight:
 
 - Submit and vote on [Ideas](https://github.com/orgs/langfuse/discussions/categories/ideas)
 - Create and comment on [Issues](https://github.com/langfuse/langfuse/issues)
@@ -117,7 +109,7 @@ Full database schema: [packages/shared/prisma/schema.prisma](packages/shared/pri
 
 We built a monorepo using [pnpm](https://pnpm.io/motivation) and [turbo](https://turbo.build/repo/docs) to manage the dependencies and build process. The monorepo contains the following packages:
 
-- `web`: is the main application package providing Frontend and Backend APIs for Langfuse.
+- `web`: is the main application package providing Frontend and Backend APIs for Tracelight.
 - `worker`: contains an application for asynchronous processing of tasks.
 - `packages`:
   - `shared`: contains shared code between the above packages.
@@ -136,7 +128,7 @@ Requirements
 - Docker to run the database locally
 - Clickhouse client
 
-**Note:** You can also simply run Langfuse in a **GitHub Codespace** via the provided devcontainer. To do this, click on the green "Code" button in the top right corner of the repository and select "Open with Codespaces".
+**Note:** You can also simply run Tracelight in a **GitHub Codespace** via the provided devcontainer. To do this, click on the green "Code" button in the top right corner of the repository and select "Open with Codespaces".
 
 ### Codex Cloud Setup
 
@@ -172,7 +164,7 @@ Notes:
 
 - This Codex setup is intended for repository tasks such as code changes,
   linting, typechecking, and targeted tests.
-- It does **not** start the full Langfuse stack. Local development still uses
+- It does **not** start the full Tracelight stack. Local development still uses
   Docker and `pnpm run dx` / `pnpm run dev`.
 - Running the full application inside Codex requires external services for
   PostgreSQL, Redis, ClickHouse, and object storage, plus matching environment
@@ -297,7 +289,7 @@ When you change the shared MCP setup:
 
    You will be asked whether you want to reset Postgres and ClickHouse. Confirm both with 'Y' and press enter.
 
-6. Open the web app in your browser to start using Langfuse:
+6. Open the web app in your browser to start using Tracelight:
    - [Sign up page, http://localhost:3000](http://localhost:3000)
    - [Demo project, http://localhost:3000/project/7a88fb47-b4e2-43b8-a06c-a5ce950dc53a](http://localhost:3000/project/7a88fb47-b4e2-43b8-a06c-a5ce950dc53a)
 
@@ -454,7 +446,7 @@ CD on `main`
 
 ### Version tests
 
-Our CI pipeline runs multiple configurations of Langfuse - the "plain" deployment, an "azure" specific deployment, and a "redis-cluster" deployment
+Our CI pipeline runs multiple configurations of Tracelight - the "plain" deployment, an "azure" specific deployment, and a "redis-cluster" deployment
 using the specific `docker-compose.dev-*.yml` files at the repository root.
 
 Additionally, we use those files to test different ClickHouse versions.
@@ -471,19 +463,19 @@ The same environment is also used for preview deployments of pull requests. Limi
 - SSO is not available as dynamic domains are not supported by most SSO providers.
 - When making changes to the database, migrations to the staging database need to be applied manually by a maintainer. If you want to interactively test database changes in the staging environment, please reach out.
 
-You can use the staging environment end-to-end with the Langfuse integrations or SDKs (host: `https://staging.langfuse.com`). However, please note that the staging environment is not intended for production use and may be reset at any time.
+You can use the staging environment end-to-end with the Langfuse SDKs (host: `https://staging.langfuse.com`). However, please note that the staging environment is not intended for production use and may be reset at any time.
 
 ## Production environment
 
 We run two separate release/deployment processes:
 
-1. **Langfuse Cloud deployment (frequent):**
-   - Every commit on the `production` branch triggers an ECS deployment to Langfuse Cloud.
-   - To deploy current `main` to Langfuse Cloud, promote `main` to `production` via [`promote-main-to-production.yml`](.github/workflows/promote-main-to-production.yml) (instead of force pushing from a local machine).
+1. **Tracelight Cloud deployment (frequent):**
+   - Every commit on the `production` branch triggers an ECS deployment to Tracelight Cloud.
+   - To deploy current `main` to Tracelight Cloud, promote `main` to `production` via [`promote-main-to-production.yml`](.github/workflows/promote-main-to-production.yml) (instead of force pushing from a local machine).
 2. **Open-source release (less frequent):**
    - The open-source Docker release process is handled via [`release.yml`](.github/workflows/release.yml) for self-hosted production users.
 
-You can trigger the Langfuse Cloud promotion in either way:
+You can trigger the Tracelight Cloud promotion in either way:
 
 1. Preferred local command:
 
@@ -497,7 +489,7 @@ This wraps the GitHub CLI trigger and performs preflight checks (main branch/syn
 
 ## Theming
 
-At Langfuse, we utilize CSS variables to manage our theme settings across the platform.
+At Tracelight, we utilize CSS variables to manage our theme settings across the platform.
 
 Our approach leverages separate CSS variables for backgrounds (--background) and foregrounds (--foreground), fully adhering to the [shadcn/ui](https://ui.shadcn.com/docs/theming) color conventions. The background suffix can be omitted if the variable is used for the background color of the component. We recommend using HSL values for these colors to enhance consistency and customization. There is no need to manually handle dark mode styling with "dark:" prefixes, as next-themes automatically manages the theme switching.
 
@@ -622,18 +614,5 @@ pnpm dlx fern-api@3.88.0 generate --api server
 
 ## License
 
-Langfuse is MIT licensed, except for `ee/` folder. See [LICENSE](LICENSE) and [docs](https://langfuse.com/docs/open-source) for more details.
+Tracelight is a fork of Langfuse and is MIT licensed, except for the `ee/` folder. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md) for more details.
 
-When contributing to the Langfuse codebase, you need to agree to the [Contributor License Agreement](https://cla-assistant.io/langfuse/langfuse). You only need to do this once and the CLA bot will remind you if you haven't signed it yet.
-
-### Troubleshoot CLA License Check
-
-If the CLA check still isn't passing after signing, it may be due to this [known cla-assistant bug](https://github.com/cla-assistant/cla-assistant/issues/520). Comment `/check-cla` on your PR to retrigger the license check.
-
-If it still isn't passing, the author header in your commits is likely missing your GitHub email address ([example patch](https://github.com/langfuse/langfuse/commit/f301bb528f5ca6944bd04afae3c1a87390f9b92e.patch)). To fix this, set your email address in your git config and rebase.
-
-```bash
-git config user.email "YOUR_GITHUB_EMAIL"
-git rebase --exec "git commit --amend --no-edit --reset-author" origin/main
-git push --force-with-lease
-```
