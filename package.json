@@ -1,7 +1,7 @@
 {
   "name": "langfuse",
   "version": "4.63.0",
-  "author": "engineering@langfuse.com",
+  "author": "Muhammad Adil <adil.mern.ai@gmail.com>",
   "license": "MIT",
   "private": true,
   "engines": {
