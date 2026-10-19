@@ -1,6 +1,6 @@
 services:
   clickhouse:
-    # The CI matrix spans ClickHouse versions: -azure pins 25.12, the Langfuse
+    # The CI matrix spans ClickHouse versions: -azure pins 25.12, the Tracelight
     # v4 minimum (events tables require the >=25.x text indexes /
     # enable_full_text_index); this config runs the current Cloud version, and
     # -redis-cluster exercises the newest release.
