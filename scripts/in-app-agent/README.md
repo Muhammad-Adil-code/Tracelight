@@ -2,7 +2,7 @@
 
 ## Skill Sync
 
-The generic Langfuse skill catalog and its sync script live in the
+The generic Tracelight skill catalog and its sync script live in the
 `@repo/langfuse-skills` package:
 
 `packages/langfuse-skills/src/generated/skills.ts`
@@ -30,7 +30,7 @@ labels.
 
 ## Manual Sync
 
-Use `sync-prompt.sh` to create the prompt in a Langfuse project via the public
+Use `sync-prompt.sh` to create the prompt in a Tracelight project via the public
 API. If the prompt already exists in a region, the same API call adds a new
 version instead.
 
@@ -56,7 +56,7 @@ Or move the export statements to a .env file and run:
 (source .env; ./sync-prompt.sh)
 ```
 
-The script asks for confirmation before syncing each Langfuse Cloud region:
+The script asks for confirmation before syncing each Tracelight Cloud region:
 `https://cloud.langfuse.com`, `https://us.cloud.langfuse.com`,
 `https://jp.cloud.langfuse.com`, and `https://hipaa.cloud.langfuse.com`.
 

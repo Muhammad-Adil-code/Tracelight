@@ -1,6 +1,6 @@
-# Langfuse Seed CLI
+# Tracelight Seed CLI
 
-One command to put any local test state into Langfuse — for developers and
+One command to put any local test state into Tracelight — for developers and
 for coding agents.
 
 ```bash

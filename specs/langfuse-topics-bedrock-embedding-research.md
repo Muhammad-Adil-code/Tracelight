@@ -1,4 +1,4 @@
-# Bedrock embeddings for Langfuse Topics
+# Bedrock embeddings for Tracelight Topics
 
 Research + implementation: 2026-09-23. Cohere Embed v4 selected and wired into Topics; regional availability/pricing verified.
 

@@ -1,6 +1,6 @@
 # @langfuse/native
 
-Rust code that the Langfuse worker calls in-process, packaged as a Node.js
+Rust code that the Tracelight worker calls in-process, packaged as a Node.js
 native addon with [napi-rs](https://napi.rs). The worker imports it like any
 other workspace package:
 

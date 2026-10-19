@@ -405,7 +405,7 @@ filterable view, not just the v4 events table. That is cheap _by design_ — but
 only if new views extend it through the seam below instead of forking the
 grammar. Read this before adding another view.
 
-**Why it's cheap: the back half is already universal.** Langfuse has ~15
+**Why it's cheap: the back half is already universal.** Tracelight has ~15
 filterable views (traces, sessions, observations, events v4, scores, prompts,
 users, monitors, evaluators, eval-logs, experiments, experiment-items,
 datasets…). Every one of them already rides ONE pipeline:

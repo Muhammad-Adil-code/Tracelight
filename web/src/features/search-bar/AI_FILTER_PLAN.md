@@ -1,7 +1,7 @@
 # AI Filter — Improvement & Dogfooding Plan (search bar, v4)
 
 What the AI filter is, what's wrong with it today, and how we'll tune it **using
-Langfuse itself** — prompt management, prompt versions, tracing, datasets, and
+Tracelight itself** — prompt management, prompt versions, tracing, datasets, and
 evals.
 
 > **Scope:** the **v4** search-bar AI filter only (`searchBar.generateFilter`,
@@ -21,9 +21,9 @@ evals.
   metadata keys + result count injected into the prompt) is now in the MVP, so
   the model maps onto the project's real columns/values instead of guessing.
   Ship it.
-- **Piece 2 (the real tuning, dogfooded on Langfuse).** Prompt management +
+- **Piece 2 (the real tuning, dogfooded on Tracelight).** Prompt management +
   versions, enriched tracing, dataset + evals — the disciplined loop, and a
-  Langfuse workshop in its own right. Everything from "Why dogfood Langfuse"
+  Tracelight workshop in its own right. Everything from "Why dogfood Tracelight"
   onward is Piece 2.
 
 Note: the UX findings below were first measured on **local `claude-3-haiku`**;
@@ -136,18 +136,18 @@ playground` per scenario (needs Bedrock creds). **Caveat:** quality is
 model-dependent — local `claude-3-haiku` fails the refine cases, so self-hosters
 on a weak model see worse output; the Piece-2 eval will quantify model choice.
 
-## 3. Why dogfood Langfuse for this
+## 3. Why dogfood Tracelight for this
 
 These are LLM-quality problems. Hand-tuning the prompt by eye is guesswork and
 regresses silently (the example-leakage is exactly that). The disciplined fix is
 a **dataset + evals + versioned prompts**, measuring every change — which is the
-product we sell. Tuning our own AI feature on Langfuse is both the correct
+product we sell. Tuning our own AI feature on Tracelight is both the correct
 engineering loop and authentic dogfooding.
 
 ## 4. Current instrumentation (baseline)
 
 - ✅ **Tracing is wired.** `searchBar.generateFilter` sends each call to the
-  AI-features Langfuse project via `traceSinkParams` (env
+  AI-features Tracelight project via `traceSinkParams` (env
   `langfuse-natural-language-filter`, traceName `search-bar-filter`,
   `targetProjectId = LANGFUSE_AI_FEATURES_PROJECT_ID`), gated on org
   `aiTelemetryEnabled`. `generateLLMText` records the system+user messages and
@@ -160,10 +160,10 @@ engineering loop and authentic dogfooding.
 
 ## 5. Architecture decision — hybrid prompt
 
-Don't choose between "registry-derived in code" and "managed in Langfuse" —
+Don't choose between "registry-derived in code" and "managed in Tracelight" —
 **split it**:
 
-- **Managed template** (Langfuse Prompt Management, new prompt `search-bar-filter`
+- **Managed template** (Tracelight Prompt Management, new prompt `search-bar-filter`
   in the AI-features project, separate from v3's): the human-tunable parts — role,
   output format, intent hints, **examples**, the **refine instruction** — with
   variables: `{{fieldCatalog}}`, `{{currentDatetime}}`, `{{currentFilters}}`,
@@ -228,7 +228,7 @@ case).
 - [ ] Build the `search-bar-filter-evals` dataset (seed cases incl. the failures).
 - [ ] Implement the deterministic scorer (reuse `parseGeneratedFilters` +
       `filterStateToQueryText`): exact-set, F1, `context_preserved`.
-- [ ] Dataset-run script via the Langfuse SDK; record a **baseline** for the
+- [ ] Dataset-run script via the Tracelight SDK; record a **baseline** for the
       current prompt+model before changing anything.
 
 **Phase 3 — tune with data**

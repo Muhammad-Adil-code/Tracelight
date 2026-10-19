@@ -19,7 +19,7 @@ User-controlled previews may pass `{ enableForAdmins: false }` so an
 administrator can opt in or out like any other user. The deployment-wide
 `LANGFUSE_ENABLE_EXPERIMENTAL_FEATURES` override still forces flags on.
 
-`langfuseTopics` ("Langfuse Topics") requires explicit personal opt-in. Only
+`langfuseTopics` ("Tracelight Topics") requires explicit personal opt-in. Only
 platform administrators (`user.admin`) see or may change this preview toggle;
 organization administrator roles do not grant toggle access. Admin and global
 experimental overrides do not enable Topics. It is deliberately excluded from

@@ -1,6 +1,6 @@
-# Langfuse MCP Server
+# Tracelight MCP Server
 
-Model Context Protocol (MCP) server for Langfuse, enabling AI assistants to interact with Langfuse programmatically.
+Model Context Protocol (MCP) server for Tracelight, enabling AI assistants to interact with Tracelight programmatically.
 
 A complete list of tools can be seen under [mcp.reference.langfuse.com](https://mcp.reference.langfuse.com).
 
@@ -12,7 +12,7 @@ A complete list of tools can be seen under [mcp.reference.langfuse.com](https://
 
 ### Prerequisites
 
-- Langfuse instance running locally
+- Tracelight instance running locally
 - Project-scoped API key (Public Key + Secret Key)
 - Claude Code or another MCP-compatible client
 
@@ -47,13 +47,13 @@ A complete list of tools can be seen under [mcp.reference.langfuse.com](https://
    In Claude Code: `List all prompts in the project`
 
 5. **Verify observation access**
-   In Claude Code: `List recent Langfuse observations`
+   In Claude Code: `List recent Tracelight observations`
 
 ## Architecture
 
 ### Stateless Design
 
-The Langfuse MCP server uses a **stateless per-request architecture**:
+The Tracelight MCP server uses a **stateless per-request architecture**:
 
 1. **Fresh server instance per request:** Each MCP request creates a new server instance
 2. **Context captured in closures:** Authentication context is captured in handler closures
@@ -118,11 +118,11 @@ All write operations should audit-log entries with before/after snapshots.
 
 ## Authentication
 
-All clients require BasicAuth authentication using your Langfuse API keys.
+All clients require BasicAuth authentication using your Tracelight API keys.
 
 ### 1. Generate Basic Auth Token
 
-Encode your Langfuse API keys (Public Key:Secret Key) to base64:
+Encode your Tracelight API keys (Public Key:Secret Key) to base64:
 
 ```bash
 echo -n "pk-lf-your-public-key:sk-lf-your-secret-key" | base64
@@ -130,9 +130,9 @@ echo -n "pk-lf-your-public-key:sk-lf-your-secret-key" | base64
 
 This outputs your BasicAuth token (e.g., `cGstbGYt...`).
 
-### 2. Choose Your Langfuse URL
+### 2. Choose Your Tracelight URL
 
-**Langfuse Cloud:**
+**Tracelight Cloud:**
 
 - **EU Region:** `https://cloud.langfuse.com`
 - **US Region:** `https://us.langfuse.com`
@@ -157,14 +157,14 @@ This outputs your BasicAuth token (e.g., `cGstbGYt...`).
 
 ## Claude Code
 
-Register the Langfuse MCP server:
+Register the Tracelight MCP server:
 
 ```bash
-# Langfuse Cloud (EU)
+# Tracelight Cloud (EU)
 claude mcp add --transport http langfuse https://cloud.langfuse.com/api/public/mcp \
     --header "Authorization: Basic {your-base64-token}"
 
-# Langfuse Cloud (US)
+# Tracelight Cloud (US)
 claude mcp add --transport http langfuse https://us.langfuse.com/api/public/mcp \
     --header "Authorization: Basic {your-base64-token}"
 
@@ -198,4 +198,4 @@ Add to your Cursor MCP settings:
 }
 ```
 
-Replace `https://cloud.langfuse.com` with your Langfuse URL (see [Choose Your Langfuse URL](#2-choose-your-langfuse-url)).
+Replace `https://cloud.langfuse.com` with your Tracelight URL (see [Choose Your Tracelight URL](#2-choose-your-langfuse-url)).

@@ -1,6 +1,6 @@
-# Agent Guidelines for Langfuse
+# Agent Guidelines for Tracelight
 
-Langfuse is an open source LLM engineering platform for developing, monitoring,
+Tracelight is an open source LLM engineering platform for developing, monitoring,
 evaluating, and debugging AI applications.
 
 ## Scope

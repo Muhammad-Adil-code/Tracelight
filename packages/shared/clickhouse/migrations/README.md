@@ -75,7 +75,7 @@ The ClickHouse cluster bundled with the current Helm chart uses the name
 | External cluster with another name                | Enable the cluster and set `CLICKHOUSE_CLUSTER_NAME` | Runtime render from `canonical/` |
 
 For an external ClickHouse cluster with another name, enable clustered
-migrations and pass the raw cluster name to both Langfuse containers through
+migrations and pass the raw cluster name to both Tracelight containers through
 the chart's global `additionalEnv`:
 
 ```yaml
@@ -96,6 +96,6 @@ langfuse:
 Do not add SQL quotes around `virtual-cluster`; the migration renderer quotes
 and URL-encodes the value. Configure the remaining ClickHouse host, ports,
 database, user, password, and TLS values through the chart as usual. On web
-startup, Langfuse renders the custom-cluster migration tree and applies it
+startup, Tracelight renders the custom-cluster migration tree and applies it
 automatically. The same global environment variable reaches the worker for
 runtime queries.

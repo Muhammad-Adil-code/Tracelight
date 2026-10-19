@@ -1,6 +1,6 @@
-# Langfuse Seeder System
+# Tracelight Seeder System
 
-System for generating test data in ClickHouse and PostgreSQL for Langfuse development and testing.
+System for generating test data in ClickHouse and PostgreSQL for Tracelight development and testing.
 
 ## Architecture Overview
 

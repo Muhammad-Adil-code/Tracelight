@@ -1,6 +1,6 @@
 # Topics UI
 
-Topics requires explicit opt-in through **Profile → Feature Previews → Langfuse
+Topics requires explicit opt-in through **Profile → Feature Previews → Tracelight
 Topics**. Only platform administrators see or change this personal flag. The
 sidebar, direct page, and Topics API also require deployment enablement and
 project permissions. Processing additionally requires the project allowlist.

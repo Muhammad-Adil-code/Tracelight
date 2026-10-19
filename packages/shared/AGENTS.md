@@ -157,7 +157,7 @@
   AI SDK-native LLM execution helpers (`generateLLMText`, `streamLLMText`, and
   `embedLLMText`), `isInternalEvalEnvironment` for shared eval/Topics exclusions,
   Bedrock default-credential provider auth
-  (`createDefaultBedrockProviderAuth`), and server test utilities. Langfuse AI
+  (`createDefaultBedrockProviderAuth`), and server test utilities. Tracelight AI
   callers select their local profile through `getLangfuseAIAwsProfile`;
   generic Bedrock auth only uses an explicitly supplied profile or the normal
   AWS credential chain.
@@ -266,7 +266,7 @@ the same PR.
      rendered modes and protects the historical migration output.
    - Redefining views or materialized views follows strict patterns (no
      `CREATE OR REPLACE VIEW`; MV SELECT changes via
-     `ALTER TABLE … MODIFY QUERY`) — apply the "Langfuse-Specific Rules" in
+     `ALTER TABLE … MODIFY QUERY`) — apply the "Tracelight-Specific Rules" in
      `.agents/skills/clickhouse-best-practices/SKILL.md` for any new ClickHouse migration.
 2. Update ClickHouse query/mapping logic in `src/server/clickhouse/*` and
    related repositories.

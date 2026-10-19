@@ -1,12 +1,12 @@
 # Underlying Architecture Principles
 
-Langfuse architecture should optimize for high-scale, exploratory observability
+Tracelight architecture should optimize for high-scale, exploratory observability
 on wide, structured event data. These principles are grounded in current
 production scale and the reference material below.
 
 ## Reference Posts
 
-- [Simplifying Langfuse for Scale](https://langfuse.com/blog/2026-03-10-simplify-langfuse-for-scale)
+- [Simplifying Tracelight for Scale](https://langfuse.com/blog/2026-03-10-simplify-langfuse-for-scale)
 - [Charity Majors on Observability 2.0](https://charity.wtf/tag/observability-2-0/)
 - [All you need is Wide Events, not "Metrics, Logs and Traces"](https://isburmistrov.substack.com/p/all-you-need-is-wide-events-not-metrics)
 

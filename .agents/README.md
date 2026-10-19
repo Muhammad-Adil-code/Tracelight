@@ -1,7 +1,7 @@
 # Shared Agent Setup
 
 This directory is the neutral, repo-owned source of truth for agent behavior in
-Langfuse.
+Tracelight.
 
 Use `.agents/` for configuration and guidance that should apply across tools.
 Do not put durable shared guidance only in `.claude/`, `.codex/`, `.cursor/`,
@@ -99,8 +99,8 @@ Current shape:
       "install": "bash scripts/agents/setup-cursor-cloud.sh",
       "start": "bash scripts/agents/start-cursor-cloud.sh",
       "ports": [
-        { "name": "Langfuse web", "port": 3000 },
-        { "name": "Langfuse worker health", "port": 3030 }
+        { "name": "Tracelight web", "port": 3000 },
+        { "name": "Tracelight worker health", "port": 3030 }
       ],
       "agentCanUpdateSnapshot": false
     }
@@ -275,7 +275,7 @@ Use HTTP/OAuth where available so credentials remain outside the agent VM.
 | Tool group | Cursor distribution | Default policy |
 | --- | --- | --- |
 | GitHub | Cursor GitHub App | Enabled for same-repo branches, draft PRs, CI, and preview status |
-| Langfuse Docs | Shared HTTP MCP | Enabled, read-only |
+| Tracelight Docs | Shared HTTP MCP | Enabled, read-only |
 | Linear | Shared OAuth MCP | Enabled; allow read/search tools only. Cursor Cloud cannot complete that OAuth prompt — maintainers add a personal `LINEAR_API_KEY` secret at https://cursor.com/dashboard/cloud-agents and start a new run. |
 | Datadog EU and US | Team Marketplace MCPs | Enabled; allow logs, metrics, traces, dashboards, and monitor reads only |
 | Metabase | Team Marketplace MCP | Enabled; allow metadata and query reads only |
@@ -295,7 +295,7 @@ do not replace an explicit allowlist. Production/support data must not be copied
 into public preview accounts or Cursor PR artifacts.
 
 Use `Default + allowlist` network mode. Include the package and container
-registries used by the Dockerfile and Compose stack, GitHub, Langfuse preview
+registries used by the Dockerfile and Compose stack, GitHub, Tracelight preview
 hosts, and `cloud-agent-artifacts.s3.us-east-1.amazonaws.com` when PR artifacts
 are enabled. Do not grant Cursor AWS/EKS credentials for preview wakeups;
 preview QA runs during Mon-Fri 08:00-24:00 Europe/Berlin.

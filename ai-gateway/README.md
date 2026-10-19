@@ -13,7 +13,7 @@ streamed Chat Completions request is asked for its usage (see below). Models lis
 are GET proxies of the provider catalog and token counting returns the native count;
 neither is ingested as a generation. A bounded capture layer captures request/response
 facts and logs capture completeness at debug level. Each finalized generation is
-uploaded as a Langfuse generation through OTLP, batched per project. Building and
+uploaded as a Tracelight generation through OTLP, batched per project. Building and
 testing need no real Web, database or provider credentials.
 
 ## Run locally
@@ -105,7 +105,7 @@ host-only development, set `LANGFUSE_AI_GATEWAY_LISTEN_ADDRESS=127.0.0.1:8080`.
 ## Operational observability
 
 Logs and operational OpenTelemetry exports describe gateway health independently
-of the inference generations sent to Langfuse. They do not include request/response
+of the inference generations sent to Tracelight. They do not include request/response
 content, credentials, key metadata, or URL query strings. They do carry the
 [resolution context](#resolution-context), including the provider connection name
 and the requested model. Health probes are excluded
@@ -151,7 +151,7 @@ resolution, 4xx/5xx gateway errors and streams. It appears in:
 | Gateway JSON log lines for the request | Top-level `request_id` |
 | Operational server span | `gateway.request.id` |
 | Web resolution call | `langfuse-gateway-request-id` header; Web adds it to its log context |
-| Langfuse generation | `langfuse.gateway.request.id` metadata |
+| Tracelight generation | `langfuse.gateway.request.id` metadata |
 
 A caller's `x-request-id` never becomes the gateway request ID. A single printable
 value of at most 256 bytes is recorded separately as the server span's
@@ -161,12 +161,12 @@ metadata; it is not forwarded to Web or the provider. The provider's own request
 `provider_request_id` on every route and as `langfuse.gateway.upstream.request.id`
 generation metadata, and its response header is still relayed unchanged.
 
-When the request will produce a Langfuse generation (`/openai/v1/responses`,
+When the request will produce a Tracelight generation (`/openai/v1/responses`,
 `/openai/v1/responses/compact`, `/openai/v1/chat/completions` and
 `/anthropic/v1/messages` with inference telemetry
 configured), the response also carries `langfuse-trace-id` and
 `langfuse-observation-id`: the uploaded generation's trace ID, after `traceparent`
-and agent turn grouping, and its OpenTelemetry span ID, which Langfuse stores as the
+and agent turn grouping, and its OpenTelemetry span ID, which Tracelight stores as the
 observation ID. They are also set on 502/504 responses for provider failures before
 response headers, which still upload a generation. Requests rejected earlier, such
 as authentication failures, and model or token-count routes omit them. Upload is
@@ -216,9 +216,9 @@ link to every request it carries, and an `ingestion` client span per HTTP attemp
 
 `reqwest-tracing` instruments resolver, provider-header, and ingestion requests.
 Each request starts a fresh operational trace, independent of incoming trace IDs,
-tracestate, baggage, Langfuse headers and sampling decisions. Only trusted Web calls
+tracestate, baggage, Tracelight headers and sampling decisions. Only trusted Web calls
 receive this internal W3C trace context; the external provider receives no tracing
-or Langfuse headers. Inference generations use the caller context described below.
+or Tracelight headers. Inference generations use the caller context described below.
 Client spans measure the HTTP send through response headers;
 streaming execution and inference-telemetry delivery are tracked separately.
 
@@ -436,7 +436,7 @@ timing/version/rate-limit headers, or Anthropic's `request-id`, `x-should-retry`
 overrides, gateway/ingestion credentials, client `x-claude-code-*` correlation
 headers, hop-by-hop headers and upstream framing are excluded.
 
-## Langfuse uploads
+## Tracelight uploads
 
 When inference is configured, each finalized execution is mapped to a generation
 span and queued without waiting. A single delivery worker groups spans by project
@@ -446,7 +446,7 @@ grant expires, when more than 256 projects have open batches (the batch due soon
 goes first), or at shutdown. The client response and provider admission never wait
 for ingestion. There is no durable delivery. A successful upload acknowledges
 ingestion acceptance; storage and cost processing still happen asynchronously in
-Langfuse.
+Tracelight.
 
 A batch gets up to three attempts. Only failures a resend can fix are retried:
 transport errors and timeouts, and HTTP 408, 429, 500, 502, 503 or 504. The second
@@ -489,8 +489,8 @@ each field describes:
 
 | Suffix                                                                                      | Meaning                                                                     |
 | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `organization.id`, `project.id`                                                             | Resolved Langfuse organization and ingestion project                        |
-| `api_key.id`, `connection.id`                                                               | Authenticated gateway key and selected Langfuse connection                  |
+| `organization.id`, `project.id`                                                             | Resolved Tracelight organization and ingestion project                        |
+| `api_key.id`, `connection.id`                                                               | Authenticated gateway key and selected Tracelight connection                  |
 | `ingestion.mode`                                                                            | Effective capture mode                                                      |
 | `request.api_format`                                                                        | Native API contract: `openai.responses`, `openai.chat-completions` or `anthropic.messages` |
 | `request.metadata`, `request.prompt_cache_key`, `request.safety_identifier`, `request.user` | Native caller-supplied fields, captured only in full mode                   |
@@ -513,7 +513,7 @@ headers arrive. After headers arrive it retains the relayed status, even if a
 stream subsequently fails; cancellation before headers leaves the status unknown.
 Relay outcome, provider status, completeness flags and first-byte timing remain
 internal facts rather than generation metadata. For the gateway scope, ingestion removes
-Langfuse attributes already mapped to trace and observation fields, such as user, session,
+Tracelight attributes already mapped to trace and observation fields, such as user, session,
 trace name, tags and environment, while preserving custom attributes, scope and resources.
 
 Provider HTTP failures and failed SSE responses set the generation level to `ERROR`
@@ -549,7 +549,7 @@ these records are not a durable accounting ledger.
 
 ## Caller tracing context
 
-Incoming `traceparent` and `tracestate` apply only to the Langfuse generation.
+Incoming `traceparent` and `tracestate` apply only to the Tracelight generation.
 A valid `traceparent` supplies its trace ID and parent observation ID; the generation
 always gets a new observation ID. Missing or malformed context starts a new root.
 Valid `tracestate` is included in the generation's OTLP `traceState` field; it is not
@@ -617,7 +617,7 @@ The gateway also recognizes correlation headers emitted by coding agents:
 An inferred session becomes `<agent>:<session>` and an inferred turn deterministically
 selects the generation trace ID, grouping the requests made before and after tool
 execution into one trace. A valid `traceparent` always wins trace identity; explicit
-Langfuse session and trace-name headers or baggage always win their respective
+Tracelight session and trace-name headers or baggage always win their respective
 attributes. Agent headers never infer a user ID.
 
 Original identifiers remain searchable in generation metadata under `agent.*`.
@@ -625,7 +625,7 @@ This includes `agent.name`, `agent.project_id`, `agent.session_id`,
 `agent.thread_id`, `agent.turn_id`, `agent.id`, `agent.parent_id`, and
 `agent.parent_session_id` when the source agent provides them. Codex's
 routing-oriented `session_id` is retained as metadata, while its
-conversation-oriented `thread_id` supplies the Langfuse session.
+conversation-oriented `thread_id` supplies the Tracelight session.
 
 Codex sends its turn snapshot canonically in the request body as
 `client_metadata["x-codex-turn-metadata"]`; the `x-codex-turn-metadata` header and the
@@ -672,14 +672,14 @@ Web's resolved ingestion mode controls content capture:
 - `full`: input retains native `input`, `instructions`, tools, prompt/context
   references and unknown fields. Model, configuration and a recognized coding agent's
   `client_metadata` are projected out of input. Output is an ordered array of native
-  completed items. Content is sent only through Langfuse ingestion.
+  completed items. Content is sent only through Tracelight ingestion.
 - `usage`: input and output are null. Model, scalar parameters, native usage,
   timing and trusted attribution are retained; request schemas/content are omitted.
 
 Full-mode model parameters include sampling/token limits, service tier, reasoning,
 text formatting, tool choice/limits, context management, truncation, streaming options,
 background/store/include flags, moderation and cache options/retention. Capture retains
-JSON types; ingestion applies Langfuse's existing model-parameter normalization
+JSON types; ingestion applies Tracelight's existing model-parameter normalization
 (booleans and structured values become JSON strings). Omitted request parameters
 are not filled with assumed defaults.
 The response model and service tier take precedence over requested values when present.
@@ -791,7 +791,7 @@ these limits never cap the actual provider response. Media is not fetched/upload
 
 Provider credentials, the gateway credential and ingestion tokens are not part of
 the capture record; raw headers are not logged. Full captured content and resolved
-key metadata remain in Langfuse ingestion and are excluded from operational logs.
+key metadata remain in Tracelight ingestion and are excluded from operational logs.
 
 ## Process lifecycle
 
