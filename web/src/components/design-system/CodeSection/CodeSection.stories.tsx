@@ -64,7 +64,7 @@ export const WithActions = meta.story({
   args: {
     title: "Webhook Secret",
     variant: "outline",
-    content: "whsec_0000000000000000000000000000",
+    content: "example-webhook-secret",
     actions: [
       { icon: RefreshCw, label: "Regenerate", onClick: () => {} },
       { icon: ExternalLink, label: "Open docs", onClick: () => {} },
