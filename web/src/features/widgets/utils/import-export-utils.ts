@@ -557,7 +557,7 @@ export function parsePastedWidget(
   ) {
     return {
       status: "invalid",
-      reason: `This widget uses format version ${declaredVersion}; this Langfuse version supports up to ${WIDGET_FILE_FORMAT_VERSION}.`,
+      reason: `This widget uses format version ${declaredVersion}; this Tracelight version supports up to ${WIDGET_FILE_FORMAT_VERSION}.`,
     };
   }
 
