@@ -55,7 +55,7 @@ type ParsedDashboards = z.infer<typeof DashboardDomainSchema>[];
 export const upsertLangfuseDashboards = async (force = false) => {
   const startTime = Date.now();
   try {
-    logger.debug(`Starting upsert of Langfuse dashboards (force = ${force})`);
+    logger.debug(`Starting upsert of Tracelight dashboards (force = ${force})`);
 
     const parsed = FileSchema.parse(langfuseDashboards);
 
@@ -74,11 +74,11 @@ export const upsertLangfuseDashboards = async (force = false) => {
     await upsertDashboards([...parsed.dashboards, homeDashboard], force);
 
     logger.info(
-      `Finished upserting Langfuse dashboards and widgets in ${Date.now() - startTime}ms`,
+      `Finished upserting Tracelight dashboards and widgets in ${Date.now() - startTime}ms`,
     );
   } catch (error) {
     logger.error(
-      `Error upserting Langfuse dashboards after ${Date.now() - startTime}ms: ${
+      `Error upserting Tracelight dashboards after ${Date.now() - startTime}ms: ${
         error instanceof Error ? error.message : ""
       }`,
       { error },

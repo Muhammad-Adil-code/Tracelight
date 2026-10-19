@@ -628,7 +628,7 @@
       "createdBy": null,
       "updatedBy": null,
       "projectId": null,
-      "name": "Langfuse Latency Dashboard",
+      "name": "Tracelight Latency Dashboard",
       "description": "Monitor latency metrics across traces and generations for performance optimization.",
       "owner": "LANGFUSE",
       "definition": {
@@ -650,7 +650,7 @@
       "createdBy": null,
       "updatedBy": null,
       "projectId": null,
-      "name": "Langfuse Usage Management",
+      "name": "Tracelight Usage Management",
       "description": "Track usage metrics across traces, observations, and scores to manage resource allocation.",
       "owner": "LANGFUSE",
       "definition": {
@@ -675,7 +675,7 @@
       "createdBy": null,
       "updatedBy": null,
       "projectId": null,
-      "name": "Langfuse Cost Dashboard",
+      "name": "Tracelight Cost Dashboard",
       "description": "Review your LLM costs.",
       "owner": "LANGFUSE",
       "definition": {
@@ -701,7 +701,7 @@
       "createdBy": null,
       "updatedBy": null,
       "projectId": null,
-      "name": "Langfuse Agent Dashboard",
+      "name": "Tracelight Agent Dashboard",
       "description": "Monitor agent tool usage: total tool calls, most-called tools, tool errors and latency, and observation type breakdowns.",
       "owner": "LANGFUSE",
       "definition": {
