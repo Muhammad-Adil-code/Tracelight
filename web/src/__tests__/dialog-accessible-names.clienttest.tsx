@@ -53,7 +53,7 @@ describe("V4IntroDialog", () => {
     });
 
     expect(
-      screen.getByRole("dialog", { name: "Welcome to a faster Langfuse" }),
+      screen.getByRole("dialog", { name: "Welcome to a faster Tracelight" }),
     ).toBeInTheDocument();
     expect(titleWarnings()).toEqual([]);
   });

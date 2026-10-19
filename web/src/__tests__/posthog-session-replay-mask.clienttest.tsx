@@ -115,7 +115,7 @@ describe("PostHog session replay privacy", () => {
     expect(initMock).not.toHaveBeenCalled();
   });
 
-  it("disables session recording outside Langfuse Cloud", async () => {
+  it("disables session recording outside Tracelight Cloud", async () => {
     vi.stubEnv("NEXT_PUBLIC_POSTHOG_KEY", "phc_test");
     vi.stubEnv("NEXT_PUBLIC_POSTHOG_HOST", "https://eu.i.posthog.com");
     vi.stubEnv("NEXT_PUBLIC_LANGFUSE_CLOUD_REGION", "");
