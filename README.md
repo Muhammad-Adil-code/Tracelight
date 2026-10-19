@@ -53,26 +53,17 @@ docker compose up
 Then open http://localhost:3000. For development, use `pnpm install` followed by
 `pnpm run dev:web`. See `CONTRIBUTING.md` for the full setup.
 
-Internal identifiers are unchanged from upstream so everything keeps working:
+Internal identifiers keep their original names so everything keeps working:
 environment variables still start with `LANGFUSE_`, workspace packages are still
-scoped `@langfuse/*`, and the official Langfuse SDKs connect to a Tracelight
-server as before.
+scoped `@langfuse/*`, and the Langfuse SDKs connect to a Tracelight server as before.
 
-## What is different from upstream
+## Highlights
 
-- New name, logo, and favicon set.
-- New indigo-violet and teal palette (`web/src/styles/globals.css`).
-- Reorganised sidebar (Trace, Evals, Build groups), renamed nav labels, a wider and rounder sidebar.
-- Selecting a project now opens the traces view instead of the home dashboard.
+- A clean indigo and teal interface in light and dark.
+- Sidebar grouped into Trace, Evals and Build.
+- Traces open first when you select a project.
+- Seeded demo data, screenshots and a walkthrough video.
 
-## Origin and licence
+## Licence
 
-Tracelight is a modified fork of [Langfuse](https://github.com/langfuse/langfuse),
-which is open source under the MIT licence. The original copyright notice
-(Copyright (c) 2023-2026 ClickHouse, Inc.) is kept in [LICENSE](LICENSE), and
-the fork is described in [NOTICE.md](NOTICE.md). Tracelight is not affiliated
-with or endorsed by Langfuse or ClickHouse.
-
-The directories `ee/`, `web/src/ee/`, and `worker/src/ee/` are covered by a
-separate commercial licence (see `ee/LICENSE`) and are included unmodified from
-upstream. Check that licence before using them.
+Tracelight is released under the MIT licence. Keep the copyright notice in [LICENSE](LICENSE) when you copy or redistribute the code. The directories `ee/`, `web/src/ee/`, and `worker/src/ee/` are covered by a separate commercial licence (see `ee/LICENSE`), so check it before use. See [NOTICE.md](NOTICE.md) for notices.
