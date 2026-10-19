@@ -28,11 +28,11 @@ describe("parseMcpRateLimitError", () => {
     });
   });
 
-  it("parses the embedded Langfuse MCP init error shape", () => {
+  it("parses the embedded Tracelight MCP init error shape", () => {
     const payload = JSON.stringify(rateLimitPayload(32));
 
     expect(
-      parseMcpRateLimitError(`Failed to initialize Langfuse MCP: ${payload}`),
+      parseMcpRateLimitError(`Failed to initialize Tracelight MCP: ${payload}`),
     ).toEqual({ retryAfterSeconds: 32 });
   });
 

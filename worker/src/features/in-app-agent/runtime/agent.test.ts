@@ -389,7 +389,7 @@ vi.mock("@mastra/mcp", () => ({
             fetch: {
               server: "langfuseDocs",
               execute: vi.fn().mockResolvedValue({
-                content: "Langfuse docs content",
+                content: "Tracelight docs content",
               }),
             },
           },
@@ -760,7 +760,7 @@ describe("createAgUiStream", () => {
 
     const options = {
       prompt: [
-        { role: "system", content: "You are the Langfuse assistant." },
+        { role: "system", content: "You are the Tracelight assistant." },
         { role: "user", content: [{ type: "text", text: "hello" }] },
         {
           role: "assistant",
@@ -777,7 +777,7 @@ describe("createAgUiStream", () => {
     const cachedPrompt = [
       {
         role: "system",
-        content: "You are the Langfuse assistant.",
+        content: "You are the Tracelight assistant.",
         providerOptions: { bedrock: { cachePoint: { type: "default" } } },
       },
       { role: "user", content: [{ type: "text", text: "hello" }] },
@@ -813,7 +813,7 @@ describe("createAgUiStream", () => {
 
     const options = {
       prompt: [
-        { role: "system", content: "You are the Langfuse assistant." },
+        { role: "system", content: "You are the Tracelight assistant." },
         { role: "user", content: [{ type: "text", text: "hello" }] },
         {
           role: "assistant",
@@ -830,7 +830,7 @@ describe("createAgUiStream", () => {
     const cachedPrompt = [
       {
         role: "system",
-        content: "You are the Langfuse assistant.",
+        content: "You are the Tracelight assistant.",
         providerOptions: {
           anthropic: { cacheControl: { type: "ephemeral" } },
         },

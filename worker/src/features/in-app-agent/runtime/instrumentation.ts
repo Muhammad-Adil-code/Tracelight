@@ -172,7 +172,7 @@ export function createInAppAgentInstrumentation({
       model,
     });
   } catch (error) {
-    logger.warn("Failed to initialize in-app agent Langfuse tracing", error);
+    logger.warn("Failed to initialize in-app agent Tracelight tracing", error);
     return undefined;
   }
 }
@@ -512,7 +512,7 @@ export class InAppAgentInstrumentation {
   flush(): Promise<void> {
     if (this.flushPromise === undefined) {
       this.flushPromise = this.processTracedEvents().catch((error) => {
-        logger.warn("Failed to flush in-app agent Langfuse tracing", error);
+        logger.warn("Failed to flush in-app agent Tracelight tracing", error);
       });
     }
 

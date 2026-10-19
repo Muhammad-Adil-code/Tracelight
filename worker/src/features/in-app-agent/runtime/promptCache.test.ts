@@ -15,13 +15,13 @@ const openaiCacheBreakpoint = {
 };
 
 const twoMessagePrompt = [
-  { role: "system", content: "You are the Langfuse assistant." },
+  { role: "system", content: "You are the Tracelight assistant." },
   { role: "user", content: [{ type: "text", text: "hello" }] },
 ];
 
 // One completed tool turn followed by a new user turn.
 const toolTurnPrompt = [
-  { role: "system", content: "You are the Langfuse assistant." },
+  { role: "system", content: "You are the Tracelight assistant." },
   { role: "user", content: [{ type: "text", text: "hello" }] },
   {
     role: "assistant",
@@ -59,7 +59,7 @@ describe("applyPromptCachePoints", () => {
     expect(
       applyPromptCachePoints(
         [
-          { role: "system", content: "You are the Langfuse assistant." },
+          { role: "system", content: "You are the Tracelight assistant." },
           { role: "system", content: "Skill: error analysis." },
           { role: "user", content: [{ type: "text", text: "hello" }] },
           {
@@ -74,7 +74,7 @@ describe("applyPromptCachePoints", () => {
         "bedrock",
       ),
     ).toEqual([
-      { role: "system", content: "You are the Langfuse assistant." },
+      { role: "system", content: "You are the Tracelight assistant." },
       {
         role: "system",
         content: "Skill: error analysis.",
@@ -97,7 +97,7 @@ describe("applyPromptCachePoints", () => {
     expect(applyPromptCachePoints(toolTurnPrompt, "bedrock")).toEqual([
       {
         role: "system",
-        content: "You are the Langfuse assistant.",
+        content: "You are the Tracelight assistant.",
         providerOptions: bedrockCachePoint,
       },
       { role: "user", content: [{ type: "text", text: "hello" }] },
@@ -131,7 +131,7 @@ describe("applyPromptCachePoints", () => {
     ).toEqual([
       {
         role: "system",
-        content: "You are the Langfuse assistant.",
+        content: "You are the Tracelight assistant.",
         providerOptions: bedrockCachePoint,
       },
       { role: "user", content: [{ type: "text", text: "hello" }] },
@@ -174,7 +174,7 @@ describe("applyPromptCachePoints", () => {
     expect(
       applyPromptCachePoints(
         [
-          { role: "system", content: "You are the Langfuse assistant." },
+          { role: "system", content: "You are the Tracelight assistant." },
           { role: "system", content: "Skill: error analysis." },
           {
             role: "user",
@@ -196,7 +196,7 @@ describe("applyPromptCachePoints", () => {
         "openai-responses",
       ),
     ).toEqual([
-      { role: "system", content: "You are the Langfuse assistant." },
+      { role: "system", content: "You are the Tracelight assistant." },
       {
         role: "system",
         content: "Skill: error analysis.",
@@ -237,7 +237,7 @@ describe("applyPromptCachePoints", () => {
     expect(applyPromptCachePoints(toolTurnPrompt, "openai-responses")).toEqual([
       {
         role: "system",
-        content: "You are the Langfuse assistant.",
+        content: "You are the Tracelight assistant.",
         providerOptions: openaiCacheBreakpoint,
       },
       {
@@ -278,13 +278,13 @@ describe("applyPromptCachePoints", () => {
   it("writes a single checkpoint when the prompt is only system messages", () => {
     expect(
       applyPromptCachePoints(
-        [{ role: "system", content: "You are the Langfuse assistant." }],
+        [{ role: "system", content: "You are the Tracelight assistant." }],
         "bedrock",
       ),
     ).toEqual([
       {
         role: "system",
-        content: "You are the Langfuse assistant.",
+        content: "You are the Tracelight assistant.",
         providerOptions: bedrockCachePoint,
       },
     ]);
@@ -296,7 +296,7 @@ describe("applyPromptCachePoints", () => {
         [
           {
             role: "system",
-            content: "You are the Langfuse assistant.",
+            content: "You are the Tracelight assistant.",
             providerOptions: { bedrock: { somethingElse: true } },
           },
           {
@@ -312,7 +312,7 @@ describe("applyPromptCachePoints", () => {
     ).toEqual([
       {
         role: "system",
-        content: "You are the Langfuse assistant.",
+        content: "You are the Tracelight assistant.",
         providerOptions: {
           bedrock: { somethingElse: true, cachePoint: { type: "default" } },
         },
@@ -331,7 +331,7 @@ describe("applyPromptCachePoints", () => {
         [
           {
             role: "system",
-            content: "You are the Langfuse assistant.",
+            content: "You are the Tracelight assistant.",
             providerOptions: { anthropic: { somethingElse: true } },
           },
           {
@@ -347,7 +347,7 @@ describe("applyPromptCachePoints", () => {
     ).toEqual([
       {
         role: "system",
-        content: "You are the Langfuse assistant.",
+        content: "You are the Tracelight assistant.",
         providerOptions: {
           anthropic: {
             somethingElse: true,
@@ -384,7 +384,7 @@ describe("applyPromptCacheToCall", () => {
       prompt: [
         {
           role: "system",
-          content: "You are the Langfuse assistant.",
+          content: "You are the Tracelight assistant.",
           providerOptions: anthropicCacheControl,
         },
         {
@@ -420,7 +420,7 @@ describe("applyPromptCacheToCall", () => {
       prompt: [
         {
           role: "system",
-          content: "You are the Langfuse assistant.",
+          content: "You are the Tracelight assistant.",
           providerOptions: openaiCacheBreakpoint,
         },
         {
@@ -461,7 +461,7 @@ describe("applyPromptCacheToCall", () => {
       prompt: [
         {
           role: "system",
-          content: "You are the Langfuse assistant.",
+          content: "You are the Tracelight assistant.",
           providerOptions: bedrockCachePoint,
         },
         {

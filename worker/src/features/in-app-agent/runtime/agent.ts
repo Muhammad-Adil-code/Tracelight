@@ -68,7 +68,7 @@ import {
   type InAppAgentLanguageModel,
 } from "./model";
 
-const ASSISTANT_TITLE = "Langfuse Halo";
+const ASSISTANT_TITLE = "Tracelight Halo";
 const IN_APP_AGENT_SYSTEM_PROMPT_NAME = "in-app-agent-system-prompt";
 const LANGFUSE_DOCS_MCP_URL = "https://langfuse.com/api/mcp";
 const IN_APP_AGENT_MCP_USER_AGENT = "langfuse-in-app-agent";
@@ -155,7 +155,7 @@ function formatSandboxContext(sandbox?: InAppAgentSandbox): string {
 
   return `<sandbox_filesystem>
 The sandbox provides read, write, edit, and bash tools for the current task.
-The sandbox has no egress network connection, so the Langfuse CLI, Langfuse SDKs, and other application-specific CLIs or SDKs cannot act on the user's project or environment from there.
+The sandbox has no egress network connection, so the Tracelight CLI, Tracelight SDKs, and other application-specific CLIs or SDKs cannot act on the user's project or environment from there.
 Use the sandbox to inspect and edit files supplied for this task, write ad-hoc scripts, and efficiently process or prepare data locally.
 You may also process or transform data fetched through MCP tools in the sandbox;
 When working in the sandbox, assume this layout:
@@ -367,7 +367,7 @@ export async function createAgUiStream(params: {
 
     try {
       return Promise.resolve(callback(instrumentation)).catch((error) => {
-        logger.warn("Failed to record in-app agent Langfuse tracing", {
+        logger.warn("Failed to record in-app agent Tracelight tracing", {
           error,
           operation,
           runId: params.input.runId,
@@ -375,7 +375,7 @@ export async function createAgUiStream(params: {
         });
       });
     } catch (error) {
-      logger.warn("Failed to record in-app agent Langfuse tracing", {
+      logger.warn("Failed to record in-app agent Tracelight tracing", {
         error,
         operation,
         runId: params.input.runId,
@@ -1189,7 +1189,7 @@ async function createMastraAdapter(params: {
           parseMcpRateLimitError(result.errors.langfuse)
         ) {
           throw new Error(
-            `Failed to initialize Langfuse MCP: ${result.errors.langfuse}`,
+            `Failed to initialize Tracelight MCP: ${result.errors.langfuse}`,
           );
         }
 
@@ -1198,11 +1198,11 @@ async function createMastraAdapter(params: {
     });
 
     if (errors.langfuse) {
-      throw new Error(`Failed to initialize Langfuse MCP: ${errors.langfuse}`);
+      throw new Error(`Failed to initialize Tracelight MCP: ${errors.langfuse}`);
     }
 
     if (errors.langfuseDocs) {
-      logger.warn("Failed to initialize Langfuse docs MCP", {
+      logger.warn("Failed to initialize Tracelight docs MCP", {
         error: errors.langfuseDocs,
         runId: params.input.runId,
         threadId: params.input.threadId,

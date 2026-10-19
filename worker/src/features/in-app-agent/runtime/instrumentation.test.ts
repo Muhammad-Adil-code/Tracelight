@@ -436,7 +436,7 @@ describe("InAppAgentInstrumentation", () => {
         },
       },
       langfuse_redirect: {
-        description: "Redirect the user to a Langfuse page.",
+        description: "Redirect the user to a Tracelight page.",
         inputSchema: {
           parse: vi.fn(),
         },
@@ -479,7 +479,7 @@ describe("InAppAgentInstrumentation", () => {
               type: "function",
               function: {
                 name: "langfuse_redirect",
-                description: "Redirect the user to a Langfuse page.",
+                description: "Redirect the user to a Tracelight page.",
               },
             },
           ],

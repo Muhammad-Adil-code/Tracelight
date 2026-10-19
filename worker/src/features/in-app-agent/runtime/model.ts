@@ -71,7 +71,7 @@ export async function createInAppAgentLanguageModel(params: {
     default: {
       const _exhaustive: never = params.config;
       throw new Error(
-        `Unsupported Langfuse AI provider: ${(_exhaustive as InAppAgentModelConfig).provider}`,
+        `Unsupported Tracelight AI provider: ${(_exhaustive as InAppAgentModelConfig).provider}`,
       );
     }
   }

@@ -461,7 +461,7 @@ export function createRedirectActionTool({
   return createTool({
     id: IN_APP_AGENT_REDIRECT_TOOL_NAME,
     description:
-      "Propose a user-confirmed navigation action to a known Langfuse page. This does not navigate automatically. Always include params; pass {} when the destination takes none.",
+      "Propose a user-confirmed navigation action to a known Tracelight page. This does not navigate automatically. Always include params; pass {} when the destination takes none.",
     inputSchema: InAppAgentRedirectToolInputSchema,
     execute: async (input) => {
       return getRedirectActionToolResult({

@@ -106,7 +106,7 @@ describe("OpenAI Chat Completions request shape", () => {
 
     const model = await createInAppAgentLanguageModel({ config });
     const prompt = [
-      { role: "system" as const, content: "You are the Langfuse assistant." },
+      { role: "system" as const, content: "You are the Tracelight assistant." },
       {
         role: "user" as const,
         content: [{ type: "text" as const, text: "hello" }],
@@ -124,7 +124,7 @@ describe("OpenAI Chat Completions request shape", () => {
     expect(calls[0]?.body.messages).toEqual([
       {
         role: "system",
-        content: "You are the Langfuse assistant.",
+        content: "You are the Tracelight assistant.",
         cache_control: { type: "ephemeral" },
       },
       {
@@ -181,7 +181,7 @@ describe("OpenAI Responses request shape", () => {
 
     const model = await createInAppAgentLanguageModel({ config });
     const prompt = [
-      { role: "system" as const, content: "You are the Langfuse assistant." },
+      { role: "system" as const, content: "You are the Tracelight assistant." },
       {
         role: "user" as const,
         content: [{ type: "text" as const, text: "hello" }],
@@ -202,7 +202,7 @@ describe("OpenAI Responses request shape", () => {
         content: [
           {
             type: "input_text",
-            text: "You are the Langfuse assistant.",
+            text: "You are the Tracelight assistant.",
             prompt_cache_breakpoint: { mode: "explicit" },
           },
         ],
@@ -265,7 +265,7 @@ describe("OpenAI Responses request shape", () => {
     const model = await createInAppAgentLanguageModel({ config });
     await model.doGenerate({
       prompt: [
-        { role: "system" as const, content: "You are the Langfuse assistant." },
+        { role: "system" as const, content: "You are the Tracelight assistant." },
         ...userPrompt(),
       ],
       providerOptions: getInAppAgentReasoningProviderOptions(config),
@@ -277,7 +277,7 @@ describe("OpenAI Responses request shape", () => {
     expect(calls[0]?.body.include).toEqual(["reasoning.encrypted_content"]);
     // `systemMessageMode: "system"` keeps the system role.
     expect(calls[0]?.body.input).toEqual([
-      { role: "system", content: "You are the Langfuse assistant." },
+      { role: "system", content: "You are the Tracelight assistant." },
       { role: "user", content: [{ type: "input_text", text: "hi" }] },
     ]);
   });
