@@ -41,7 +41,7 @@ export const sendUsageThresholdWarningEmail = async ({
   try {
     const mailer = createMailTransport(env.SMTP_CONNECTION_URL);
 
-    const emailSubject = `Langfuse Free Tier: ${organizationName} usage reached ${limit.toLocaleString()} events`;
+    const emailSubject = `Tracelight Free Tier: ${organizationName} usage reached ${limit.toLocaleString()} events`;
     const emailHtml = await render(
       UsageThresholdWarningEmailTemplate({
         organizationName,
@@ -57,7 +57,7 @@ export const sendUsageThresholdWarningEmail = async ({
       to: receiverEmail,
       from: {
         address: env.EMAIL_FROM_ADDRESS,
-        name: "Langfuse",
+        name: "Tracelight",
       },
       replyTo: "support@langfuse.com",
       subject: emailSubject,

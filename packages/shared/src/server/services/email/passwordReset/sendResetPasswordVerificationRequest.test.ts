@@ -59,10 +59,10 @@ describe("sendResetPasswordVerificationRequest", () => {
   it("sends email verification copy for the sign-up flow", async () => {
     const mail = await sentMail("http://localhost:3000/auth/setup-password");
 
-    expect(mail.subject).toBe("Verify your Langfuse email");
+    expect(mail.subject).toBe("Verify your Tracelight email");
     expect(mail.text).toContain("verify your email");
-    expect(mail.text).not.toContain("reset your Langfuse password");
-    expect(mail.html).toContain("Welcome to Langfuse!");
+    expect(mail.text).not.toContain("reset your Tracelight password");
+    expect(mail.html).toContain("Welcome to Tracelight!");
   });
 
   it("sends email verification copy when the deployment uses a base path", async () => {
@@ -70,15 +70,15 @@ describe("sendResetPasswordVerificationRequest", () => {
       "http://localhost:3000/langfuse/auth/setup-password",
     );
 
-    expect(mail.subject).toBe("Verify your Langfuse email");
+    expect(mail.subject).toBe("Verify your Tracelight email");
   });
 
   it("sends password reset copy for the reset flow", async () => {
     const mail = await sentMail("http://localhost:3000/auth/reset-password");
 
-    expect(mail.subject).toBe("Your Langfuse password reset code");
-    expect(mail.text).toContain("reset your Langfuse password");
-    expect(mail.html).toContain("Forgot your Langfuse password?");
+    expect(mail.subject).toBe("Your Tracelight password reset code");
+    expect(mail.text).toContain("reset your Tracelight password");
+    expect(mail.html).toContain("Forgot your Tracelight password?");
   });
 
   it("falls back to password reset copy when no callback URL is present", async () => {
@@ -88,7 +88,7 @@ describe("sendResetPasswordVerificationRequest", () => {
     });
 
     expect(sendMail.mock.calls[0][0].subject).toBe(
-      "Your Langfuse password reset code",
+      "Your Tracelight password reset code",
     );
   });
 });

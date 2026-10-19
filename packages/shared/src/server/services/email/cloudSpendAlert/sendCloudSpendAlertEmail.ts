@@ -45,7 +45,7 @@ export const sendCloudSpendAlertEmail = async ({
     const mailer = createMailTransport(env.SMTP_CONNECTION_URL);
 
     const billingUrl = `${env.NEXTAUTH_URL}/organization/${orgId}/settings/billing`;
-    const emailSubject = `Langfuse Spend Alert · ${orgName} reached $${threshold.toFixed(2)}`;
+    const emailSubject = `Tracelight Spend Alert · ${orgName} reached $${threshold.toFixed(2)}`;
 
     // Send email to each recipient
     for (const recipient of recipients) {
@@ -65,7 +65,7 @@ export const sendCloudSpendAlertEmail = async ({
         to: recipient,
         from: {
           address: env.EMAIL_FROM_ADDRESS,
-          name: "Langfuse",
+          name: "Tracelight",
         },
         subject: emailSubject,
         html: emailHtml,

@@ -29,7 +29,7 @@ export const BatchExportSuccessEmailTemplate = ({
   batchExportName,
   downloadWindowHours,
 }: BatchExportSuccessTemplateProps) => {
-  const previewText = `Download your data export from Langfuse`;
+  const previewText = `Download your data export from Tracelight`;
 
   return (
     <Html>
@@ -43,7 +43,7 @@ export const BatchExportSuccessEmailTemplate = ({
                 src="https://static.langfuse.com/langfuse_logo_transactional_email.png"
                 width="40"
                 height="40"
-                alt="Langfuse"
+                alt="Tracelight"
                 className="mx-auto my-0"
               />
             </Section>

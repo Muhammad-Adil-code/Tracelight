@@ -44,7 +44,7 @@ export const sendBatchExportSuccessEmail = async ({
       to: receiverEmail,
       from: {
         address: env.EMAIL_FROM_ADDRESS,
-        name: "Langfuse",
+        name: "Tracelight",
       },
       subject: "Your data export is ready",
       html: htmlTemplate,
