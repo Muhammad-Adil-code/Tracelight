@@ -90,8 +90,8 @@ export async function seedInAppAgentDemoConversation({
     projectId: summaryPrompt.projectId,
   });
   const assistantIntro =
-    "I'm your Langfuse assistant! I can help you with:\n\n" +
-    "**Langfuse Data & Analysis:**\n" +
+    "I'm your Tracelight assistant! I can help you with:\n\n" +
+    "**Tracelight Data & Analysis:**\n" +
     "- Query and explore your traces, observations, and spans\n" +
     "- Review and analyze scores, annotations, and feedback\n" +
     "- Inspect datasets, prompts, and experiment runs\n" +

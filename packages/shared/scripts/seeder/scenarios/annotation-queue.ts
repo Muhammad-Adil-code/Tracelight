@@ -156,7 +156,7 @@ const TRACE_NAMES = [
 ] as const;
 
 const QUESTIONS = [
-  "What is Langfuse used for?",
+  "What is Tracelight used for?",
   "Summarize the attached release notes.",
   "Is this support ticket urgent?",
   "Translate the message to German.",
@@ -164,7 +164,7 @@ const QUESTIONS = [
 ] as const;
 
 const ANSWERS = [
-  "Langfuse is an open-source LLM engineering platform.",
+  "Tracelight is an open-source LLM engineering platform.",
   "The release adds keyboard-first annotation and bug fixes.",
   "Yes — the customer reports a production outage.",
   "Der Build schlug fehl; bitte erneut versuchen.",

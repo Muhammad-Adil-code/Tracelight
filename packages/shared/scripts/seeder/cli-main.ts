@@ -76,7 +76,7 @@ const truncateDescription = (text: string, maxLen = 100): string => {
 
 const usage = (): string => {
   const lines = [
-    "Langfuse seed CLI — one-shot local test data.",
+    "Tracelight seed CLI — one-shot local test data.",
     "",
     "Usage:",
     "  pnpm run seed -- doctor [--json] [--project <id>]   check the local stack, print fixes",
